@@ -1177,6 +1177,17 @@
         // 初始化：从 localStorage 加载数据或使用默认数据
         function initData() {
             const saved = localStorage.getItem('bigclaw_data');
+            const savedVersion = localStorage.getItem('bigclaw_version');
+            const currentVersion = siteData.version || '1.0.0';
+            
+            // 如果版本不同，清除旧缓存
+            if (savedVersion !== currentVersion) {
+                localStorage.removeItem('bigclaw_data');
+                localStorage.setItem('bigclaw_version', currentVersion);
+                console.log('数据版本已更新，已清除旧缓存');
+                return;
+            }
+            
             if (saved) {
                 try {
                     const parsed = JSON.parse(saved);
@@ -1191,7 +1202,9 @@
         
         // 保存数据到 localStorage
         function saveData() {
+            siteData.version = siteData.version || '1.1.0';
             localStorage.setItem('bigclaw_data', JSON.stringify(siteData));
+            localStorage.setItem('bigclaw_version', siteData.version);
         }
         
         function renderCategoryNav() {

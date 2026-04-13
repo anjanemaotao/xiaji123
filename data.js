@@ -1,4 +1,5 @@
 var siteData = {
+    "version": "1.1.0",
     "categories": [
         {
             "title": "百虾争鸣",
