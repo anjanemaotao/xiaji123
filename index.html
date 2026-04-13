@@ -529,12 +529,21 @@
         
         @media (max-width: 768px) {
             .sidebar {
-                position: relative;
-                width: 100%;
-                height: auto;
+                position: fixed;
+                width: 280px;
+                height: 100vh;
+                left: -280px;
+                top: 0;
+                z-index: 1000;
+                transition: left 0.3s ease;
+            }
+            .sidebar.open {
+                left: 0;
             }
             .main {
                 margin-left: 0;
+                padding: 20px;
+                padding-top: 70px;
             }
             .app {
                 flex-direction: column;
@@ -542,6 +551,62 @@
             .links-grid {
                 grid-template-columns: 1fr;
             }
+            /* 移动端菜单按钮 */
+            .mobile-menu-btn {
+                display: flex !important;
+            }
+            /* 移动端遮罩 */
+            .sidebar-overlay {
+                display: block;
+            }
+            /* 收藏提示位置调整 */
+            .bookmark-tip {
+                left: 20px;
+                right: 20px;
+                bottom: 20px;
+            }
+        }
+        
+        /* 移动端菜单按钮 */
+        .mobile-menu-btn {
+            display: none;
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 999;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+        
+        .mobile-menu-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        /* 侧边栏遮罩 */
+        .sidebar-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .sidebar-overlay.show {
+            opacity: 1;
         }
         
         /* 滚动条样式 */
@@ -748,11 +813,17 @@
     </style>
 </head>
 <body>
+    <!-- 移动端菜单按钮 -->
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+    
+    <!-- 侧边栏遮罩 -->
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+    
     <div class="app">
         <!-- 左侧边栏 -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
-                <a href="#" class="logo">
+                <a href="#" class="logo" onclick="closeSidebar()">
                     <div class="logo-icon"><img src="logo.png" alt="虾记导航" style="width:48px;height:48px;border-radius:12px;"></div>
                     <div class="logo-text">
                         <span class="logo-title">虾记导航</span>
@@ -1202,6 +1273,11 @@
             });
             
             renderContent(category);
+            
+            // 移动端自动关闭侧边栏
+            if (window.innerWidth <= 768) {
+                closeSidebar();
+            }
         }
         
         function handleSearch(event) {
@@ -1527,6 +1603,21 @@
             if (localStorage.getItem('bookmarkTipClosed') === 'true') {
                 document.getElementById('bookmarkTip').style.display = 'none';
             }
+        }
+        
+        // 移动端侧边栏控制
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('show');
+        }
+        
+        function closeSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            sidebar.classList.remove('open');
+            overlay.classList.remove('show');
         }
         
         // 初始化
