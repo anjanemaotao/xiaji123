@@ -557,7 +557,7 @@
             }
             /* 移动端遮罩 */
             .sidebar-overlay {
-                display: block;
+                display: block !important;
             }
             /* 收藏提示位置调整 */
             .bookmark-tip {
@@ -581,7 +581,7 @@
             color: #fff;
             font-size: 20px;
             cursor: pointer;
-            z-index: 999;
+            z-index: 1001;
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
@@ -602,11 +602,14 @@
             background: rgba(0, 0, 0, 0.5);
             z-index: 999;
             opacity: 0;
+            pointer-events: none;
             transition: opacity 0.3s;
+            cursor: pointer;
         }
         
         .sidebar-overlay.show {
             opacity: 1;
+            pointer-events: auto;
         }
         
         /* 滚动条样式 */
