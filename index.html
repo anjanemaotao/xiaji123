@@ -549,13 +549,17 @@
             .category-nav {
                 padding-top: 16px;
             }
+            /* 移动端分类导航第一项添加间距 */
+            .category-nav .nav-item:first-child {
+                margin-top: 16px;
+            }
             .sidebar-footer {
                 padding: 12px 16px;
             }
             .main {
                 margin-left: 0;
                 padding: 16px;
-                padding-top: 120px;
+                padding-top: 140px;
             }
             .app {
                 flex-direction: column;
@@ -592,33 +596,35 @@
             right: 0;
             background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
             border-bottom: 1px solid #2a2a4a;
-            padding: 12px 16px;
+            padding: 20px 16px;
             padding-left: 60px;
             z-index: 1000;
             flex-direction: column;
-            gap: 10px;
+            gap: 16px;
         }
         
         .mobile-header-top {
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: center;
+            gap: 12px;
         }
         
         .mobile-logo {
             display: flex;
             align-items: center;
-            gap: 8px;
+            justify-content: center;
+            gap: 12px;
         }
         
         .mobile-logo img {
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
         }
         
         .mobile-logo-text {
-            font-size: 16px;
+            font-size: 20px;
             font-weight: 700;
             color: #fff;
         }
@@ -629,7 +635,7 @@
         
         .mobile-search input {
             width: 100%;
-            padding: 10px 14px;
+            padding: 12px 16px;
             background: #0f0f23;
             border: 1px solid #2a2a4a;
             border-radius: 8px;
@@ -650,7 +656,7 @@
         .mobile-menu-btn {
             display: none;
             position: fixed;
-            top: 14px;
+            top: 20px;
             left: 12px;
             width: 40px;
             height: 40px;
