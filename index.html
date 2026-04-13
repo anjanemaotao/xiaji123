@@ -540,10 +540,15 @@
             .sidebar.open {
                 left: 0;
             }
+            /* 移动端隐藏侧边栏中的 header 和搜索框 */
+            .sidebar-header,
+            .search-box {
+                display: none;
+            }
             .main {
                 margin-left: 0;
                 padding: 20px;
-                padding-top: 70px;
+                padding-top: 130px;
             }
             .app {
                 flex-direction: column;
@@ -559,12 +564,78 @@
             .sidebar-overlay {
                 display: block !important;
             }
+            /* 移动端顶部栏 */
+            .mobile-header {
+                display: flex !important;
+            }
             /* 收藏提示位置调整 */
             .bookmark-tip {
                 left: 20px;
                 right: 20px;
                 bottom: 20px;
             }
+        }
+        
+        /* 移动端顶部栏 */
+        .mobile-header {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+            border-bottom: 1px solid #2a2a4a;
+            padding: 12px 16px;
+            z-index: 998;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .mobile-header-top {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .mobile-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .mobile-logo img {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+        }
+        
+        .mobile-logo-text {
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+        }
+        
+        .mobile-search {
+            flex: 1;
+        }
+        
+        .mobile-search input {
+            width: 100%;
+            padding: 10px 14px;
+            background: #0f0f23;
+            border: 1px solid #2a2a4a;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+        }
+        
+        .mobile-search input:focus {
+            border-color: #ff6b35;
+        }
+        
+        .mobile-search input::placeholder {
+            color: #666;
         }
         
         /* 移动端菜单按钮 */
@@ -816,6 +887,19 @@
     </style>
 </head>
 <body>
+    <!-- 移动端顶部栏 -->
+    <div class="mobile-header" id="mobileHeader">
+        <div class="mobile-header-top">
+            <div class="mobile-logo">
+                <img src="logo.png" alt="虾记导航">
+                <span class="mobile-logo-text">虾记导航</span>
+            </div>
+        </div>
+        <div class="mobile-search">
+            <input type="text" id="mobileSearchInput" placeholder="搜索网站..." onkeyup="handleMobileSearch(event)">
+        </div>
+    </div>
+    
     <!-- 移动端菜单按钮 -->
     <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
     
@@ -1287,6 +1371,93 @@
             if (event.key === 'Enter') {
                 doSearch();
             }
+        }
+        
+        // 移动端搜索
+        function handleMobileSearch(event) {
+            if (event.key === 'Enter') {
+                const keyword = document.getElementById('mobileSearchInput').value.toLowerCase().trim();
+                // 同步到侧边栏搜索框
+                document.getElementById('searchInput').value = document.getElementById('mobileSearchInput').value;
+                doSearchMobile(keyword);
+            }
+        }
+        
+        function doSearchMobile(keyword) {
+            if (!keyword) {
+                selectCategory(currentCategory);
+                return;
+            }
+            
+            const filtered = [];
+            for (let i = 0; i < siteData.categories.length; i++) {
+                const cat = siteData.categories[i];
+                if (hiddenCategories.includes(cat.title)) continue;
+                const matchedLinks = [];
+                
+                for (let j = 0; j < cat.links.length; j++) {
+                    const link = cat.links[j];
+                    if (link.name.toLowerCase().indexOf(keyword) >= 0 ||
+                        link.description.toLowerCase().indexOf(keyword) >= 0 ||
+                        link.url.toLowerCase().indexOf(keyword) >= 0) {
+                        matchedLinks.push(link);
+                    }
+                }
+                
+                if (matchedLinks.length > 0) {
+                    filtered.push({ title: cat.title, links: matchedLinks });
+                }
+            }
+            
+            const main = document.getElementById('mainContent');
+            if (filtered.length === 0) {
+                main.innerHTML = '<div style="text-align:center;padding:60px;color:#888;">未找到相关网站</div>';
+                return;
+            }
+            
+            let html = '<div style="margin-bottom:30px;"><h1 style="font-size:28px;color:#fff;margin-bottom:8px;">搜索结果</h1>';
+            html += '<p style="color:#888;font-size:14px;">找到 ' + filtered.reduce((a, c) => a + c.links.length, 0) + ' 个相关网站</p></div>';
+            
+            for (let i = 0; i < filtered.length; i++) {
+                const cat = filtered[i];
+                html += '<section class="category-section">';
+                html += '<div class="category-header">';
+                html += '<div class="category-icon">' + getCategoryIcon(cat.title) + '</div>';
+                html += '<h2 class="category-title">' + cat.title + '</h2>';
+                html += '<span class="category-count">' + cat.links.length + ' 个结果</span>';
+                html += '</div>';
+                html += '<div class="links-grid">';
+                
+                for (let j = 0; j < cat.links.length; j++) {
+                    const link = cat.links[j];
+                    const favicon = getFaviconDefault(link.url, link.name, link.icon);
+                    const tag = getTag(link.url);
+                    const domain = link.name.charAt(0).toUpperCase();
+                    
+                    html += '<div class="link-card">';
+                    
+                    if (isAdminLoggedIn()) {
+                        html += '<div class="card-actions">';
+                        html += '<button class="btn-edit" onclick="openEditModal(\'' + cat.title + '\', ' + j + ')" title="编辑">✏️</button>';
+                        html += '<button class="btn-delete" onclick="openDeleteModal(\'' + cat.title + '\', ' + j + ')" title="删除">🗑️</button>';
+                        html += '</div>';
+                    }
+                    
+                    html += '<a href="' + link.url + '" target="_blank" rel="noopener noreferrer">';
+                    html += '<div class="link-icon"><img src="' + favicon + '" alt="" onerror="handleIconError(this, \'' + link.url + '\', \'' + domain + '\')"></div>';
+                    html += '<div class="link-content">';
+                    html += '<div class="link-name">' + link.name;
+                    if (tag) html += '<span class="link-tag">' + tag + '</span>';
+                    html += '</div>';
+                    html += '<div class="link-desc">' + link.description + '</div>';
+                    html += '<div class="link-url">' + link.url + '</div>';
+                    html += '</div></a></div>';
+                }
+                
+                html += '</div></section>';
+            }
+            
+            main.innerHTML = html;
         }
         
         function doSearch() {
