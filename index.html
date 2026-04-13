@@ -547,11 +547,7 @@
             }
             /* 移动端侧边栏分类导航添加顶部间距 */
             .category-nav {
-                padding-top: 16px;
-            }
-            /* 移动端分类导航第一项添加间距 */
-            .category-nav .nav-item:first-child {
-                margin-top: 16px;
+                padding-top: 60px;
             }
             .sidebar-footer {
                 padding: 12px 16px;
@@ -597,7 +593,6 @@
             background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
             border-bottom: 1px solid #2a2a4a;
             padding: 20px 16px;
-            padding-left: 60px;
             z-index: 1000;
             flex-direction: column;
             gap: 16px;
@@ -608,6 +603,7 @@
             align-items: center;
             justify-content: center;
             gap: 12px;
+            position: relative;
         }
         
         .mobile-logo {
@@ -630,7 +626,8 @@
         }
         
         .mobile-search {
-            flex: 1;
+            width: 100%;
+            max-width: 100%;
         }
         
         .mobile-search input {
