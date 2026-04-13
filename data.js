@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "1.1.0",
+    "version": "1.2.0",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -115,7 +115,59 @@ var siteData = {
                 {"name": "ZenMux", "url": "https://zenmux.ai/invite/9ENK8S", "description": "全球首个支持保险赔付机制的企业级大模型聚合平台"},
                 {"name": "Model123", "url": "https://www.model123.ai/", "description": "专业的企业级 AI编程服务平台"},
                 {"name": "华为云", "url": "https://www.huaweicloud.com/ai/token-service.html", "description": "华为云MaaS平台覆盖大模型全生命周期管理"},
-                {"name": "快手万擎", "url": "https://www.streamlake.com/product/wanqing", "description": "企业级大模型服务与开发平台"}
+                {"name": "快手万擎", "url": "https://www.streamlake.com/product/wanqing", "description": "企业级大模型服务与开发平台"},
+                {"name": "蓝耘元生代", "url": "https://www.lanyun.net/", "description": "MaaS平台，DeepSeek-v3.2模型吞吐性能登顶AI Ping榜首"},
+                {"name": "魔搭社区", "url": "https://modelscope.cn/", "description": "阿里云旗下，国内最大AI模型开源社区，提供3000+预训练模型"},
+                {"name": "腾讯云TI平台", "url": "https://cloud.tencent.com/product/ti", "description": "腾讯云大模型精选商店，覆盖模型训练、推理及工具链支持"}
+            ]
+        },
+        {
+            "title": "API聚合平台",
+            "links": [
+                {"name": "PoloAPI", "url": "https://poloapi.com/", "description": "企业级AI API网关，自建边缘加速层，首字响应快120ms"},
+                {"name": "weelinking", "url": "https://weelinking.com/", "description": "企业级AI中台，支持300+主流大模型，99.99%可用性"},
+                {"name": "n1n.ai", "url": "https://n1n.ai/", "description": "1元=1美元汇率，比市场价节省85%成本，支持人民币直付"},
+                {"name": "147API", "url": "https://147ai.com/", "description": "企业级MaaS平台，全球专线网络，支持对公转账"},
+                {"name": "Azure OpenAI", "url": "https://azure.microsoft.com/openai", "description": "微软官方企业级AI服务，最高级别数据隐私合规"}
+            ]
+        },
+        {
+            "title": "Agent开发平台",
+            "links": [
+                {"name": "LangChain", "url": "https://www.langchain.com/", "description": "智能体框架早期布道者，链式架构设计"},
+                {"name": "LangGraph", "url": "https://langchain-ai.github.io/langgraph/", "description": "LangChain生态，专注构建可控、状态化AI Agents"},
+                {"name": "CrewAI", "url": "https://www.crewai.com/", "description": "角色化协作框架，让Agent像人类团队一样分工干活"},
+                {"name": "AutoGen", "url": "https://microsoft.github.io/autogen/", "description": "微软开源多Agent通信框架，对话驱动协作"},
+                {"name": "Dify", "url": "https://dify.ai/", "description": "开源智能体平台，拖拽式界面+内置RAG策略"},
+                {"name": "Kimi Agent Builder", "url": "https://www.kimi.com/agent", "description": "百万字长文本处理标杆，精准解析专业文档"},
+                {"name": "通义千问Agent Studio", "url": "https://tongyi.aliyun.com/agent", "description": "阿里云生态深度绑定，内置钉钉、OSS等原生工具"},
+                {"name": "腾讯混元Agent平台", "url": "https://cloud.tencent.com/product/hunyuan-agent", "description": "微信/企业微信生态原生适配，多模态交互"},
+                {"name": "MiniMax Agent Builder", "url": "https://www.minimaxi.com/agent", "description": "多模态情感计算核心优势，虚拟主播首选"},
+                {"name": "智谱清言Agent Studio", "url": "https://agent.bigmodel.cn/", "description": "科研与工程领域利器，支持代码生成、论文解读"},
+                {"name": "实在Agent", "url": "https://www.ishiji.com/", "description": "RPA+大模型融合的第三代数字员工"},
+                {"name": "LangFlow", "url": "https://langflow.org/", "description": "开源界顶流工具，节点连线式工作流编排"},
+                {"name": "飞书Agent Builder", "url": "https://www.feishu.cn/product/agent", "description": "飞书办公生态深度融合，会议纪要、报销审核等"},
+                {"name": "豆包Agent Studio", "url": "https://www.doubao.com/agent", "description": "抖音集团旗下，短视频脚本生成、直播话术优化"},
+                {"name": "JeecgBoot", "url": "https://www.jeecg.com/", "description": "新一代AI低代码平台，支持多模型接入"}
+            ]
+        },
+        {
+            "title": "Agent沙箱",
+            "links": [
+                {"name": "E2B", "url": "https://e2b.dev/", "description": "专注于代码执行与云端开发环境，适合构建编码助手"},
+                {"name": "Modal Sandboxes", "url": "https://modal.com/", "description": "按需启动的隔离环境，支持快速迭代与部署"},
+                {"name": "Browserbase", "url": "https://www.browserbase.com/", "description": "专业的浏览器自动化平台，支持大规模并发"},
+                {"name": "Steel", "url": "https://steel.dev/", "description": "抗指纹识别的浏览器环境，增强隐蔽性"}
+            ]
+        },
+        {
+            "title": "AI编程工具",
+            "links": [
+                {"name": "Claude Code", "url": "https://claude.ai/code", "description": "Anthropic终端原生Agent，深度推理能力"},
+                {"name": "Cursor", "url": "https://cursor.com/", "description": "AI原生IDE，流畅编辑体验、并行Agent"},
+                {"name": "GitHub Copilot", "url": "https://github.com/features/copilot", "description": "1500万开发者基数、企业合规"},
+                {"name": "Codex CLI", "url": "https://github.com/openai/codex", "description": "OpenAI终端Agent，ChatGPT生态"},
+                {"name": "Gemini CLI", "url": "https://github.com/google/gemini-cli", "description": "Google终端Agent，免费、与Google服务集成"}
             ]
         },
         {

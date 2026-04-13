@@ -1,5 +1,5 @@
 // 网站图标映射表 - 本地化版本
-// 共 181 个网站图标
+// 共 213 个网站图标
 var iconMap = {
     "OpenClaw 官网": "icons/OpenClaw_官网.webp",
     "官方GitHub": "icons/官方GitHub.svg",
@@ -181,7 +181,44 @@ var iconMap = {
     "Bitmart": "icons/Bitmart.webp",
     "Weex": "icons/Weex.webp",
     "XT.com": "icons/XT_com.webp",
-    "Ju.com": "icons/Ju_com.webp"
+    "Ju.com": "icons/Ju_com.webp",
+    // MaaS平台新增
+    "蓝耘元生代": "icons/蓝耘元生代.webp",
+    "魔搭社区": "icons/魔搭社区.webp",
+    "腾讯云TI平台": "icons/腾讯云TI平台.webp",
+    // API聚合平台
+    "PoloAPI": "icons/PoloAPI.webp",
+    "weelinking": "icons/weelinking.webp",
+    "n1n.ai": "icons/n1n_ai.webp",
+    "147API": "icons/147API.webp",
+    "Azure OpenAI": "icons/Azure_OpenAI.webp",
+    // Agent开发平台
+    "LangChain": "icons/LangChain.webp",
+    "LangGraph": "icons/LangGraph.webp",
+    "CrewAI": "icons/CrewAI.webp",
+    "AutoGen": "icons/AutoGen.webp",
+    "Dify": "icons/Dify.webp",
+    "Kimi Agent Builder": "icons/Kimi_Agent_Builder.webp",
+    "通义千问Agent Studio": "icons/通义千问Agent_Studio.webp",
+    "腾讯混元Agent平台": "icons/腾讯混元Agent平台.webp",
+    "MiniMax Agent Builder": "icons/MiniMax_Agent_Builder.webp",
+    "智谱清言Agent Studio": "icons/智谱清言Agent_Studio.webp",
+    "实在Agent": "icons/实在Agent.webp",
+    "LangFlow": "icons/LangFlow.webp",
+    "飞书Agent Builder": "icons/飞书Agent_Builder.webp",
+    "豆包Agent Studio": "icons/豆包Agent_Studio.webp",
+    "JeecgBoot": "icons/JeecgBoot.webp",
+    // Agent沙箱
+    "E2B": "icons/E2B.webp",
+    "Modal Sandboxes": "icons/Modal_Sandboxes.webp",
+    "Browserbase": "icons/Browserbase.webp",
+    "Steel": "icons/Steel.webp",
+    // AI编程工具
+    "Claude Code": "icons/Claude_Code.webp",
+    "Cursor": "icons/Cursor.webp",
+    "GitHub Copilot": "icons/GitHub_Copilot.webp",
+    "Codex CLI": "icons/Codex_CLI.webp",
+    "Gemini CLI": "icons/Gemini_CLI.webp"
 };
 
 // 根据网站名称获取图标
