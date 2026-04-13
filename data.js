@@ -1,7 +1,7 @@
 var siteData = {
     "categories": [
         {
-            "title": "百虾大战",
+            "title": "百虾争鸣",
             "links": [
                 {"name": "OpenClaw 官网", "url": "https://openclaw.ai/", "description": "开源、本地优先的自主 AI 助手，运行在你的电脑或服务器上"},
                 {"name": "官方GitHub", "url": "https://github.com/openclaw/openclaw", "description": "收集了OpenClaw的源代码，方便用户查阅、参考"},
@@ -43,7 +43,7 @@ var siteData = {
             ]
         },
         {
-            "title": "云端部署",
+            "title": "云端大虾",
             "links": [
                 {"name": "阿里云", "url": "https://www.aliyun.com/benefit/scene/moltbot", "description": "快速上手三步轻松构建 AI 助理低至 9.9 元起"},
                 {"name": "腾讯云", "url": "https://cloud.tencent.com/act/pro/openclaw", "description": "轻量应用服务器让OpenClaw一直在线，稳定输出，也更安全"},
