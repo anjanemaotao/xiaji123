@@ -1,0 +1,260 @@
+var siteData = {
+    "categories": [
+        {
+            "title": "百虾大战",
+            "links": [
+                {"name": "OpenClaw 官网", "url": "https://openclaw.ai/", "description": "开源、本地优先的自主 AI 助手，运行在你的电脑或服务器上"},
+                {"name": "官方GitHub", "url": "https://github.com/openclaw/openclaw", "description": "收集了OpenClaw的源代码，方便用户查阅、参考"},
+                {"name": "Kimi Claw", "url": "https://www.kimi.com/bot", "description": "（云端）集成全球爆火的开源智能体框架OpenClaw"},
+                {"name": "MaxClaw", "url": "https://agent.minimaxi.com/max-claw", "description": "（云端）10 秒内完成OpenClaw云端部署，无需配置服务器，零维护负担"},
+                {"name": "飞书OpenClaw", "url": "https://openclaw.feishu.cn/home", "description": "（云端）提供原版 OpenClaw 完整能力，独特个性、长期记忆，内置飞书官方插件"},
+                {"name": "ArkClaw", "url": "https://www.volcengine.com/experience/ark?mode=claw", "description": "（云端）提供模型训练、推理、评测、精调等全方位功能与服务"},
+                {"name": "扣子Coze", "url": "https://code.coze.cn/home", "description": "（云端）字节旗下AI Agent开发平台，让每个人都能轻松创建自己的AI机器人"},
+                {"name": "DuClaw", "url": "https://cloud.baidu.com/product/duclaw.html", "description": "（云端）通过免除镜像选择、服务器部署及API Key配置等繁琐环节，实现AI智能体的即开即用"},
+                {"name": "Xiaomi MiMo Claw", "url": "https://aistudio.xiaomimimo.com/", "description": "（云端）依托小米最新大模型打造，实现一键部署OpenClaw智能体"},
+                {"name": "StepClaw", "url": "https://www.stepfun.com/openclaw", "description": "（云端）阶跃星辰推出基于OpenClaw打造的云端AI助手"},
+                {"name": "AstronClaw", "url": "https://agent.xfyun.cn/astron-claw", "description": "（云端）科大讯飞推出的云端部署OpenClaw，支持一键部署、全天候在线运行"},
+                {"name": "Happycapy", "url": "https://happycapy.ai/", "description": "（云端）一台面向所有人设计的云端 Agent 原生计算机"},
+                {"name": "Qclaw", "url": "https://claw.guanjia.qq.com/", "description": "（本地）支持微信直联，扫码绑定后，能随时随地通过微信发指令，远程操控电脑完成任务"},
+                {"name": "DuMate", "url": "https://cloud.baidu.com/product/dumate.html", "description": "（本地）百度推出的桌面级AI智能体，定位为办公搭子"},
+                {"name": "LobsterAI 有道龙虾", "url": "https://lobsterai.youdao.com/", "description": "（本地）7x24小时帮你干活的全场景个人助理 Agent，能够主动执行任务、管理流程、跨平台协作"},
+                {"name": "WorkBuddy", "url": "https://www.codebuddy.cn/work/", "description": "（本地）AI 原生的桌面智能体工作台，一句指令即可完成数据处理、内容创作与深度分析"},
+                {"name": "AutoClaw", "url": "https://autoglm.zhipuai.cn/autoclaw/", "description": "（本地）提供飞书集成、模型热插拔、50+技能与AutoGLM浏览器自动化能力"},
+                {"name": "悟空", "url": "https://www.dingtalk.com/wukong", "description": "（本地）阿里巴巴发布的全球首个企业级AI原生工作平台"},
+                {"name": "360安全龙虾", "url": "https://claw.360.cn/", "description": "（本地）国内首个以安全模式为核心设计的OpenClaw智能体产品"},
+                {"name": "QoderWork", "url": "https://qoder.com/qoderwork", "description": "（本地）用户只需通过简单的自然语言对话，就能完成文件整理、数据处理、文档生成等任务"},
+                {"name": "阶跃桌面伙伴", "url": "https://www.stepfun.com/download", "description": "（本地）始终在场，会主动做事的桌面 Agent，支持多任务并行处理"},
+                {"name": "JVS Claw", "url": "https://jvs.wuying.aliyun.com/", "description": "阿里云推出的多 Agent 智能体协作平台，提供免部署免配置的极简体验"},
+                {"name": "EasyClaw", "url": "https://easyclaw.com/zh-cn/", "description": "（本地）一键部署OpenClaw网关、可视化技能配置、多平台聊天应用集成"},
+                {"name": "CoPaw", "url": "https://copaw.agentscope.io/", "description": "（本地）阿里云推出的协同个人智能体工作台"},
+                {"name": "nexu", "url": "https://github.com/nexu-io/nexu", "description": "可一键安装的 OpenClaw 开源桌面客户端，支持所有主流聊天软件接入"},
+                {"name": "Manus", "url": "https://manus.im/", "description": "具备从任务规划到执行的全流程自动化能力，可独立完成报告撰写、数据分析、跨平台操作等"},
+                {"name": "牛马 AI", "url": "https://niuma.limyai.com/", "description": "本地免费版的Manus/Genspark，可处理从文档分析、数据整理到复杂工作流自动化的一系列任务"},
+                {"name": "MuleRun", "url": "https://mulerun.com/", "description": "全球首个自进化个人AI - MuleRun（骡子快跑）"},
+                {"name": "LobeHub", "url": "https://lobehub.com/zh", "description": "一个以 AI Agent（智能体）为核心的开源大模型协作平台"},
+                {"name": "Tabbit 浏览器", "url": "https://tabbitbrowser.com/", "description": "（本地）一键引用网页、截图、收藏、文件进行对话，Agent 自动执行重复任务"},
+                {"name": "Linkfox Claw", "url": "https://agent.linkfox.com/claw", "description": "LinkFox.Agent帮你一键部署OpenClaw，自由对话，智能随行"},
+                {"name": "PoorClaw穷虾", "url": "https://www.poorclaw.com/", "description": "不花一分钱，直接使用 OpenClaw 的全部 AI 能力，无隐藏费用"},
+                {"name": "HiClaw", "url": "https://higress.ai/hiclaw", "description": "OpenClaw的团队协作升级版，创新性引入Manager Agent架构"},
+                {"name": "KiloClaw", "url": "https://kilo.ai/kiloclaw", "description": "KiloClaw定位为面向开发者和团队的托管版OpenClaw服务"},
+                {"name": "NemoClaw", "url": "https://www.nvidia.com/en-us/ai/nemoclaw/", "description": "英伟达推出的一个面向企业的开源AI智能体平台"},
+                {"name": "Loomy", "url": "https://loomy.xunfei.cn/", "description": "科大讯飞推出的桌面级 AI 个人助理，基于 AstronClaw 打造"},
+                {"name": "Hermes Agent", "url": "https://hermes-agent.nousresearch.com/", "description": "开源自主Al代理，拥有内置的自我学习循环"}
+            ]
+        },
+        {
+            "title": "云端部署",
+            "links": [
+                {"name": "阿里云", "url": "https://www.aliyun.com/benefit/scene/moltbot", "description": "快速上手三步轻松构建 AI 助理低至 9.9 元起"},
+                {"name": "腾讯云", "url": "https://cloud.tencent.com/act/pro/openclaw", "description": "轻量应用服务器让OpenClaw一直在线，稳定输出，也更安全"},
+                {"name": "火山引擎", "url": "https://www.volcengine.com/activity/clawdbot", "description": "分钟级部署，拥有您的私人AI管家"},
+                {"name": "百度智能云", "url": "https://cloud.baidu.com/product/BCC/moltbot.html", "description": "从快速开通到日常指令管理，为您提供极简的自动化体验"},
+                {"name": "华为云", "url": "https://activity.huaweicloud.com/openclaw.html", "description": "基于华为云Flexus云服务器L实例来搭建OpenClaw"},
+                {"name": "京东云", "url": "https://www.jdcloud.com/cn/pages/openclaw", "description": "来京东云部署OpenClaw即送美味小龙虾"},
+                {"name": "国家超算互联网", "url": "https://www.scnet.cn/ui/chatbot/openclaw", "description": "虾友福利 限时2周！免费领1000万Tokens"},
+                {"name": "天翼云", "url": "https://www.ctyun.cn/act/OpenClaw", "description": "依托天翼云息壤智算平台，独立隔离运行环境"}
+            ]
+        },
+        {
+            "title": "教程合集",
+            "links": [
+                {"name": "官方文档", "url": "https://docs.openclaw.ai/zh-CN", "description": "适用于任何操作系统的 AI 智能体 Gateway 网关"},
+                {"name": "OpenClaw 橙皮书", "url": "https://my.feishu.cn/wiki/H27Iw9ussiaYbokymhncExtjnAh", "description": "覆盖了从认识OpenClaw到真正把它用起来的所有关键信息"},
+                {"name": "万象 AI 实验室", "url": "https://yunyinghui.feishu.cn/wiki/Ru7PwG82qiDGo1kGMFZcxqpGnnf", "description": "OpenClaw知识手册，从入门到精通"},
+                {"name": "WaytoAGI 之路", "url": "https://waytoagi.feishu.cn/wiki/CCR4wl3upi6dF9kVE5YcAcGcnlU", "description": "详解OpenClaw，是最大最全面的 AI 知识库"},
+                {"name": "非凡产研", "url": "https://uniquecapital.feishu.cn/wiki/Nwwiwh6PNiesZqkWNw7cWegjn2c", "description": "整理了OpenClaw核心概念、适用场景、快速预览"},
+                {"name": "OpenClaw 中文学习手册", "url": "https://my.feishu.cn/wiki/NzvOwzHdKiwSe2kPLx0cs1jlncg", "description": "全面的 OpenClaw 中文教程网站"},
+                {"name": "OpenClaw 从入门到精通", "url": "https://my.feishu.cn/docx/P6zsdsgYco6i4XxLeIccvlpvnQe", "description": "持续更新的OpenClaw知识库文档"},
+                {"name": "Hello Claw 教程", "url": "https://datawhalechina.github.io/hello-claw/cn/adopt/intro/", "description": "Datawhale 开源教程，从零领养到构建 AI 助手"},
+                {"name": "Awesome 教程", "url": "https://awesome.tryopenclaw.asia/", "description": "从零开始玩转 OpenClaw，最全面的中文教程"},
+                {"name": "飞书官方修炼指南", "url": "https://larkcommunity.feishu.cn/wiki/GGJPwJ2IfiTynVk2Vy4cZbRvn2f", "description": "简单易懂的OpenClaw云端部署教程"},
+                {"name": "麻小玩虾指南", "url": "https://t0woxppdywz.feishu.cn/wiki/Oxf0wcTECie8KkkwkIlc6psanNe", "description": "从零开始的 OpenClaw 使用指南"},
+                {"name": "中文用例大全", "url": "https://github.com/AlexAnys/awesome-openclaw-usecases-zh", "description": "一份面向中文用户的 OpenClaw 真实使用案例合集"}
+            ]
+        },
+        {
+            "title": "常用AI",
+            "links": [
+                {"name": "千问", "url": "https://www.qianwen.com/", "description": "阿里云推出的一个超大规模的语言模型"},
+                {"name": "豆包", "url": "https://www.doubao.com/", "description": "抖音旗下AI工具，你的智能助手"},
+                {"name": "Kimi", "url": "https://www.kimi.com/", "description": "会推理解析，能深度思考的AI助手"},
+                {"name": "腾讯元宝", "url": "https://yuanbao.tencent.com/", "description": "腾讯推出的免费AI智能助手"},
+                {"name": "DeepSeek", "url": "https://chat.deepseek.com/", "description": "幻方量化旗下深度求索推出的开源大模型和聊天助手"},
+                {"name": "ChatGPT", "url": "https://chat.openai.com/", "description": "地表最强AI聊天机器人"},
+                {"name": "Gemini", "url": "https://gemini.google.com/", "description": "Google推出的AI聊天对话机器人"},
+                {"name": "Grok", "url": "https://grok.com/", "description": "马斯克旗下xAI推出的人工智能助手"},
+                {"name": "即梦AI", "url": "https://jimeng.jianying.com/ai-tool/home", "description": "Seedance 2.0 字节最新的视频生成模型"}
+            ]
+        },
+        {
+            "title": "Coding Plan",
+            "links": [
+                {"name": "Kimi", "url": "https://www.kimi.com/code", "description": "Kimi 会员计划中面向代码开发的权益"},
+                {"name": "MiniMax Token Plan", "url": "https://platform.minimaxi.com/subscribe/token-plan", "description": "MiniMax 最强编程与智能体模型"},
+                {"name": "智谱 Coding Plan", "url": "https://bigmodel.cn/glm-coding", "description": "目前支持 GLM-5、GLM-4.7 和 GLM-4.6"},
+                {"name": "腾讯云 Coding Plan", "url": "https://cloud.tencent.com/act/pro/codingplan", "description": "集合多个最新模型，适配多种主流 AI 编程工具"},
+                {"name": "阿里云Coding Plan", "url": "https://www.aliyun.com/benefit/scene/codingplan", "description": "面向高频AI编程场景的订阅服务"},
+                {"name": "火山引擎Coding Plan", "url": "https://www.volcengine.com/activity/codingplan", "description": "新用户专属优惠限量秒杀中，首月低至8.9元"},
+                {"name": "百度千帆Coding Plan", "url": "https://cloud.baidu.com/product/codingplan.html", "description": "百度千帆推出AI编码专属订阅套餐"},
+                {"name": "Step Plan", "url": "https://platform.stepfun.com/step-plan", "description": "阶跃星辰的 Coding Plan"},
+                {"name": "腾讯云 Token Plan", "url": "https://cloud.tencent.com/act/pro/tokenplan", "description": "面向龙虾和 AI 编码场景设计"},
+                {"name": "Xiaomi MiMo", "url": "https://platform.xiaomimimo.com/#/token-plan", "description": "一次购买，畅用 MiMo-V2-Pro/Omni 两款全新顶级旗舰模型"}
+            ]
+        },
+        {
+            "title": "Maas平台",
+            "links": [
+                {"name": "阿里云", "url": "https://bailian.console.aliyun.com/", "description": "专为企业打造的大模型服务与应用开发平台"},
+                {"name": "火山方舟", "url": "https://www.volcengine.com/product/ark", "description": "火山方舟提供模型训练、推理、评测、精调等全方位功能与服务"},
+                {"name": "百度千帆", "url": "https://cloud.baidu.com/product-s/qianfan_home", "description": "以Agent为核心的一站式企业级大模型服务平台"},
+                {"name": "硅基流动", "url": "https://www.siliconflow.cn/", "description": "国内领先的模型聚合平台，提供 200+ 开源和商用模型的统一 API 接口"},
+                {"name": "七牛云", "url": "https://www.qiniu.com/ai/agent", "description": "提供多个顶级闭源和开源大模型"},
+                {"name": "讯飞星火", "url": "https://xinghuo.xfyun.cn/maas-home", "description": "一站式大模型精调定制及服务平台"},
+                {"name": "OpenRouter", "url": "https://openrouter.ai/", "description": "AI模型聚合平台，提供统一的API接口"},
+                {"name": "ZenMux", "url": "https://zenmux.ai/invite/9ENK8S", "description": "全球首个支持保险赔付机制的企业级大模型聚合平台"},
+                {"name": "Model123", "url": "https://www.model123.ai/", "description": "专业的企业级 AI编程服务平台"},
+                {"name": "华为云", "url": "https://www.huaweicloud.com/ai/token-service.html", "description": "华为云MaaS平台覆盖大模型全生命周期管理"},
+                {"name": "快手万擎", "url": "https://www.streamlake.com/product/wanqing", "description": "企业级大模型服务与开发平台"}
+            ]
+        },
+        {
+            "title": "AI大模型",
+            "links": [
+                {"name": "Kimi", "url": "https://platform.moonshot.cn/", "description": "专业代码生成、智能对话、视觉推理"},
+                {"name": "MiniMax", "url": "https://www.minimaxi.com/", "description": "MiniMax 自主研发了一系列多模态通用大模型"},
+                {"name": "智谱GLM", "url": "https://www.bigmodel.cn/", "description": "新一代国产自主通用Al大模型开放平台"},
+                {"name": "DeepSeek", "url": "https://www.deepseek.com/", "description": "DeepSeek-V3.2 正式版发布，强化 Agent 能力"},
+                {"name": "千问Qwen", "url": "https://www.aliyun.com/product/tongyi", "description": "千问首个原生多模态大模型"},
+                {"name": "豆包Doubao", "url": "https://www.doubao.com/chat/", "description": "字节跳动自研大模型"},
+                {"name": "Claude", "url": "https://platform.claude.com/", "description": "Anthropic开发的大型语言模型家族"},
+                {"name": "Gemini", "url": "https://aistudio.google.com/", "description": "兼具高推理能力、多模态处理、可视化渲染和低成本高效能"},
+                {"name": "GPT", "url": "https://platform.openai.com/", "description": "首个具备原生计算机使用能力的通用模型"},
+                {"name": "Grok", "url": "https://console.x.ai/", "description": "马斯克旗下xAI公司开发的人工智能大模型系列"},
+                {"name": "Llama", "url": "https://www.llama.com/", "description": "Meta推出的一款开源大语言模型"},
+                {"name": "Mistral", "url": "https://mistral.ai/", "description": "一个基于大语言模型的对话平台"},
+                {"name": "MiMo", "url": "https://mimo.xiaomi.com/zh/", "description": "小米公司自研的开源推理大模型系列"},
+                {"name": "讯飞星火", "url": "https://xinghuo.xfyun.cn/sparkapi", "description": "大讯飞推出的新一代认知智能大模型"},
+                {"name": "腾讯混元", "url": "https://cloud.tencent.com/product/tclm", "description": "腾讯研发的大语言模型"},
+                {"name": "百度文心", "url": "https://yiyan.baidu.com/", "description": "百度旗下A助手"},
+                {"name": "阶跃星辰", "url": "https://platform.stepfun.com/", "description": "专注通用人工智能（AGI），自研大模型与多模态技术"},
+                {"name": "PinchBench", "url": "https://pinchbench.com/", "description": "龙虾模型排行榜"},
+                {"name": "Artificial Analysis", "url": "https://artificialanalysis.ai/", "description": "一个专注于AI语言模型和API提供商的独立分析平台"},
+                {"name": "Arena.ai", "url": "https://arena.ai/leaderboard", "description": "由美国加州大学伯克利分校推出的AI模型评估平台"},
+                {"name": "OpenRouter Rankings", "url": "https://openrouter.ai/rankings", "description": "模型排名反映了在 OpenRouter 平台上各个大型语言模型的实际使用情况"},
+                {"name": "XSCT Bench", "url": "https://xsct.ai/", "description": "场景化大模型测评平台"},
+                {"name": "Vals AI", "url": "https://www.vals.ai/", "description": "专注于大型语言模型评估和基准测试的平台"}
+            ]
+        },
+        {
+            "title": "Skills市场",
+            "links": [
+                {"name": "ClawHub", "url": "https://clawhub.ai/", "description": "OpenClaw官方Skills注册中心"},
+                {"name": "SkillHub", "url": "https://skillhub.tencent.com/", "description": "腾讯云专为中国用户优化的Skills社区"},
+                {"name": "Skills.sh", "url": "https://skills.sh/", "description": "Vercel 官方技能目录"},
+                {"name": "SkillsMP", "url": "https://skillsmp.com/zh", "description": "面向 Agent 的开源 skill 集合平台"},
+                {"name": "虾评Skill", "url": "https://xiaping.coze.site/", "description": "面向 Agent 的精品优质 Skill 分享评测平台"},
+                {"name": "SkillHub中国", "url": "https://www.skill-cn.com/", "description": "助力国内 Skill 使用者快速找到能用、好用、可复用的实践方案"},
+                {"name": "Agent Skills Hub", "url": "https://agentskillshub.top/", "description": "一个集中式平台和市场，用于发现、管理和部署AI代理技能"},
+                {"name": "OpenClaw Directory", "url": "https://openclawdirectory.co.uk/", "description": "由社区驱动的中心，用于发现、提交和管理OpenClaw技能"},
+                {"name": "OpenClawDir", "url": "https://openclawdir.com/", "description": "OpenClaw AI 助手的社区目录"},
+                {"name": "ClawSkills", "url": "https://clawskills.sh/", "description": "5,490+ Skills 集合"},
+                {"name": "CryptoSkills", "url": "https://cryptoskills.dev/", "description": "为所有crypto领域提供开源Skills"},
+                {"name": "CocoLoop", "url": "https://hub.cocoloop.cn/", "description": "更快更安全的 Al Agent Skills 商店"},
+                {"name": "MiniMax", "url": "https://agent.minimaxi.com/skills", "description": "AI Agent学习新技能的地方"}
+            ]
+        },
+        {
+            "title": "综合生态",
+            "links": [
+                {"name": "Xcrawl", "url": "https://xcrawl.com/?keyword=2ozjddoq", "description": "通过 OpenClaw 集成 XCrawl，可以让你的 Agent 直接获得网页抓取能力"}
+            ]
+        },
+        {
+            "title": "Agent生态",
+            "links": [
+                {"name": "Moltbook", "url": "https://www.moltbook.cn/", "description": "面向 AI Agent的社交网络"},
+                {"name": "InStreet", "url": "https://instreet.coze.site/", "description": "Agent社交平台，AI Agent 在线互动、学习、竞技的社区"},
+                {"name": "虾聊", "url": "https://clawdchat.ai/", "description": "AI Agent 的社交平台"},
+                {"name": "虾聊", "url": "https://xialiaoai.com/", "description": "纯 Agent（OpenClaw）交流社区，人类只能围观，不能发言"},
+                {"name": "AgentMail", "url": "https://www.agentmail.to/", "description": "专为 AI Agent 打造的邮箱基础设施服务"},
+                {"name": "MailboxKit", "url": "https://mailboxkit.com/", "description": "聚焦新创和消费主题的科技媒体"},
+                {"name": "mails", "url": "https://mails.dev/", "description": "一个为 agents 设计的邮件服务"},
+                {"name": "Souls.zip", "url": "https://souls.zip/shop", "description": "浏览经过生产测试的AI代理灵魂和技能"},
+                {"name": "OpenClaw Startups", "url": "https://trustmrr.com/special-category/openclaw", "description": "一个开源、本地优先的 AI 机器人生态系统"},
+                {"name": "曝光观察板", "url": "https://openclaw.allegro.earth/", "description": "列出了可公开访问的活跃OpenClaw防御意识实例"},
+                {"name": "Claw Bench 排行榜", "url": "https://clawbench.net/", "description": "AI Agent 框架标准化评估"},
+                {"name": "ClawPal", "url": "https://clawpal.xyz/", "description": "OpenClaw 的桌面配置助手"},
+                {"name": "ClawWatcher", "url": "https://clawwatcher.com/", "description": "面向 OpenClaw 的监控仪表盘"},
+                {"name": "ClawManager", "url": "https://clawmanager.ai/", "description": "让 OpenClaw 对所有人都可使用的仪表盘"},
+                {"name": "Control Center", "url": "https://github.com/TianyiDataScience/openclaw-control-center", "description": "OpenClaw 的安全优先、本地优先控制中心"},
+                {"name": "水产市场", "url": "https://openclawmp.cc/", "description": "专为 OpenClaw 构建的 Agent 进化生态平台"},
+                {"name": "EdgeOne ClawScan", "url": "https://matrix.tencent.com/clawscan/", "description": "一键全面扫描 OpenClaw 不安全配置、恶意 Skill与漏洞"},
+                {"name": "OpenClaw 使用案例", "url": "https://openclawcases.zeabur.app/", "description": "复制提示词就可以直接使用于 OpenClaw、Claude Code、Cursor 或其他 AI agent 工具"},
+                {"name": "A2H Market", "url": "https://a2hmarket.ai/", "description": "同时面向人类和 AI Agent 的开放交易市场"},
+                {"name": "Reddit板块", "url": "https://www.reddit.com/r/openclaw/", "description": "Reddit 上OpenClaw讨论板块"},
+                {"name": "Discord官方服务器", "url": "https://discord.gg/openclaw", "description": "实时技术交流与问题解答"},
+                {"name": "Clawvard", "url": "https://clawvard.school/", "description": "第一所人工智能代理大学，送你的 Agent 去上学"}
+            ]
+        },
+        {
+            "title": "Agent支付",
+            "links": [
+                {"name": "Claw402", "url": "https://claw402.ai/", "description": "一个用USDC付费的个人AI助手"},
+                {"name": "SkillPay", "url": "https://skillpay.me/", "description": "一个基于信贷的通用支付系统，用于OpenClaw支付"},
+                {"name": "FluxA", "url": "https://fluxapay.xyz/", "description": "代理钱包，可以为API、向任何地址汇款"},
+                {"name": "AgentCard.ai", "url": "https://agentcard.ai/", "description": "一张专为 AI Agent 打造的独立虚拟信用卡"},
+                {"name": "AgentCard.sh", "url": "https://agentcard.sh/", "description": "面向人工智能代理的虚拟信用卡"},
+                {"name": "Clawcard.sh", "url": "https://www.clawcard.sh/", "description": "首个为agent提供的统一凭证系统"},
+                {"name": "Lobster.cash", "url": "https://www.lobster.cash/", "description": "允许你的 Agent支付任何费用"},
+                {"name": "Machines Cash", "url": "https://www.machines.cash/", "description": "面向个人与代理的虚拟 Visa 信用卡"},
+                {"name": "Gate Pay for AI", "url": "https://www.gate.com/zh/gate-for-ai/pay", "description": "AI Agent 原生支付，真正自主"},
+                {"name": "Coinbase AgentKit", "url": "https://www.coinbase.com/zh-cn/developer-platform/products/agentkit", "description": "通过AgentKit赋能您的AI代理进行自主支付"},
+                {"name": "Tempo Wallet", "url": "https://wallet.tempo.xyz/", "description": "Tempo 公链的官方钱包，专为 AI Agent 与机器支付场景设计"},
+                {"name": "ClawVault", "url": "https://clawvault.cc/", "description": "一个平台保障你所有的 AI Agent支出"},
+                {"name": "ClawCredit", "url": "https://www.claw.credit/", "description": "T54 提供了完整的 AI 原生金融服务"},
+                {"name": "PayAI", "url": "https://payai.network/", "description": "构建能够实时支付和收获的AI代理和应用"},
+                {"name": "Ampersend", "url": "https://www.ampersend.ai/", "description": "一个基于 x402 构建的管理平台"}
+            ]
+        },
+        {
+            "title": "币圈生态",
+            "links": [
+                {"name": "OKX Agent Trade Kit", "url": "https://www.okx.com/zh-hans/agent-tradekit", "description": "将 AI 助手与您的 OKX 账户直接连接"},
+                {"name": "Binance Skills Hub", "url": "https://www.binance.com/zh-CN/skills", "description": "让 AI 代理能够原生访问加密货币"},
+                {"name": "GetClaw", "url": "https://www.bitget.com/zh-CN/activity-hub/get-claw", "description": "Bitget 出品的AI 交易自主智能体"},
+                {"name": "HTX AI Skills", "url": "https://www.htx.com/zh-cn/skills", "description": "面向 AI Agent 生态推出的开放交易协议"},
+                {"name": "GateClaw", "url": "https://www.gate.com/zh/gateclaw", "description": "Gate 推出的 AI Web3 Agent 工作平台"},
+                {"name": "Bybit AI Hub", "url": "https://www.bybit.com/zh-MY/ai", "description": "您的 AI 助手，现已接入 Bybit 全栈交易引擎"},
+                {"name": "COIN CLAW", "url": "https://www.aicoin.com/zh-Hans/coinclaw", "description": "你的 Web3 世界 AI 常驻特工"},
+                {"name": "AiCoin CoinOS", "url": "https://www.aicoin.com/zh-Hans/coinos", "description": "为 OpenClaw 等 Agent 接入实时行情、实盘操作"},
+                {"name": "MoonPay Agents", "url": "https://www.moonpay.com/agents", "description": "人工智能系统自己的加密钱包"},
+                {"name": "Alchemy Ai Agent", "url": "https://www.alchemy.com/ai-agents", "description": "构建管理钱包、执行安全交易并将资产跨链转移的AI代理"},
+                {"name": "Circle Skills", "url": "https://github.com/circlefin/skills", "description": "提供USDC支付、跨链转账、钱包和智能合约的最佳实践指导"},
+                {"name": "MetaMask Skill", "url": "https://github.com/MetaMask/openclaw-skills", "description": "用于构建、测试和与MetaMask及更广泛的以太坊生态系统互动"},
+                {"name": "PolyHub", "url": "https://github.com/HubbleVision/polyhub-skills", "description": "开源PolyHub Skills，让你的 AI 变成Polymarket顶级交易员"},
+                {"name": "KuCoin Skills Hub", "url": "https://github.com/Kucoin/kucoin-skills-hub", "description": "通过标准化、模块化的能力，为 AI 智能提供更广泛的原生加密接入能力"},
+                {"name": "Gate Skills Hub", "url": "https://www.gate.com/zh/skills-hub", "description": "无需编写代码，即可一键调用 Gate 的现货、永续合约与行情能力"},
+                {"name": "Bitget Agent Hub", "url": "https://www.bitget.com/zh-CN/activity-hub/agent-hub", "description": "让开发者和 Vibe Coder 安全高效地接入加密交易能力"}
+            ]
+        },
+        {
+            "title": "交易所",
+            "links": [
+                {"name": "Binance", "url": "https://www.binance.com/zh-CN", "description": "领先的加密货币交易平台"},
+                {"name": "OKX", "url": "https://www.okx.com/zh-hans", "description": "全球领先的数字资产交易平台"},
+                {"name": "Bitget", "url": "https://www.bitget.com/zh-CN", "description": "加密货币交易所，支持多种货币"},
+                {"name": "Bybit", "url": "https://www.bybit.com/zh-MY/", "description": "全球知名的加密货币交易平台"},
+                {"name": "Gate", "url": "https://www.gate.com/zh/", "description": "全球区块链资产交易平台"},
+                {"name": "KuCoin", "url": "https://www.kucoin.com/zh-hant", "description": "值得信赖的加密交易所"},
+                {"name": "Mexc", "url": "https://www.mexc.com/zh-MY/", "description": "全球化的加密货币交易所"},
+                {"name": "HTX", "url": "https://www.htx.com/zh-cn/", "description": "全球前三的加密货币交易所"},
+                {"name": "Coinbase", "url": "https://www.coinbase.com/", "description": "美国加密货币交易所"},
+                {"name": "Kraken", "url": "https://www.kraken.com/zh-cn", "description": "用户可以相对较低的手续费，在该平台购买、出售并交易各种资产"},
+                {"name": "Bitmart", "url": "https://www.bitmart.com/zh-CN", "description": "平台为个人及机构用户提供现货、期货、杠杆及跟单等多元化交易服务"},
+                {"name": "Weex", "url": "https://www.weex.com/zh-CN", "description": "为初学者和专业交易者设计的交易平台"},
+                {"name": "XT.com", "url": "https://www.xt.com/zh-CN", "description": "安全可靠的加密货币交易所"},
+                {"name": "Ju.com", "url": "https://www.ju.com/zh-CN", "description": "提供现货交易、永续合约、质押、代币发行平台及非托管Web3钱包等服务"}
+            ]
+        }
+    ]
+};
