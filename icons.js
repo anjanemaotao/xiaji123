@@ -244,7 +244,9 @@ var iconMap = {
     "Liblib": "icons/Liblib.webp",
     "Oii": "icons/Oii.webp",
     "即梦": "icons/即梦_画布.webp",
-    "星流": "icons/星流.webp"
+    "星流": "icons/星流.webp",
+    // AI音乐创作
+    "歌歌AI写歌": "icons/歌歌AI写歌.jpg"
 };
 
 // 根据网站名称获取图标
