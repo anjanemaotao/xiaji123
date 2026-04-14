@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "1.5.0",
+    "version": "1.6.0",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -196,6 +196,31 @@ var siteData = {
                 {"name": "Oii", "url": "https://oiioii.ai/", "description": "AI创意画布，一站式AI创作工具"},
                 {"name": "即梦", "url": "https://jimeng.jianying.com/ai-tool/assets-canvas", "description": "字节跳动推出的AI创作画布"},
                 {"name": "星流", "url": "https://www.xingliu.art/", "description": "AI艺术创作平台"}
+            ]
+        },
+        {
+            "title": "语音大模型",
+            "links": [
+                {"name": "VoxCPM2", "url": "https://voxcpm.modelbest.cn/", "description": "（开源）面壁智能开源，2B参数，支持30国语种+9大方言"},
+                {"name": "Qwen3-TTS", "url": "https://tongyi.aliyun.com/", "description": "（开源）阿里开源，3秒克隆，97ms延迟"},
+                {"name": "CosyVoice3", "url": "https://github.com/FunAudioLLM/CosyVoice", "description": "（开源）阿里FunAudioLLM开源，中文优化"},
+                {"name": "GPT-SoVITS", "url": "https://github.com/RVC-Boss/GPT-SoVITS", "description": "（开源）社区开源，高保真音色克隆"},
+                {"name": "Fish Speech", "url": "https://fish.audio/", "description": "（开源）阶跃星辰开源，多语言支持"},
+                {"name": "ElevenLabs", "url": "https://elevenlabs.io/", "description": "全球语音自然度标杆"},
+                {"name": "Voxtral", "url": "https://mistral.ai/", "description": "（开源）Mistral开源，3秒克隆"},
+                {"name": "IndexTTS-2", "url": "https://github.com/index-tts/indextts", "description": "（开源）零样本克隆，情绪控制"},
+                {"name": "Spark-TTS", "url": "https://github.com/SparkAudio/Spark-TTS", "description": "（开源）腾讯开源，基于Qwen"},
+                {"name": "MiniMax 语音", "url": "https://www.minimaxi.com/audio", "description": "支持语音合成、音色设计、声音克隆、人声提取"},
+                {"name": "OpenVoice", "url": "https://research.myshell.ai/open-voice", "description": "（开源）MyShell开源，MIT协议"},
+                {"name": "Whisper", "url": "https://github.com/openai/whisper", "description": "（开源）OpenAI开源，99种语言"},
+                {"name": "GLM-ASR-Nano", "url": "https://www.bigmodel.cn/", "description": "（开源）智谱开源，支持中国方言"},
+                {"name": "Qwen3-ASR", "url": "https://tongyi.aliyun.com/", "description": "（开源）阿里开源，多语言识别"},
+                {"name": "FunASR", "url": "https://github.com/modelscope/FunASR", "description": "（开源）阿里达摩院开源，工业级ASR"},
+                {"name": "Qwen-Omni", "url": "https://tongyi.aliyun.com/", "description": "（开源）阿里开源，语音对话模型"},
+                {"name": "GLM-4.1V-Thinking-Flash", "url": "https://www.bigmodel.cn/", "description": "（开源）智谱免费，语音+视觉多模态"},
+                {"name": "SkyReels-V3", "url": "https://skyreels.ai/", "description": "昆仑万维，视频+语音生成"},
+                {"name": "PaddleSpeech", "url": "https://github.com/PaddlePaddle/PaddleSpeech", "description": "（开源）百度开源，全流程语音工具"},
+                {"name": "Sherpa-ONNX", "url": "https://github.com/k2-fsa/sherpa-onnx", "description": "（开源）离线语音识别/合成框架"}
             ]
         },
         {
