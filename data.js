@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "2.2.0",
+    "version": "2.2.1",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -261,8 +261,6 @@ var siteData = {
                 {"name": "Jellyfish", "url": "https://github.com/chatfire-AI/jellyfish", "description": "（开源）AI短剧工厂，解决角色漂移问题"},
                 {"name": "剧火AI", "url": "https://www.juhuo.ai/", "description": "AI编导工具，懂短剧懂情绪"},
                 {"name": "可灵AI", "url": "https://klingai.kuaishou.com/", "description": "快手出品，AI视频生成"},
-                {"name": "造梦专家", "url": "https://zhaomeng.kuaishou.com/", "description": "快手一站式AI漫剧生产平台"},
-                {"name": "漫剧专家", "url": "https://manju.kuaishou.com/", "description": "快手AI漫剧生产、变现平台"},
                 {"name": "盼趣AI", "url": "https://panqu.com/", "description": "AI短剧创作平台，秒级呈现分镜与成片"},
                 {"name": "火宝短剧", "url": "https://github.com/chatfire-AI/huobao-drama", "description": "（开源）一站式短剧生成平台"},
                 {"name": "灵果短剧AI", "url": "https://github.com/LingGuoAI/LingGuo-Drama", "description": "（开源）短剧/漫剧生成平台"},
