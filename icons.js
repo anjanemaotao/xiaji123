@@ -246,6 +246,9 @@ var iconMap = {
     "即梦": "icons/即梦_画布.webp",
     "星流": "icons/星流.webp",
     // AI音乐创作
+    "音潮": "icons/音潮.svg",
+    "音创AI": "icons/音创AI.svg",
+    "乐悟AI": "icons/乐悟AI.svg",
     "歌歌AI写歌": "icons/歌歌AI写歌.jpg"
 };
 
