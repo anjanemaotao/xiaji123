@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "1.3.0",
+    "version": "1.4.0",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -175,7 +175,18 @@ var siteData = {
                 {"name": "通义灵码", "url": "https://lingma.aliyun.com/", "description": "阿里云推出的智能编码助手，国内开发者首选"},
                 {"name": "代码小浣熊", "url": "https://code.sensetime.com/", "description": "商汤科技推出的AI编程助手"},
                 {"name": "豆包MarsCode", "url": "https://www.marscode.cn/", "description": "字节跳动推出的AI驱动一站式开发平台，国内免费"},
-                {"name": "Kimi Code", "url": "https://kimi.moonshot.cn/code", "description": "月之暗面推出的编程工具，擅长代码与Agentic任务"}
+                {"name": "Kimi Code", "url": "https://kimi.moonshot.cn/code", "description": "月之暗面推出的编程工具，擅长代码与Agentic任务"},
+                {"name": "Windsurf", "url": "https://codeium.com/windsurf", "description": "Codeium推出的AI原生IDE，流畅编辑体验"},
+                {"name": "Codeium", "url": "https://codeium.com/", "description": "现代编码超级工具，免费AI代码补全"},
+                {"name": "Google AI Studio", "url": "https://aistudio.google.com/", "description": "Google推出的AI开发平台，快速构建Gemini应用"},
+                {"name": "Cline", "url": "https://cline.bot/", "description": "开源AI编程助手，VS Code插件"},
+                {"name": "CodeGeeX", "url": "https://codegeex.cn/", "description": "清华+智谱联合打造的多语言代码生成模型"},
+                {"name": "JoyCode", "url": "https://joycode.jd.com/", "description": "京东云推出的智能编程助手"},
+                {"name": "Amazon Q Developer", "url": "https://aws.amazon.com/q/developer/", "description": "亚马逊推出的AI编程助手，最强代码接受率"},
+                {"name": "Continue", "url": "https://continue.dev/", "description": "开源AI代码助手，支持自定义模型"},
+                {"name": "Zed AI", "url": "https://zed.dev/", "description": "Rust编写的高性能编辑器，原生集成Claude"},
+                {"name": "Aider", "url": "https://aider.chat/", "description": "终端AI编程助手，开源免费"},
+                {"name": "v0", "url": "https://v0.dev/", "description": "Vercel推出的AI代码生成器，快速构建UI"}
             ]
         },
         {
