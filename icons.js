@@ -276,7 +276,12 @@ var iconMap = {
     "Tunee": "icons/Tunee.png",
     "MiniMax 音乐": "icons/MiniMax_语音.ico",
     "Filmora AI Music": "icons/Filmora_AI_Music.png",
-    "Soundraw": "icons/Soundraw.png"
+    "Soundraw": "icons/Soundraw.png",
+    // 新增 2026-04-14
+    "山海·知音": "icons/山海知音.png",
+    "华为Agent Arts": "icons/华为Agent_Arts.png",
+    "BetterYeah AI": "icons/BetterYeah_AI.png",
+    "京东云JoyAgent": "icons/京东云JoyAgent.png"
 };
 
 // 根据网站名称获取图标

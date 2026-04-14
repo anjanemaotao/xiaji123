@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "2.0.0",
+    "version": "2.1.0",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -148,7 +148,10 @@ var siteData = {
                 {"name": "LangFlow", "url": "https://langflow.org/", "description": "开源界顶流工具，节点连线式工作流编排"},
                 {"name": "飞书Agent Builder", "url": "https://www.feishu.cn/product/agent", "description": "飞书办公生态深度融合，会议纪要、报销审核等"},
                 {"name": "豆包Agent Studio", "url": "https://www.doubao.com/agent", "description": "抖音集团旗下，短视频脚本生成、直播话术优化"},
-                {"name": "JeecgBoot", "url": "https://www.jeecg.com/", "description": "新一代AI低代码平台，支持多模型接入"}
+                {"name": "JeecgBoot", "url": "https://www.jeecg.com/", "description": "新一代AI低代码平台，支持多模型接入"},
+                {"name": "华为Agent Arts", "url": "https://www.huawei.com/", "description": "华为企业级智能体开发平台，4月30日公测"},
+                {"name": "BetterYeah AI", "url": "https://www.betteryeah.com/", "description": "企业级AI智能体开发平台，独创NeuroFlow框架"},
+                {"name": "京东云JoyAgent", "url": "https://www.jdcloud.com/", "description": "开源企业级智能体，GAIA准确率超77%"}
             ]
         },
         {
@@ -220,7 +223,8 @@ var siteData = {
                 {"name": "GLM-4.1V-Thinking-Flash", "url": "https://www.bigmodel.cn/", "description": "（开源）智谱免费，语音+视觉多模态"},
                 {"name": "SkyReels-V3", "url": "https://skyreels.ai/", "description": "昆仑万维，视频+语音生成"},
                 {"name": "PaddleSpeech", "url": "https://github.com/PaddlePaddle/PaddleSpeech", "description": "（开源）百度开源，全流程语音工具"},
-                {"name": "Sherpa-ONNX", "url": "https://github.com/k2-fsa/sherpa-onnx", "description": "（开源）离线语音识别/合成框架"}
+                {"name": "Sherpa-ONNX", "url": "https://github.com/k2-fsa/sherpa-onnx", "description": "（开源）离线语音识别/合成框架"},
+                {"name": "山海·知音", "url": "https://www.unisound.com/", "description": "云知声出品，支持30+方言、全双工交互，首包延迟90ms"}
             ]
         },
         {
