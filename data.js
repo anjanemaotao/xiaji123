@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "1.2.0",
+    "version": "1.3.0",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -167,7 +167,15 @@ var siteData = {
                 {"name": "Cursor", "url": "https://cursor.com/", "description": "AI原生IDE，流畅编辑体验、并行Agent"},
                 {"name": "GitHub Copilot", "url": "https://github.com/features/copilot", "description": "1500万开发者基数、企业合规"},
                 {"name": "Codex CLI", "url": "https://github.com/openai/codex", "description": "OpenAI终端Agent，ChatGPT生态"},
-                {"name": "Gemini CLI", "url": "https://github.com/google/gemini-cli", "description": "Google终端Agent，免费、与Google服务集成"}
+                {"name": "Gemini CLI", "url": "https://github.com/google/gemini-cli", "description": "Google终端Agent，免费、与Google服务集成"},
+                {"name": "Trae", "url": "https://www.trae.com.cn/", "description": "字节跳动推出的AI原生IDE，支持SOLO模式全流程自动化"},
+                {"name": "Qoder", "url": "https://qoder.com/", "description": "阿里推出的AI编程编辑器，支持智能体协同编程"},
+                {"name": "CodeBuddy", "url": "https://copilot.tencent.com/", "description": "腾讯云代码助手，基于混元+DeepSeek双轮模型"},
+                {"name": "文心快码", "url": "https://comate.baidu.com/", "description": "百度推出的智能代码助手，基于文心大模型"},
+                {"name": "通义灵码", "url": "https://lingma.aliyun.com/", "description": "阿里云推出的智能编码助手，国内开发者首选"},
+                {"name": "代码小浣熊", "url": "https://code.sensetime.com/", "description": "商汤科技推出的AI编程助手"},
+                {"name": "豆包MarsCode", "url": "https://www.marscode.cn/", "description": "字节跳动推出的AI驱动一站式开发平台，国内免费"},
+                {"name": "Kimi Code", "url": "https://kimi.moonshot.cn/code", "description": "月之暗面推出的编程工具，擅长代码与Agentic任务"}
             ]
         },
         {

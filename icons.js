@@ -1,5 +1,5 @@
 // 网站图标映射表 - 本地化版本
-// 共 213 个网站图标
+// 共 221 个网站图标
 var iconMap = {
     "OpenClaw 官网": "icons/OpenClaw_官网.webp",
     "官方GitHub": "icons/官方GitHub.svg",
@@ -218,7 +218,16 @@ var iconMap = {
     "Cursor": "icons/Cursor.webp",
     "GitHub Copilot": "icons/GitHub_Copilot.webp",
     "Codex CLI": "icons/Codex_CLI.webp",
-    "Gemini CLI": "icons/Gemini_CLI.webp"
+    "Gemini CLI": "icons/Gemini_CLI.webp",
+    // 国内AI编程工具
+    "Trae": "icons/Trae.webp",
+    "Qoder": "icons/Qoder.webp",
+    "CodeBuddy": "icons/CodeBuddy.webp",
+    "文心快码": "icons/文心快码.webp",
+    "通义灵码": "icons/通义灵码.webp",
+    "代码小浣熊": "icons/代码小浣熊.webp",
+    "豆包MarsCode": "icons/豆包MarsCode.webp",
+    "Kimi Code": "icons/Kimi_Code.webp"
 };
 
 // 根据网站名称获取图标
