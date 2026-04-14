@@ -245,11 +245,42 @@ var iconMap = {
     "Oii": "icons/Oii.webp",
     "即梦": "icons/即梦_画布.webp",
     "星流": "icons/星流.webp",
+    // 语音大模型
+    "VoxCPM2": "icons/VoxCPM2.png",
+    "Qwen3-TTS": "icons/Qwen3-TTS.png",
+    "Fish Speech": "icons/Fish_Speech.png",
+    "ElevenLabs": "icons/ElevenLabs.png",
+    "Voxtral": "icons/Voxtral.png",
+    "OpenVoice": "icons/OpenVoice.png",
+    "GLM-ASR-Nano": "icons/GLM_ASR_Nano.png",
+    "SkyReels-V3": "icons/SkyReels_V3.png",
+    "PaddleSpeech": "icons/PaddleSpeech.png",
+    "MiniMax 语音": "icons/MiniMax_语音.ico",
     // AI音乐创作
+    "Suno": "icons/Suno.png",
+    "Udio": "icons/Udio.png",
+    "Mureka": "icons/Mureka.png",
+    "Soundful": "icons/Soundful.png",
+    "Mubert": "icons/Mubert.svg",
+    "AIVA": "icons/AIVA.png",
+    "Boomy": "icons/Boomy.ico",
+    "Stable Audio": "icons/Stable_Audio.png",
+    "Google Lyria": "icons/Google_Lyria.svg",
+    "Producer.AI": "icons/Producer_AI.png",
     "音潮": "icons/音潮.svg",
+    "天工SkyMusic": "icons/天工SkyMusic.png",
+    "网易天音 XStudio": "icons/网易天音_XStudio.png",
+    "海绵音乐": "icons/海绵音乐.png",
+    "谱乐": "icons/谱乐.png",
+    "妙音AI": "icons/妙音AI.svg",
+    "蘑兔AI": "icons/蘑兔AI.ico",
+    "歌歌AI写歌": "icons/歌歌AI写歌.jpg",
     "音创AI": "icons/音创AI.svg",
+    "Tunee": "icons/Tunee.png",
     "乐悟AI": "icons/乐悟AI.svg",
-    "歌歌AI写歌": "icons/歌歌AI写歌.jpg"
+    "MiniMax 音乐": "icons/MiniMax_语音.ico",
+    "Filmora AI Music": "icons/Filmora_AI_Music.png",
+    "Soundraw": "icons/Soundraw.png"
 };
 
 // 根据网站名称获取图标
