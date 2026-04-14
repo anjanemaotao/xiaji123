@@ -281,7 +281,20 @@ var iconMap = {
     "山海·知音": "icons/山海知音.png",
     "华为Agent Arts": "icons/华为Agent_Arts.png",
     "BetterYeah AI": "icons/BetterYeah_AI.png",
-    "京东云JoyAgent": "icons/京东云JoyAgent.png"
+    "京东云JoyAgent": "icons/京东云JoyAgent.png",
+    // 短剧Agent
+    "小云雀AI": "icons/小云雀AI.webp",
+    "ZenStudio": "icons/ZenStudio.webp",
+    "Jellyfish": "icons/GitHub.webp",
+    "剧火AI": "icons/剧火AI.webp",
+    "可灵AI": "icons/可灵AI.webp",
+    "盼趣AI": "icons/盼趣AI.webp",
+    "火宝短剧": "icons/GitHub.webp",
+    "灵果短剧AI": "icons/GitHub.webp",
+    "百度AI短剧创作": "icons/百度AI短剧创作.webp",
+    "Zopia": "icons/Zopia.webp",
+    "万彩AI": "icons/万彩AI.webp",
+    "万兴喵影": "icons/万兴喵影.webp"
 };
 
 // 根据网站名称获取图标
