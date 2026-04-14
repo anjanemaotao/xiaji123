@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "1.6.0",
+    "version": "1.7.0",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -221,6 +221,36 @@ var siteData = {
                 {"name": "SkyReels-V3", "url": "https://skyreels.ai/", "description": "昆仑万维，视频+语音生成"},
                 {"name": "PaddleSpeech", "url": "https://github.com/PaddlePaddle/PaddleSpeech", "description": "（开源）百度开源，全流程语音工具"},
                 {"name": "Sherpa-ONNX", "url": "https://github.com/k2-fsa/sherpa-onnx", "description": "（开源）离线语音识别/合成框架"}
+            ]
+        },
+        {
+            "title": "AI音乐创作",
+            "links": [
+                {"name": "Suno", "url": "https://suno.com/", "description": "全球最知名的 AI 音乐生成工具，V5.5 支持人声克隆"},
+                {"name": "Udio", "url": "https://www.udio.com/", "description": "高保真音质输出，支持 48kHz、分轨下载"},
+                {"name": "Mureka", "url": "https://www.mureka.ai/", "description": "昆仑万维出品，支持 10 种语言，V8 版本领先"},
+                {"name": "Soundful", "url": "https://my.soundful.com/", "description": "专业背景音乐生成，适合内容创作者"},
+                {"name": "Mubert", "url": "https://mubert.com/", "description": "实时音乐流生成，适合直播和视频"},
+                {"name": "AIVA", "url": "https://www.aiva.ai/", "description": "古典音乐专业，适合电影配乐、游戏原声"},
+                {"name": "Boomy", "url": "https://boomy.com/", "description": "零门槛音乐创作，支持发布到流媒体平台"},
+                {"name": "Stable Audio", "url": "https://stability.ai/", "description": "Stability AI 出品，开源音频生成模型"},
+                {"name": "Jukebox AI", "url": "https://github.com/openai/jukebox", "description": "（开源）OpenAI 开源，生成完整歌曲波形"},
+                {"name": "Google Lyria", "url": "https://deepmind.google/", "description": "Google DeepMind 出品，3 分钟结构化音乐"},
+                {"name": "Producer.AI", "url": "https://www.producer.ai/", "description": "AI 音乐 Agent，对话式创作"},
+                {"name": "音潮", "url": "https://www.yinchao.ai/", "description": "面向全民的 AI 写歌软件，V3.0 音乐平权"},
+                {"name": "天工SkyMusic", "url": "https://tiangong.cn/", "description": "昆仑万维出品，中文人声自然度领先"},
+                {"name": "网易天音 XStudio", "url": "https://xstudio.music.163.com/", "description": "网易出品，专业 AI 音乐创作平台"},
+                {"name": "海绵音乐", "url": "https://www.haimian.com/", "description": "字节跳动出品，短视频配乐首选"},
+                {"name": "谱乐", "url": "https://app.yourmusic.fun/", "description": "AI 作曲写歌，支持多种风格"},
+                {"name": "妙音AI", "url": "https://www.miaoyin.ai/", "description": "中文特化，支持方言音乐馆、国风专区"},
+                {"name": "蘑兔AI", "url": "https://www.motu.ai/", "description": "中文创作者首选，民谣和华语流行出色"},
+                {"name": "歌歌AI写歌", "url": "https://www.gege.ai/", "description": "人声克隆、AI 音乐生成、全球发行"},
+                {"name": "音创AI", "url": "https://www.yinchuang.ai/", "description": "12 轨专业级分离，多样化伴奏"},
+                {"name": "Tunee", "url": "https://www.tunee.ai/", "description": "国内首个对话式 AI 音乐创作 Agent"},
+                {"name": "乐悟AI", "url": "https://www.yuewu.ai/", "description": "民族音乐生成，《AI-江南》超 2 亿播放"},
+                {"name": "MiniMax 音乐", "url": "https://www.minimaxi.com/audio/music", "description": "MiniMax 出品，AI 音乐生成"},
+                {"name": "Filmora AI Music", "url": "https://filmora.wondershare.com/", "description": "万兴喵影内置 AI 音乐生成器"},
+                {"name": "Soundraw", "url": "https://soundraw.io/", "description": "可定制化 AI 音乐生成，支持商用"}
             ]
         },
         {
