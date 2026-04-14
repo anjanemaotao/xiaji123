@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "2.1.0",
+    "version": "2.2.0",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -251,6 +251,26 @@ var siteData = {
                 {"name": "MiniMax 音乐", "url": "https://www.minimaxi.com/audio/music", "description": "MiniMax 出品，AI 音乐生成"},
                 {"name": "Filmora AI Music", "url": "https://filmora.wondershare.com/", "description": "万兴喵影内置 AI 音乐生成器"},
                 {"name": "Soundraw", "url": "https://soundraw.io/", "description": "可定制化 AI 音乐生成，支持商用"}
+            ]
+        },
+        {
+            "title": "短剧Agent",
+            "links": [
+                {"name": "小云雀AI", "url": "https://xyq.jianying.com/", "description": "字节跳动出品，行业首个搭载Seedance2.0的短剧Agent"},
+                {"name": "ZenStudio", "url": "https://tvi.v.qq.com/", "description": "腾讯视频AI短剧创作平台"},
+                {"name": "Jellyfish", "url": "https://github.com/chatfire-AI/jellyfish", "description": "（开源）AI短剧工厂，解决角色漂移问题"},
+                {"name": "剧火AI", "url": "https://www.juhuo.ai/", "description": "AI编导工具，懂短剧懂情绪"},
+                {"name": "可灵AI", "url": "https://klingai.kuaishou.com/", "description": "快手出品，AI视频生成"},
+                {"name": "造梦专家", "url": "https://zhaomeng.kuaishou.com/", "description": "快手一站式AI漫剧生产平台"},
+                {"name": "漫剧专家", "url": "https://manju.kuaishou.com/", "description": "快手AI漫剧生产、变现平台"},
+                {"name": "盼趣AI", "url": "https://panqu.com/", "description": "AI短剧创作平台，秒级呈现分镜与成片"},
+                {"name": "火宝短剧", "url": "https://github.com/chatfire-AI/huobao-drama", "description": "（开源）一站式短剧生成平台"},
+                {"name": "灵果短剧AI", "url": "https://github.com/LingGuoAI/LingGuo-Drama", "description": "（开源）短剧/漫剧生成平台"},
+                {"name": "百度AI短剧创作", "url": "https://yiyan.baidu.com/", "description": "百度出品，AI短剧内容生成"},
+                {"name": "Zopia", "url": "https://zopia.ai/", "description": "AI短剧Agent，支持OpenClaw原生适配"},
+                {"name": "万彩AI", "url": "https://ai.kezhan365.com/", "description": "AI短视频创作，数字人口播"},
+                {"name": "即梦AI", "url": "https://jimeng.jianying.com/", "description": "字节跳动出品，Seedance 2.0视频生成"},
+                {"name": "万兴喵影", "url": "https://filmora.wondershare.com/", "description": "AI视频编辑，内置短剧模板"}
             ]
         },
         {
