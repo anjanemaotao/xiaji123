@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "1.4.0",
+    "version": "1.5.0",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -187,6 +187,15 @@ var siteData = {
                 {"name": "Zed AI", "url": "https://zed.dev/", "description": "Rust编写的高性能编辑器，原生集成Claude"},
                 {"name": "Aider", "url": "https://aider.chat/", "description": "终端AI编程助手，开源免费"},
                 {"name": "v0", "url": "https://v0.dev/", "description": "Vercel推出的AI代码生成器，快速构建UI"}
+            ]
+        },
+        {
+            "title": "AI创作画布",
+            "links": [
+                {"name": "Liblib", "url": "https://liblib.tv/", "description": "AI图像创作平台，丰富的模型资源"},
+                {"name": "Oii", "url": "https://oiioii.ai/", "description": "AI创意画布，一站式AI创作工具"},
+                {"name": "即梦", "url": "https://jimeng.jianying.com/ai-tool/assets-canvas", "description": "字节跳动推出的AI创作画布"},
+                {"name": "星流", "url": "https://www.xingliu.art/", "description": "AI艺术创作平台"}
             ]
         },
         {
