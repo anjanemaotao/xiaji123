@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "2.2.1",
+    "version": "2.3.0",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -118,7 +118,8 @@ var siteData = {
                 {"name": "快手万擎", "url": "https://www.streamlake.com/product/wanqing", "description": "企业级大模型服务与开发平台"},
                 {"name": "蓝耘元生代", "url": "https://www.lanyun.net/", "description": "MaaS平台，DeepSeek-v3.2模型吞吐性能登顶AI Ping榜首"},
                 {"name": "魔搭社区", "url": "https://modelscope.cn/", "description": "阿里云旗下，国内最大AI模型开源社区，提供3000+预训练模型"},
-                {"name": "腾讯云TI平台", "url": "https://cloud.tencent.com/product/ti", "description": "腾讯云大模型精选商店，覆盖模型训练、推理及工具链支持"}
+                {"name": "腾讯云TI平台", "url": "https://cloud.tencent.com/product/ti", "description": "腾讯云大模型精选商店，覆盖模型训练、推理及工具链支持"},
+                {"name": "元景大模型MaaS平台", "url": "https://www.chinaunicom.com/", "description": "中国联通出品，面向工业领域的模型即服务平台"}
             ]
         },
         {
@@ -151,7 +152,9 @@ var siteData = {
                 {"name": "JeecgBoot", "url": "https://www.jeecg.com/", "description": "新一代AI低代码平台，支持多模型接入"},
                 {"name": "华为Agent Arts", "url": "https://www.huawei.com/", "description": "华为企业级智能体开发平台，4月30日公测"},
                 {"name": "BetterYeah AI", "url": "https://www.betteryeah.com/", "description": "企业级AI智能体开发平台，独创NeuroFlow框架"},
-                {"name": "京东云JoyAgent", "url": "https://www.jdcloud.com/", "description": "开源企业级智能体，GAIA准确率超77%"}
+                {"name": "京东云JoyAgent", "url": "https://www.jdcloud.com/", "description": "开源企业级智能体，GAIA准确率超77%"},
+                {"name": "瓴羊Quick Service", "url": "https://www.lingyang.aliyun.com/", "description": "阿里云旗下智能客服Agent，全流程智能服务"},
+                {"name": "瓴羊Agent One", "url": "https://www.lingyang.aliyun.com/", "description": "阿里云旗下决策执行Agent，打通数据与业务"}
             ]
         },
         {
@@ -189,7 +192,8 @@ var siteData = {
                 {"name": "Continue", "url": "https://continue.dev/", "description": "开源AI代码助手，支持自定义模型"},
                 {"name": "Zed AI", "url": "https://zed.dev/", "description": "Rust编写的高性能编辑器，原生集成Claude"},
                 {"name": "Aider", "url": "https://aider.chat/", "description": "终端AI编程助手，开源免费"},
-                {"name": "v0", "url": "https://v0.dev/", "description": "Vercel推出的AI代码生成器，快速构建UI"}
+                {"name": "v0", "url": "https://v0.dev/", "description": "Vercel推出的AI代码生成器，快速构建UI"},
+                {"name": "TabNine", "url": "https://www.tabnine.com/", "description": "AI代码补全工具，支持80+编程语言，主打隐私保护"}
             ]
         },
         {
@@ -224,7 +228,8 @@ var siteData = {
                 {"name": "SkyReels-V3", "url": "https://skyreels.ai/", "description": "昆仑万维，视频+语音生成"},
                 {"name": "PaddleSpeech", "url": "https://github.com/PaddlePaddle/PaddleSpeech", "description": "（开源）百度开源，全流程语音工具"},
                 {"name": "Sherpa-ONNX", "url": "https://github.com/k2-fsa/sherpa-onnx", "description": "（开源）离线语音识别/合成框架"},
-                {"name": "山海·知音", "url": "https://www.unisound.com/", "description": "云知声出品，支持30+方言、全双工交互，首包延迟90ms"}
+                {"name": "山海·知音", "url": "https://www.unisound.com/", "description": "云知声出品，支持30+方言、全双工交互，首包延迟90ms"},
+                {"name": "Seeduplex", "url": "https://www.doubao.com/", "description": "豆包全双工语音大模型，边听边说，交互自然顺畅"}
             ]
         },
         {
@@ -250,7 +255,9 @@ var siteData = {
                 {"name": "Tunee", "url": "https://www.tunee.ai/", "description": "国内首个对话式 AI 音乐创作 Agent"},
                 {"name": "MiniMax 音乐", "url": "https://www.minimaxi.com/audio/music", "description": "MiniMax 出品，AI 音乐生成"},
                 {"name": "Filmora AI Music", "url": "https://filmora.wondershare.com/", "description": "万兴喵影内置 AI 音乐生成器"},
-                {"name": "Soundraw", "url": "https://soundraw.io/", "description": "可定制化 AI 音乐生成，支持商用"}
+                {"name": "Soundraw", "url": "https://soundraw.io/", "description": "可定制化 AI 音乐生成，支持商用"},
+                {"name": "音潮V3.0", "url": "https://www.yinchao.ai/", "description": "自由量级出品，一站式AI音乐创作平台，零门槛出歌"},
+                {"name": "Vemus未音", "url": "https://vemus.music.163.com/", "description": "腾讯音乐旗下AI音乐创作工具，多模态输入"}
             ]
         },
         {
@@ -296,7 +303,8 @@ var siteData = {
                 {"name": "Arena.ai", "url": "https://arena.ai/leaderboard", "description": "由美国加州大学伯克利分校推出的AI模型评估平台"},
                 {"name": "OpenRouter Rankings", "url": "https://openrouter.ai/rankings", "description": "模型排名反映了在 OpenRouter 平台上各个大型语言模型的实际使用情况"},
                 {"name": "XSCT Bench", "url": "https://xsct.ai/", "description": "场景化大模型测评平台"},
-                {"name": "Vals AI", "url": "https://www.vals.ai/", "description": "专注于大型语言模型评估和基准测试的平台"}
+                {"name": "Vals AI", "url": "https://www.vals.ai/", "description": "专注于大型语言模型评估和基准测试的平台"},
+                {"name": "Gemma 4", "url": "https://ai.google.dev/gemma", "description": "（开源）Google开源大模型系列，Apache 2.0协议"}
             ]
         },
         {

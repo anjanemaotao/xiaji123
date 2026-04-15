@@ -294,7 +294,10 @@ var iconMap = {
     "百度AI短剧创作": "icons/百度AI短剧创作.webp",
     "Zopia": "icons/Zopia.webp",
     "万彩AI": "icons/万彩AI.webp",
-    "万兴喵影": "icons/万兴喵影.webp"
+    "万兴喵影": "icons/万兴喵影.webp",
+    // 新增 2026-04-15
+    "TabNine": "icons/TabNine.webp",
+    "Gemma 4": "icons/Gemma4.webp"
 };
 
 // 根据网站名称获取图标
