@@ -301,7 +301,7 @@ var iconMap = {
     "瓴羊Quick Service": "icons/瓴羊QuickService.webp",
     "瓴羊Agent One": "icons/瓴羊AgentOne.webp",
     "音潮": "icons/音潮.webp",
-    "Vemus未音": "icons/Vemus未音.ico"
+    "Vemus未音": "icons/Vemus未音.png"
 };
 
 // 根据网站名称获取图标
