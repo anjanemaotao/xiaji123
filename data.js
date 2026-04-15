@@ -255,7 +255,9 @@ var siteData = {
                 {"name": "Tunee", "url": "https://www.tunee.ai/", "description": "国内首个对话式 AI 音乐创作 Agent"},
                 {"name": "MiniMax 音乐", "url": "https://www.minimaxi.com/audio/music", "description": "MiniMax 出品，AI 音乐生成"},
                 {"name": "Filmora AI Music", "url": "https://filmora.wondershare.com/", "description": "万兴喵影内置 AI 音乐生成器"},
-                {"name": "Soundraw", "url": "https://soundraw.io/", "description": "可定制化 AI 音乐生成，支持商用"}
+                {"name": "Soundraw", "url": "https://soundraw.io/", "description": "可定制化 AI 音乐生成，支持商用"},
+                {"name": "音潮", "url": "https://web.yinchaoyongxian.com/studio/music-explore", "description": "自由量级出品，一站式AI音乐创作平台，零门槛出歌"},
+                {"name": "Vemus未音", "url": "https://y.qq.com/vemus/", "description": "腾讯音乐旗下AI音乐创作工具，多模态输入"}
             ]
         },
         {

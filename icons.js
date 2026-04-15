@@ -299,7 +299,9 @@ var iconMap = {
     "TabNine": "icons/TabNine.webp",
     "Gemma 4": "icons/Gemma4.webp",
     "瓴羊Quick Service": "icons/瓴羊QuickService.webp",
-    "瓴羊Agent One": "icons/瓴羊AgentOne.webp"
+    "瓴羊Agent One": "icons/瓴羊AgentOne.webp",
+    "音潮": "icons/音潮.webp",
+    "Vemus未音": "icons/Vemus未音.webp"
 };
 
 // 根据网站名称获取图标
