@@ -297,7 +297,9 @@ var iconMap = {
     "万兴喵影": "icons/万兴喵影.webp",
     // 新增 2026-04-15
     "TabNine": "icons/TabNine.webp",
-    "Gemma 4": "icons/Gemma4.webp"
+    "Gemma 4": "icons/Gemma4.webp",
+    "瓴羊Quick Service": "icons/瓴羊QuickService.webp",
+    "瓴羊Agent One": "icons/瓴羊AgentOne.webp"
 };
 
 // 根据网站名称获取图标

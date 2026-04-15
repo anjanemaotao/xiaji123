@@ -153,8 +153,8 @@ var siteData = {
                 {"name": "华为Agent Arts", "url": "https://www.huawei.com/", "description": "华为企业级智能体开发平台，4月30日公测"},
                 {"name": "BetterYeah AI", "url": "https://www.betteryeah.com/", "description": "企业级AI智能体开发平台，独创NeuroFlow框架"},
                 {"name": "京东云JoyAgent", "url": "https://www.jdcloud.com/", "description": "开源企业级智能体，GAIA准确率超77%"},
-                {"name": "瓴羊Quick Service", "url": "https://www.lingyang.aliyun.com/", "description": "阿里云旗下智能客服Agent，全流程智能服务"},
-                {"name": "瓴羊Agent One", "url": "https://www.lingyang.aliyun.com/", "description": "阿里云旗下决策执行Agent，打通数据与业务"}
+                {"name": "瓴羊Quick Service", "url": "https://www.lydaas.com/quickservice", "description": "阿里云旗下智能客服Agent，全流程智能服务"},
+                {"name": "瓴羊Agent One", "url": "https://www.lydaas.com/agentone", "description": "阿里云旗下决策执行Agent，打通数据与业务"}
             ]
         },
         {
