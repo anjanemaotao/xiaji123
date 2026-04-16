@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "2.3.1",
+    "version": "2.3.2",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -229,7 +229,10 @@ var siteData = {
                 {"name": "PaddleSpeech", "url": "https://github.com/PaddlePaddle/PaddleSpeech", "description": "（开源）百度开源，全流程语音工具"},
                 {"name": "Sherpa-ONNX", "url": "https://github.com/k2-fsa/sherpa-onnx", "description": "（开源）离线语音识别/合成框架"},
                 {"name": "山海·知音", "url": "https://www.unisound.com/", "description": "云知声出品，支持30+方言、全双工交互，首包延迟90ms"},
-                {"name": "Seeduplex", "url": "https://www.doubao.com/", "description": "豆包全双工语音大模型，边听边说，交互自然顺畅"}
+                {"name": "Seeduplex", "url": "https://www.doubao.com/", "description": "豆包全双工语音大模型，边听边说，交互自然顺畅"},
+                {"name": "Xiaomi MiMo-V2-TTS", "url": "https://mimo.mi.com/", "description": "小米自研语音合成大模型，支持方言、歌声合成，上亿小时预训练"},
+                {"name": "佰分象AI", "url": "https://www.ntxsl666.com/", "description": "AI语音机器人，语音识别准确率98.2%，支持1200路并发外呼"},
+                {"name": "avavox", "url": "https://avavox.com/", "description": "神州泰岳旗下大模型外呼机器人，按Token计费，30秒搭建"}
             ]
         },
         {
@@ -289,7 +292,7 @@ var siteData = {
                 {"name": "豆包Doubao", "url": "https://www.doubao.com/chat/", "description": "字节跳动自研大模型"},
                 {"name": "Claude", "url": "https://platform.claude.com/", "description": "Anthropic开发的大型语言模型家族"},
                 {"name": "Gemini", "url": "https://aistudio.google.com/", "description": "兼具高推理能力、多模态处理、可视化渲染和低成本高效能"},
-                {"name": "GPT", "url": "https://platform.openai.com/", "description": "首个具备原生计算机使用能力的通用模型"},
+                {"name": "GPT", "url": "https://platform.openai.com/", "description": "OpenAI大模型系列，GPT-6将于2026年4月发布，支持200万Token上下文"},
                 {"name": "Grok", "url": "https://console.x.ai/", "description": "马斯克旗下xAI公司开发的人工智能大模型系列"},
                 {"name": "Llama", "url": "https://www.llama.com/", "description": "Meta推出的一款开源大语言模型"},
                 {"name": "Mistral", "url": "https://mistral.ai/", "description": "一个基于大语言模型的对话平台"},

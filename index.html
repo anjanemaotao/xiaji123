@@ -1345,14 +1345,15 @@
         
         // 图标加载失败处理 - 尝试备用源
         function handleIconError(img, url, fallbackText) {
-            const sources = ['clearbit', 'yandex', 'duckduckgo'];
+            // icon.horse 在国内最稳定，放在首位
+            const sources = ['iconhorse', 'yandex', 'duckduckgo'];
             const currentSrc = img.src;
             let nextSource = null;
             
             // 检查当前使用的是哪个源，切换到下一个
-            if (currentSrc.includes('icon.horse')) {
+            if (currentSrc.includes('clearbit')) {
                 nextSource = sources[0];
-            } else if (currentSrc.includes('clearbit')) {
+            } else if (currentSrc.includes('icon.horse')) {
                 nextSource = sources[1];
             } else if (currentSrc.includes('yandex')) {
                 nextSource = sources[2];

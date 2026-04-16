@@ -1,5 +1,5 @@
 // 网站图标映射表 - 本地化版本
-// 共 236 个网站图标
+// 共 240 个网站图标
 var iconMap = {
     "OpenClaw 官网": "icons/OpenClaw_官网.webp",
     "官方GitHub": "icons/官方GitHub.svg",
@@ -301,7 +301,12 @@ var iconMap = {
     "瓴羊Quick Service": "icons/瓴羊QuickService.webp",
     "瓴羊Agent One": "icons/瓴羊AgentOne.webp",
     "音潮": "icons/音潮.webp",
-    "Vemus未音": "icons/Vemus未音.png"
+    "Vemus未音": "icons/Vemus未音.png",
+    // 新增 2026-04-16
+    "Xiaomi MiMo-V2-TTS": "icons/Xiaomi_MiMo_V2_TTS.png",
+    "佰分象AI": "icons/佰分象AI.jpg",
+    "avavox": "icons/avavox.png",
+    "Seeduplex": "icons/豆包.webp"
 };
 
 // 根据网站名称获取图标
