@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "2.3.2",
+    "version": "2.3.3",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -40,7 +40,8 @@ var siteData = {
                 {"name": "KiloClaw", "url": "https://kilo.ai/kiloclaw", "description": "KiloClaw定位为面向开发者和团队的托管版OpenClaw服务"},
                 {"name": "NemoClaw", "url": "https://www.nvidia.com/en-us/ai/nemoclaw/", "description": "英伟达推出的一个面向企业的开源AI智能体平台"},
                 {"name": "Loomy", "url": "https://loomy.xunfei.cn/", "description": "科大讯飞推出的桌面级 AI 个人助理，基于 AstronClaw 打造"},
-                {"name": "Hermes Agent", "url": "https://hermes-agent.nousresearch.com/", "description": "开源自主Al代理，拥有内置的自我学习循环"}
+                {"name": "Hermes Agent", "url": "https://hermes-agent.nousresearch.com/", "description": "开源自主Al代理，拥有内置的自我学习循环"},
+                {"name": "铠盒智能", "url": "https://www.nizwo.com/", "description": "AI智能体计算机，预装OpenClaw，7x24小时稳定运行"}
             ]
         },
         {
@@ -232,7 +233,9 @@ var siteData = {
                 {"name": "Seeduplex", "url": "https://www.doubao.com/", "description": "豆包全双工语音大模型，边听边说，交互自然顺畅"},
                 {"name": "Xiaomi MiMo-V2-TTS", "url": "https://mimo.mi.com/", "description": "小米自研语音合成大模型，支持方言、歌声合成，上亿小时预训练"},
                 {"name": "佰分象AI", "url": "https://www.ntxsl666.com/", "description": "AI语音机器人，语音识别准确率98.2%，支持1200路并发外呼"},
-                {"name": "avavox", "url": "https://avavox.com/", "description": "神州泰岳旗下大模型外呼机器人，按Token计费，30秒搭建"}
+                {"name": "avavox", "url": "https://avavox.com/", "description": "神州泰岳旗下大模型外呼机器人，按Token计费，30秒搭建"},
+                {"name": "云蝠智能", "url": "https://www.telrobot.top/", "description": "VoiceAgent大模型语音智能体，支持多模态交互，500ms响应"},
+                {"name": "沃丰科技智呼机器人", "url": "https://www.udesk.cn/", "description": "大模型语音机器人，0.3秒响应，支持全渠道接入"}
             ]
         },
         {
