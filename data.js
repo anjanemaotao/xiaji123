@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "2.3.3",
+    "version": "2.3.4",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -130,7 +130,8 @@ var siteData = {
                 {"name": "weelinking", "url": "https://weelinking.com/", "description": "企业级AI中台，支持300+主流大模型，99.99%可用性"},
                 {"name": "n1n.ai", "url": "https://n1n.ai/", "description": "1元=1美元汇率，比市场价节省85%成本，支持人民币直付"},
                 {"name": "147API", "url": "https://147ai.com/", "description": "企业级MaaS平台，全球专线网络，支持对公转账"},
-                {"name": "Azure OpenAI", "url": "https://azure.microsoft.com/openai", "description": "微软官方企业级AI服务，最高级别数据隐私合规"}
+                {"name": "Azure OpenAI", "url": "https://azure.microsoft.com/openai", "description": "微软官方企业级AI服务，最高级别数据隐私合规"},
+                {"name": "星链4SAPI", "url": "https://www.4sapi.com/", "description": "企业级API网关，99.99%可用性，全球边缘加速"}
             ]
         },
         {
@@ -235,7 +236,17 @@ var siteData = {
                 {"name": "佰分象AI", "url": "https://www.ntxsl666.com/", "description": "AI语音机器人，语音识别准确率98.2%，支持1200路并发外呼"},
                 {"name": "avavox", "url": "https://avavox.com/", "description": "神州泰岳旗下大模型外呼机器人，按Token计费，30秒搭建"},
                 {"name": "云蝠智能", "url": "https://www.telrobot.top/", "description": "VoiceAgent大模型语音智能体，支持多模态交互，500ms响应"},
-                {"name": "沃丰科技智呼机器人", "url": "https://www.udesk.cn/", "description": "大模型语音机器人，0.3秒响应，支持全渠道接入"}
+                {"name": "沃丰科技智呼机器人", "url": "https://www.udesk.cn/", "description": "大模型语音机器人，0.3秒响应，支持全渠道接入"},
+                {"name": "CosyVoice3", "url": "https://github.com/FunAudioLLM/CosyVoice", "description": "（开源）阿里FunAudioLLM开源，中文优化语音合成"},
+                {"name": "GPT-SoVITS", "url": "https://github.com/RVC-Boss/GPT-SoVITS", "description": "（开源）社区开源，高保真音色克隆"},
+                {"name": "IndexTTS-2", "url": "https://github.com/index-tts/indextts", "description": "（开源）零样本克隆，情绪控制"},
+                {"name": "Spark-TTS", "url": "https://github.com/SparkAudio/Spark-TTS", "description": "（开源）腾讯开源，基于Qwen的语音合成"},
+                {"name": "Whisper", "url": "https://github.com/openai/whisper", "description": "（开源）OpenAI开源，99种语言语音识别"},
+                {"name": "Qwen3-ASR", "url": "https://tongyi.aliyun.com/", "description": "（开源）阿里开源，多语言语音识别"},
+                {"name": "FunASR", "url": "https://github.com/modelscope/FunASR", "description": "（开源）阿里达摩院开源，工业级ASR"},
+                {"name": "Qwen-Omni", "url": "https://tongyi.aliyun.com/", "description": "（开源）阿里开源，语音对话模型"},
+                {"name": "GLM-4.1V-Thinking-Flash", "url": "https://www.bigmodel.cn/", "description": "（开源）智谱免费，语音+视觉多模态"},
+                {"name": "Sherpa-ONNX", "url": "https://github.com/k2-fsa/sherpa-onnx", "description": "（开源）离线语音识别/合成框架"}
             ]
         },
         {
@@ -263,7 +274,8 @@ var siteData = {
                 {"name": "Filmora AI Music", "url": "https://filmora.wondershare.com/", "description": "万兴喵影内置 AI 音乐生成器"},
                 {"name": "Soundraw", "url": "https://soundraw.io/", "description": "可定制化 AI 音乐生成，支持商用"},
                 {"name": "音潮", "url": "https://web.yinchaoyongxian.com/studio/music-explore", "description": "自由量级出品，一站式AI音乐创作平台，零门槛出歌"},
-                {"name": "Vemus未音", "url": "https://y.qq.com/vemus/", "description": "腾讯音乐旗下AI音乐创作工具，多模态输入"}
+                {"name": "Vemus未音", "url": "https://y.qq.com/vemus/", "description": "腾讯音乐旗下AI音乐创作工具，多模态输入"},
+                {"name": "Lemonaid", "url": "https://www.lemonaid.ai/", "description": "面向专业音乐人的AI音乐生成工具，支持MIDI与WAV输出"}
             ]
         },
         {
@@ -281,7 +293,8 @@ var siteData = {
                 {"name": "Zopia", "url": "https://zopia.ai/", "description": "AI短剧Agent，支持OpenClaw原生适配"},
                 {"name": "万彩AI", "url": "https://ai.kezhan365.com/", "description": "AI短视频创作，数字人口播"},
                 {"name": "即梦AI", "url": "https://jimeng.jianying.com/", "description": "字节跳动出品，Seedance 2.0视频生成"},
-                {"name": "万兴喵影", "url": "https://filmora.wondershare.com/", "description": "AI视频编辑，内置短剧模板"}
+                {"name": "万兴喵影", "url": "https://filmora.wondershare.com/", "description": "AI视频编辑，内置短剧模板"},
+                {"name": "巨日禄", "url": "https://www.jurilu.com/", "description": "AI短剧创作平台，支持剧本生成与视频制作"}
             ]
         },
         {

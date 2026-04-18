@@ -310,7 +310,21 @@ var iconMap = {
     // 新增 2026-04-17
     "云蝠智能": "icons/云蝠智能.png",
     "沃丰科技智呼机器人": "icons/沃丰科技.png",
-    "铠盒智能": "icons/铠盒智能.png"
+    "铠盒智能": "icons/铠盒智能.png",
+    // 新增 2026-04-18
+    "CosyVoice3": "icons/GitHub.webp",
+    "GPT-SoVITS": "icons/GitHub.webp",
+    "IndexTTS-2": "icons/GitHub.webp",
+    "Spark-TTS": "icons/GitHub.webp",
+    "Whisper": "icons/GitHub.webp",
+    "Qwen3-ASR": "icons/千问Qwen.jpg",
+    "FunASR": "icons/GitHub.webp",
+    "Qwen-Omni": "icons/千问Qwen.jpg",
+    "GLM-4.1V-Thinking-Flash": "icons/智谱GLM.webp",
+    "Sherpa-ONNX": "icons/GitHub.webp",
+    "星链4SAPI": "icons/星链4SAPI.ico",
+    "Lemonaid": null,
+    "巨日禄": null
 };
 
 // 根据网站名称获取图标
