@@ -324,7 +324,16 @@ var iconMap = {
     "Sherpa-ONNX": "icons/GitHub.webp",
     "星链4SAPI": "icons/星链4SAPI.ico",
     "Lemonaid": null,
-    "巨日禄": null
+    "巨日禄": null,
+    // 新增世界模型分类 2026-04-18
+    "HappyOyster": "icons/HappyOyster.jpg",
+    "WorldLabs Marble": null,
+    "Meta V-JEPA 2": null,
+    "Google Genie 2": null,
+    "Runway GWM-1": "icons/Runway_GWM1.webp",
+    "智元 Genie Envisioner": null,
+    "蔚来世界模型": null,
+    "特斯拉世界模型": null
 };
 
 // 根据网站名称获取图标

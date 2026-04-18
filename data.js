@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "2.3.4",
+    "version": "2.3.5",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -435,6 +435,19 @@ var siteData = {
                 {"name": "Weex", "url": "https://www.weex.com/zh-CN", "description": "为初学者和专业交易者设计的交易平台"},
                 {"name": "XT.com", "url": "https://www.xt.com/zh-CN", "description": "安全可靠的加密货币交易所"},
                 {"name": "Ju.com", "url": "https://www.ju.com/zh-CN", "description": "提供现货交易、永续合约、质押、代币发行平台及非托管Web3钱包等服务"}
+            ]
+        },
+        {
+            "title": "世界模型",
+            "links": [
+                {"name": "HappyOyster", "url": "https://www.happyoyster.cn/", "description": "阿里开放世界模型，实时交互三维内容生成"},
+                {"name": "WorldLabs Marble", "url": "https://www.worldlabs.ai/", "description": "李飞飞空间智能，生成持久可编辑的三维环境"},
+                {"name": "Meta V-JEPA 2", "url": "https://ai.meta.com/blog/v-jepa-2/", "description": "Meta联合嵌入预测架构，理解并预测陌生物体和环境动态"},
+                {"name": "Google Genie 2", "url": "https://deepmind.google/", "description": "Google DeepMind通用世界模型，生成可交互的3D环境"},
+                {"name": "Runway GWM-1", "url": "https://runwayml.com/", "description": "Runway生成式视频世界模型"},
+                {"name": "智元 Genie Envisioner", "url": "https://www.zhiyuan-robot.com/", "description": "智元机器人世界模型，动作驱动的物理进化引擎"},
+                {"name": "蔚来世界模型", "url": "https://www.nio.com/", "description": "智能驾驶世界模型，停车场自主寻路"},
+                {"name": "特斯拉世界模型", "url": "https://www.tesla.com/", "description": "自动驾驶世界模型，神经网络驱动的环境模拟"}
             ]
         }
     ]
