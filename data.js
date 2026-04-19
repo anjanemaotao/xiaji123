@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "2.3.5",
+    "version": "2.3.6",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -156,7 +156,8 @@ var siteData = {
                 {"name": "BetterYeah AI", "url": "https://www.betteryeah.com/", "description": "企业级AI智能体开发平台，独创NeuroFlow框架"},
                 {"name": "京东云JoyAgent", "url": "https://www.jdcloud.com/", "description": "开源企业级智能体，GAIA准确率超77%"},
                 {"name": "瓴羊Quick Service", "url": "https://www.lydaas.com/quickservice", "description": "阿里云旗下智能客服Agent，全流程智能服务"},
-                {"name": "瓴羊Agent One", "url": "https://www.lydaas.com/agentone", "description": "阿里云旗下决策执行Agent，打通数据与业务"}
+                {"name": "瓴羊Agent One", "url": "https://www.lydaas.com/agentone", "description": "阿里云旗下决策执行Agent，打通数据与业务"},
+                {"name": "蚂蚁数科 Agentar", "url": "https://antdigital.com/products/Agentar", "description": "全栈式智能体开发平台，信通院可信AI评估5级评级"}
             ]
         },
         {
@@ -165,7 +166,8 @@ var siteData = {
                 {"name": "E2B", "url": "https://e2b.dev/", "description": "专注于代码执行与云端开发环境，适合构建编码助手"},
                 {"name": "Modal Sandboxes", "url": "https://modal.com/", "description": "按需启动的隔离环境，支持快速迭代与部署"},
                 {"name": "Browserbase", "url": "https://www.browserbase.com/", "description": "专业的浏览器自动化平台，支持大规模并发"},
-                {"name": "Steel", "url": "https://steel.dev/", "description": "抗指纹识别的浏览器环境，增强隐蔽性"}
+                {"name": "Steel", "url": "https://steel.dev/", "description": "抗指纹识别的浏览器环境，增强隐蔽性"},
+                {"name": "阿里云 AgentBay", "url": "https://help.aliyun.com/document_detail/2878644.html", "description": "无影AgentBay，提供浏览器、代码空间、云电脑、移动端四大核心环境"}
             ]
         },
         {
@@ -195,7 +197,9 @@ var siteData = {
                 {"name": "Zed AI", "url": "https://zed.dev/", "description": "Rust编写的高性能编辑器，原生集成Claude"},
                 {"name": "Aider", "url": "https://aider.chat/", "description": "终端AI编程助手，开源免费"},
                 {"name": "v0", "url": "https://v0.dev/", "description": "Vercel推出的AI代码生成器，快速构建UI"},
-                {"name": "TabNine", "url": "https://www.tabnine.com/", "description": "AI代码补全工具，支持80+编程语言，主打隐私保护"}
+                {"name": "TabNine", "url": "https://www.tabnine.com/", "description": "AI代码补全工具，支持80+编程语言，主打隐私保护"},
+                {"name": "Supermaven", "url": "https://supermaven.com/", "description": "100万Token上下文窗口，响应延迟20ms级，极速代码补全"},
+                {"name": "Kiro", "url": "https://kiro.dev/", "description": "规格驱动开发，企业级AI IDE，从原型到生产的全流程自动化"}
             ]
         },
         {
