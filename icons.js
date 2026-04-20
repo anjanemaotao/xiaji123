@@ -333,7 +333,11 @@ var iconMap = {
     "Runway GWM-1": "icons/Runway_GWM1.webp",
     "智元 Genie Envisioner": null,
     "蔚来世界模型": null,
-    "特斯拉世界模型": null
+    "特斯拉世界模型": null,
+    // 新增 2026-04-20
+    "Tabby": "icons/Tabby.avif",
+    "VoiceFox": "icons/VoiceFox.png",
+    "Hyperbrowser": "icons/Hyperbrowser.svg"
 };
 
 // 根据网站名称获取图标

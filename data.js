@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "2.3.6",
+    "version": "2.3.7",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -167,7 +167,8 @@ var siteData = {
                 {"name": "Modal Sandboxes", "url": "https://modal.com/", "description": "按需启动的隔离环境，支持快速迭代与部署"},
                 {"name": "Browserbase", "url": "https://www.browserbase.com/", "description": "专业的浏览器自动化平台，支持大规模并发"},
                 {"name": "Steel", "url": "https://steel.dev/", "description": "抗指纹识别的浏览器环境，增强隐蔽性"},
-                {"name": "阿里云 AgentBay", "url": "https://help.aliyun.com/document_detail/2878644.html", "description": "无影AgentBay，提供浏览器、代码空间、云电脑、移动端四大核心环境"}
+                {"name": "阿里云 AgentBay", "url": "https://help.aliyun.com/document_detail/2878644.html", "description": "无影AgentBay，提供浏览器、代码空间、云电脑、移动端四大核心环境"},
+                {"name": "Hyperbrowser", "url": "https://hyperbrowser.ai/", "description": "高性能浏览器环境，优化渲染与交互速度"}
             ]
         },
         {
@@ -199,7 +200,8 @@ var siteData = {
                 {"name": "v0", "url": "https://v0.dev/", "description": "Vercel推出的AI代码生成器，快速构建UI"},
                 {"name": "TabNine", "url": "https://www.tabnine.com/", "description": "AI代码补全工具，支持80+编程语言，主打隐私保护"},
                 {"name": "Supermaven", "url": "https://supermaven.com/", "description": "100万Token上下文窗口，响应延迟20ms级，极速代码补全"},
-                {"name": "Kiro", "url": "https://kiro.dev/", "description": "规格驱动开发，企业级AI IDE，从原型到生产的全流程自动化"}
+                {"name": "Kiro", "url": "https://kiro.dev/", "description": "规格驱动开发，企业级AI IDE，从原型到生产的全流程自动化"},
+                {"name": "Tabby", "url": "https://github.com/TabbyML/tabby", "description": "（开源）完全本地运行的AI代码助手，隐私保护极佳"}
             ]
         },
         {
@@ -250,7 +252,8 @@ var siteData = {
                 {"name": "FunASR", "url": "https://github.com/modelscope/FunASR", "description": "（开源）阿里达摩院开源，工业级ASR"},
                 {"name": "Qwen-Omni", "url": "https://tongyi.aliyun.com/", "description": "（开源）阿里开源，语音对话模型"},
                 {"name": "GLM-4.1V-Thinking-Flash", "url": "https://www.bigmodel.cn/", "description": "（开源）智谱免费，语音+视觉多模态"},
-                {"name": "Sherpa-ONNX", "url": "https://github.com/k2-fsa/sherpa-onnx", "description": "（开源）离线语音识别/合成框架"}
+                {"name": "Sherpa-ONNX", "url": "https://github.com/k2-fsa/sherpa-onnx", "description": "（开源）离线语音识别/合成框架"},
+                {"name": "VoiceFox", "url": "https://voicefox.cn/", "description": "大模型增强ASR，支持19种方言，噪音环境识别率领先"}
             ]
         },
         {
