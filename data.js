@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "2.3.7",
+    "version": "2.3.8",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -348,7 +348,9 @@ var siteData = {
                 {"name": "ClawSkills", "url": "https://clawskills.sh/", "description": "5,490+ Skills 集合"},
                 {"name": "CryptoSkills", "url": "https://cryptoskills.dev/", "description": "为所有crypto领域提供开源Skills"},
                 {"name": "CocoLoop", "url": "https://hub.cocoloop.cn/", "description": "更快更安全的 Al Agent Skills 商店"},
-                {"name": "MiniMax", "url": "https://agent.minimaxi.com/skills", "description": "AI Agent学习新技能的地方"}
+                {"name": "MiniMax", "url": "https://agent.minimaxi.com/skills", "description": "AI Agent学习新技能的地方"},
+                {"name": "theSkills.ai", "url": "https://theskills.ai/", "description": "专家认证技能市场，连接技能专家与AI Agent"},
+                {"name": "SafeSkill", "url": "https://safeskill.cn/", "description": "微步旗下AI智能体Skills安全平台，守护每一个AI Agent Skill"}
             ]
         },
         {

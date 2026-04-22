@@ -337,7 +337,10 @@ var iconMap = {
     // 新增 2026-04-20
     "Tabby": "icons/Tabby.avif",
     "VoiceFox": "icons/VoiceFox.png",
-    "Hyperbrowser": "icons/Hyperbrowser.svg"
+    "Hyperbrowser": "icons/Hyperbrowser.svg",
+    // 新增 2026-04-22
+    "theSkills.ai": "icons/theSkills.svg",
+    "SafeSkill": "icons/SafeSkill.ico"
 };
 
 // 根据网站名称获取图标
