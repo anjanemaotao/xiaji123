@@ -1905,6 +1905,7 @@ var iconMap = {
     "sclof": "icons/sclof.png",
     "sectionschool.com": "icons/sectionschoolcom.png",
     "sellesta.com": "icons/sellestacom.png",
+    "Sellesta": "icons/sellestacom.png",
     "sitelifter.com": "icons/siteliftercom.png",
     "smoc.ai": "icons/smocai.png",
     "squirai.com": "icons/squiraicom.png",

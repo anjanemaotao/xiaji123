@@ -1657,7 +1657,7 @@ var siteData = {
                 {"name": "Raily", "url": "https://www.raily.app/", "description": "旅行约会应用程序Raily在旅途中连接人们，通过独特功能和奖励增强旅程。"},
                 {"name": "Boloo Buddy", "url": "https://chromewebstore.google.com/detail/boloo-buddy/fefpocfmkbkncjkocjbejmnmpgkhpnap", "description": "用Boloo强化您的bol.com业务。"},
                 {"name": "Parthean AI", "url": "https://www.parthean.com/", "description": "Parthean是一个使用人工智能教育和赋能用户的金融平台。"},
-                {"name": "Sellesta", "url": "https://sellesta.ai/", "description": "\"Sellesta.ai - 提升亚马逊卖家产品排名和转化率的AI平台。\""},
+                {"name": "Sellesta", "url": "https://sellesta.com/", "description": "Sellesta - 提升亚马逊卖家产品排名和转化率的AI平台。"},
                 {"name": "Attentionkart", "url": "https://attentionkart.com/", "description": "AI驱动的在线会议参与度分析平台。"},
                 {"name": "YOMO AI", "url": "https://yomoai.com/", "description": "产品经理的AI会议助手。"},
                 {"name": "DesignGen", "url": "https://designgen.io/", "description": "将复杂技术转化为优雅、用户友好的产品。"},
