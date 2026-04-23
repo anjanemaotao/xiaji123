@@ -1,5 +1,5 @@
 // 网站图标映射表 - 本地化版本
-// 共 2246 个网站图标
+// 共 2251 个网站图标
 var iconMap = {
     "123Colorize": "icons/123Colorize.png",
     "135 AI排版": "icons/135_AI排版.png",
@@ -467,6 +467,7 @@ var iconMap = {
     "Deepgram": "icons/Deepgram.png",
     "Definity Legend A.I Game Builder": "icons/Definity_Legend_AI_Game_Builder.png",
     "Deleo.io AI image Generator": "icons/Deleoio_AI_image_Generator.png",
+    "Delphos | AI Music": "icons/Delphos_AI_Music.png",
     "DenoLyrics": "icons/DenoLyrics.png",
     "Descript": "icons/Descript.png",
     "Design Champ": "icons/Design_Champ.png",
@@ -493,6 +494,7 @@ var iconMap = {
     "Discountly": "icons/Discountly.png",
     "Disgraph": "icons/Disgraph.png",
     "Dishi – The Meal Prep Timer": "icons/Dishi_The_Meal_Prep_Timer.png",
+    "Distribute | Death To Whitepapers": "icons/Distribute_Death_To_Whitepapers.png",
     "Dittin AI": "icons/Dittin_AI.png",
     "Dittin AI V2": "icons/Dittin_AI_V2.png",
     "DocWhizz": "icons/DocWhizz.png",
@@ -834,6 +836,7 @@ var iconMap = {
     "Kaddo": "icons/Kaddo.png",
     "Kaggle": "icons/Kaggle.png",
     "Kapi: Learn To Write Nepali": "icons/Kapi_Learn_To_Write_Nepali.png",
+    "Keble | Online Business Co-Pilot": "icons/Keble_Online_Business_Co-Pilot.png",
     "Keras": "icons/Keras.png",
     "KeyWI – AI Content Marketing Assistant": "icons/KeyWI_AI_Content_Marketing_Assistant.png",
     "Keyword Insights": "icons/Keyword_Insights.png",
@@ -983,6 +986,7 @@ var iconMap = {
     "MailboxKit": "icons/MailboxKit.png",
     "Maintain-AI – Good Roads Cost Less": "icons/Maintain-AI_Good_Roads_Cost_Less.png",
     "Mairecipe": "icons/Mairecipe.png",
+    "Mana | Accelerate Job Applications with AI": "icons/Mana_Accelerate_Job_Applications_with_AI.png",
     "Manaliza Pro": "icons/Manaliza_Pro.png",
     "Manus": "icons/Manus.ico",
     "Marenda": "icons/Marenda.png",
@@ -1078,6 +1082,7 @@ var iconMap = {
     "Nack AI": "icons/Nack_AI.png",
     "Namefinder.ai": "icons/Namefinderai.png",
     "Namingram": "icons/Namingram.png",
+    "Nando.ai | Generate High-Converting Copy Instantly": "icons/Nandoai_Generate_High-Converting_Copy_Instantly.png",
     "Nanonets": "icons/Nanonets.png",
     "NativeBI": "icons/NativeBI.png",
     "NaturalReader": "icons/NaturalReader.png",
@@ -1905,7 +1910,6 @@ var iconMap = {
     "sclof": "icons/sclof.png",
     "sectionschool.com": "icons/sectionschoolcom.png",
     "sellesta.com": "icons/sellestacom.png",
-    "Sellesta": "icons/sellestacom.png",
     "sitelifter.com": "icons/siteliftercom.png",
     "smoc.ai": "icons/smocai.png",
     "squirai.com": "icons/squiraicom.png",
