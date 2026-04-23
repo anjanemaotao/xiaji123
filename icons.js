@@ -340,7 +340,9 @@ var iconMap = {
     "Hyperbrowser": "icons/Hyperbrowser.svg",
     // 新增 2026-04-22
     "theSkills.ai": "icons/theSkills.svg",
-    "SafeSkill": "icons/SafeSkill.ico"
+    "SafeSkill": "icons/SafeSkill.ico",
+    // 新增 2026-04-23
+    "Daytona": "icons/Daytona.png"
 };
 
 // 根据网站名称获取图标

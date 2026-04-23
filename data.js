@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "2.3.8",
+    "version": "2.3.9",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -168,7 +168,8 @@ var siteData = {
                 {"name": "Browserbase", "url": "https://www.browserbase.com/", "description": "专业的浏览器自动化平台，支持大规模并发"},
                 {"name": "Steel", "url": "https://steel.dev/", "description": "抗指纹识别的浏览器环境，增强隐蔽性"},
                 {"name": "阿里云 AgentBay", "url": "https://help.aliyun.com/document_detail/2878644.html", "description": "无影AgentBay，提供浏览器、代码空间、云电脑、移动端四大核心环境"},
-                {"name": "Hyperbrowser", "url": "https://hyperbrowser.ai/", "description": "高性能浏览器环境，优化渲染与交互速度"}
+                {"name": "Hyperbrowser", "url": "https://hyperbrowser.ai/", "description": "高性能浏览器环境，优化渲染与交互速度"},
+                {"name": "Daytona", "url": "https://www.daytona.io/", "description": "安全弹性基础设施，运行AI生成代码，支持Computer Use"}
             ]
         },
         {
