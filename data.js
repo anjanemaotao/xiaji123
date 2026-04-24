@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "3.0.0",
+    "version": "3.1.0",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -153,6 +153,7 @@ var siteData = {
                 {"name": "豆包Agent Studio", "url": "https://www.doubao.com/agent", "description": "抖音集团旗下，短视频脚本生成、直播话术优化"},
                 {"name": "JeecgBoot", "url": "https://www.jeecg.com/", "description": "新一代AI低代码平台，支持多模型接入"},
                 {"name": "华为Agent Arts", "url": "https://www.huawei.com/", "description": "华为企业级智能体开发平台，4月30日公测"},
+                {"name": "华为云AgentArts", "url": "https://www.huaweicloud.com/product/agentarts.html", "description": "华为云一站式智能体构建与运营平台，低代码可视化编排"},
                 {"name": "BetterYeah AI", "url": "https://www.betteryeah.com/", "description": "企业级AI智能体开发平台，独创NeuroFlow框架"},
                 {"name": "京东云JoyAgent", "url": "https://www.jdcloud.com/", "description": "开源企业级智能体，GAIA准确率超77%"},
                 {"name": "瓴羊Quick Service", "url": "https://www.lydaas.com/quickservice", "description": "阿里云旗下智能客服Agent，全流程智能服务"},
@@ -260,9 +261,9 @@ var siteData = {
         {
             "title": "AI音乐创作",
             "links": [
-                {"name": "Suno", "url": "https://suno.com/", "description": "全球最知名的 AI 音乐生成工具，V5.5 支持人声克隆"},
+                {"name": "Suno", "url": "https://suno.com/", "description": "全球最知名的 AI 音乐生成工具，V5.5 支持人声克隆、风格训练"},
                 {"name": "Udio", "url": "https://www.udio.com/", "description": "高保真音质输出，支持 48kHz、分轨下载"},
-                {"name": "Mureka", "url": "https://www.mureka.ai/", "description": "昆仑万维出品，支持 10 种语言，V8 版本领先"},
+                {"name": "Mureka", "url": "https://www.mureka.ai/", "description": "昆仑万维出品，V9登顶全球AI音乐模型双榜第一"},
                 {"name": "Soundful", "url": "https://my.soundful.com/", "description": "专业背景音乐生成，适合内容创作者"},
                 {"name": "Mubert", "url": "https://mubert.com/", "description": "实时音乐流生成，适合直播和视频"},
                 {"name": "AIVA", "url": "https://www.aiva.ai/", "description": "古典音乐专业，适合电影配乐、游戏原声"},
@@ -278,7 +279,8 @@ var siteData = {
                 {"name": "蘑兔AI", "url": "https://www.motu.ai/", "description": "中文创作者首选，民谣和华语流行出色"},
                 {"name": "歌歌AI写歌", "url": "https://www.gege.ai/", "description": "人声克隆、AI 音乐生成、全球发行"},
                 {"name": "Tunee", "url": "https://www.tunee.ai/", "description": "国内首个对话式 AI 音乐创作 Agent"},
-                {"name": "MiniMax 音乐", "url": "https://www.minimaxi.com/audio/music", "description": "MiniMax 出品，AI 音乐生成"},
+                {"name": "MiniMax 音乐", "url": "https://www.minimaxi.com/audio/music", "description": "MiniMax出品，Music 2.6支持20秒出歌、Cover创作"},
+                {"name": "Music Skill", "url": "https://www.minimaxi.com/", "description": "MiniMax音乐生成工具集，开源三个音乐技能"},
                 {"name": "Filmora AI Music", "url": "https://filmora.wondershare.com/", "description": "万兴喵影内置 AI 音乐生成器"},
                 {"name": "Soundraw", "url": "https://soundraw.io/", "description": "可定制化 AI 音乐生成，支持商用"},
                 {"name": "音潮", "url": "https://web.yinchaoyongxian.com/studio/music-explore", "description": "自由量级出品，一站式AI音乐创作平台，零门槛出歌"},
@@ -331,7 +333,9 @@ var siteData = {
                 {"name": "OpenRouter Rankings", "url": "https://openrouter.ai/rankings", "description": "模型排名反映了在 OpenRouter 平台上各个大型语言模型的实际使用情况"},
                 {"name": "XSCT Bench", "url": "https://xsct.ai/", "description": "场景化大模型测评平台"},
                 {"name": "Vals AI", "url": "https://www.vals.ai/", "description": "专注于大型语言模型评估和基准测试的平台"},
-                {"name": "Gemma 4", "url": "https://ai.google.dev/gemma", "description": "（开源）Google开源大模型系列，Apache 2.0协议"}
+                {"name": "Gemma 4", "url": "https://ai.google.dev/gemma", "description": "（开源）Google开源大模型系列，Apache 2.0协议"},
+                {"name": "Kimi K2.6", "url": "https://platform.moonshot.cn/", "description": "月之暗面最新开源模型，支持300个子Agent并行协作"},
+                {"name": "Qwen3.6-Max", "url": "https://www.aliyun.com/product/tongyi", "description": "阿里最新旗舰模型，登顶最佳国产模型"}
             ]
         },
         {

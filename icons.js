@@ -1,5 +1,5 @@
 // 网站图标映射表 - 本地化版本
-// 共 2251 个网站图标
+// 共 2253 个网站图标
 var iconMap = {
     "123Colorize": "icons/123Colorize.png",
     "135 AI排版": "icons/135_AI排版.png",
@@ -842,6 +842,7 @@ var iconMap = {
     "Keyword Insights": "icons/Keyword_Insights.png",
     "KiloClaw": "icons/KiloClaw.png",
     "Kimi": "icons/Kimi.webp",
+    "Kimi K2.6": "icons/Kimi_K2_6.png",
     "Kimi Agent Builder": "icons/Kimi_Agent_Builder.webp",
     "Kimi Chat": "icons/Kimi_Chat.png",
     "Kimi Claw": "icons/Kimi_Claw.webp",
@@ -1065,6 +1066,7 @@ var iconMap = {
     "Mureka": "icons/Mureka.png",
     "Murf AI": "icons/Murf_AI.png",
     "Museland": "icons/Museland.png",
+    "Music Skill": "icons/Music_Skill.png",
     "MusicAI: Top AI Music Generator": "icons/MusicAI_Top_AI_Music_Generator.png",
     "MusicStar.AI": "icons/MusicStarAI.png",
     "Mutable": "icons/Mutable.png",
@@ -1334,6 +1336,7 @@ var iconMap = {
     "Qwen-Omni": "icons/Qwen-Omni.png",
     "Qwen3-ASR": "icons/Qwen3-ASR.png",
     "Qwen3-TTS": "icons/Qwen3-TTS.png",
+    "Qwen3.6-Max": "icons/Qwen3_6-Max.png",
     "RIZILA – Make your life a bit easier.": "icons/RIZILA_Make_your_life_a_bit_easier.png",
     "RTGLabs": "icons/RTGLabs.png",
     "Radical Human Intelligence™": "icons/Radical_Human_Intelligence.png",
@@ -1981,6 +1984,7 @@ var iconMap = {
     "千鹿AI": "icons/千鹿AI.png",
     "华为Agent Arts": "icons/华为Agent_Arts.png",
     "华为云": "icons/华为云.png",
+    "华为云AgentArts": "icons/华为云AgentArts.png",
     "即创": "icons/即创.png",
     "即时AI": "icons/即时AI.png",
     "即构数智人": "icons/即构数智人.png",
