@@ -1067,6 +1067,7 @@ var iconMap = {
     "Murf AI": "icons/Murf_AI.png",
     "Museland": "icons/Museland.png",
     "Music Skill": "icons/Music_Skill.png",
+    "Moxt": "icons/Moxt.png",
     "MusicAI: Top AI Music Generator": "icons/MusicAI_Top_AI_Music_Generator.png",
     "MusicStar.AI": "icons/MusicStarAI.png",
     "Mutable": "icons/Mutable.png",

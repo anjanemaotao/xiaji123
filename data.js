@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "3.1.0",
+    "version": "3.2.0",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -362,6 +362,12 @@ var siteData = {
             "title": "综合生态",
             "links": [
                 {"name": "Xcrawl", "url": "https://xcrawl.com/?keyword=2ozjddoq", "description": "通过 OpenClaw 集成 XCrawl，可以让你的 Agent 直接获得网页抓取能力"}
+            ]
+        },
+        {
+            "title": "AI 团队",
+            "links": [
+                {"name": "Moxt", "url": "https://moxt.ai/zh-CN", "description": "多Agent协作平台，人与AI协同工作"}
             ]
         },
         {
