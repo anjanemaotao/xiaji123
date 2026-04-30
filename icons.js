@@ -1139,6 +1139,8 @@ var iconMap = {
     "Onvo AI": "icons/Onvo_AI.png",
     "Open Apps": "icons/Open_Apps.png",
     "Open LLM Leaderboard": "icons/Open_LLM_Leaderboard.png",
+    "OpenCode": "icons/OpenCode.png",
+    "GLM-5.1": "icons/GLM-5_1.png",
     "OpenAISora.video": "icons/OpenAISoravideo.png",
     "OpenClaw": "icons/OpenClaw.png",
     "OpenClaw Directory": "icons/OpenClaw_Directory.png",

@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "3.2.0",
+    "version": "3.3.0",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -189,7 +189,8 @@ var siteData = {
                 {"name": "代码小浣熊", "url": "https://code.sensetime.com/", "description": "商汤科技推出的AI编程助手"},
                 {"name": "豆包MarsCode", "url": "https://www.marscode.cn/", "description": "字节跳动推出的AI驱动一站式开发平台，国内免费"},
                 {"name": "Kimi Code", "url": "https://kimi.moonshot.cn/code", "description": "月之暗面推出的编程工具，擅长代码与Agentic任务"},
-                {"name": "Windsurf", "url": "https://codeium.com/windsurf", "description": "Codeium推出的AI原生IDE，流畅编辑体验"},
+                {"name": "Windsurf", "url": "https://codeium.com/windsurf", "description": "Codeium推出的AI原生IDE，整合Devin云端Agent能力"},
+                {"name": "OpenCode", "url": "https://github.com/opencode-ai/opencode", "description": "（开源）终端AI编程工具，隐私优先，不存储代码上下文"},
                 {"name": "Codeium", "url": "https://codeium.com/", "description": "现代编码超级工具，免费AI代码补全"},
                 {"name": "Google AI Studio", "url": "https://aistudio.google.com/", "description": "Google推出的AI开发平台，快速构建Gemini应用"},
                 {"name": "Cline", "url": "https://cline.bot/", "description": "开源AI编程助手，VS Code插件"},
@@ -312,13 +313,14 @@ var siteData = {
             "links": [
                 {"name": "Kimi", "url": "https://platform.moonshot.cn/", "description": "专业代码生成、智能对话、视觉推理"},
                 {"name": "MiniMax", "url": "https://www.minimaxi.com/", "description": "MiniMax 自主研发了一系列多模态通用大模型"},
-                {"name": "智谱GLM", "url": "https://www.bigmodel.cn/", "description": "新一代国产自主通用Al大模型开放平台"},
-                {"name": "DeepSeek", "url": "https://www.deepseek.com/", "description": "DeepSeek-V3.2 正式版发布，强化 Agent 能力"},
+                {"name": "智谱GLM", "url": "https://www.bigmodel.cn/", "description": "新一代国产自主通用Al大模型开放平台，GLM-5.1登顶SWE-bench Pro开源第一"},
+                {"name": "GLM-5.1", "url": "https://www.bigmodel.cn/", "description": "智谱最新开源模型，8小时级持续工作，SWE-bench Pro全球第三"},
+                {"name": "DeepSeek", "url": "https://www.deepseek.com/", "description": "DeepSeek-V4发布，百万Token上下文，原生适配华为昇腾"},
                 {"name": "千问Qwen", "url": "https://www.aliyun.com/product/tongyi", "description": "千问首个原生多模态大模型"},
                 {"name": "豆包Doubao", "url": "https://www.doubao.com/chat/", "description": "字节跳动自研大模型"},
                 {"name": "Claude", "url": "https://platform.claude.com/", "description": "Anthropic开发的大型语言模型家族"},
                 {"name": "Gemini", "url": "https://aistudio.google.com/", "description": "兼具高推理能力、多模态处理、可视化渲染和低成本高效能"},
-                {"name": "GPT", "url": "https://platform.openai.com/", "description": "OpenAI大模型系列，GPT-6将于2026年4月发布，支持200万Token上下文"},
+                {"name": "GPT", "url": "https://platform.openai.com/", "description": "OpenAI大模型系列，GPT-5.5于2026年4月发布，GPT-6支持200万Token上下文"},
                 {"name": "Grok", "url": "https://console.x.ai/", "description": "马斯克旗下xAI公司开发的人工智能大模型系列"},
                 {"name": "Llama", "url": "https://www.llama.com/", "description": "Meta推出的一款开源大语言模型"},
                 {"name": "Mistral", "url": "https://mistral.ai/", "description": "一个基于大语言模型的对话平台"},
