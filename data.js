@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "3.3.0",
+    "version": "3.4.0",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -158,7 +158,9 @@ var siteData = {
                 {"name": "京东云JoyAgent", "url": "https://www.jdcloud.com/", "description": "开源企业级智能体，GAIA准确率超77%"},
                 {"name": "瓴羊Quick Service", "url": "https://www.lydaas.com/quickservice", "description": "阿里云旗下智能客服Agent，全流程智能服务"},
                 {"name": "瓴羊Agent One", "url": "https://www.lydaas.com/agentone", "description": "阿里云旗下决策执行Agent，打通数据与业务"},
-                {"name": "蚂蚁数科 Agentar", "url": "https://antdigital.com/products/Agentar", "description": "全栈式智能体开发平台，信通院可信AI评估5级评级"}
+                {"name": "蚂蚁数科 Agentar", "url": "https://antdigital.com/products/Agentar", "description": "全栈式智能体开发平台，信通院可信AI评估5级评级"},
+                {"name": "OpenAgents", "url": "https://openagents.com/", "description": "全球首个开放式智能体互联网，解决多Agent协同孤岛问题"},
+                {"name": "NebulaAI", "url": "https://www.nebula-ai.com/", "description": "企业级私有部署平台，支持与OA、ERP等系统深度拉通"}
             ]
         },
         {
@@ -204,7 +206,9 @@ var siteData = {
                 {"name": "TabNine", "url": "https://www.tabnine.com/", "description": "AI代码补全工具，支持80+编程语言，主打隐私保护"},
                 {"name": "Supermaven", "url": "https://supermaven.com/", "description": "100万Token上下文窗口，响应延迟20ms级，极速代码补全"},
                 {"name": "Kiro", "url": "https://kiro.dev/", "description": "规格驱动开发，企业级AI IDE，从原型到生产的全流程自动化"},
-                {"name": "Tabby", "url": "https://github.com/TabbyML/tabby", "description": "（开源）完全本地运行的AI代码助手，隐私保护极佳"}
+                {"name": "Tabby", "url": "https://github.com/TabbyML/tabby", "description": "（开源）完全本地运行的AI代码助手，隐私保护极佳"},
+                {"name": "Qwen Code CLI", "url": "https://github.com/QwenLM/Qwen-Code", "description": "阿里推出的终端AI编程工具，支持智能体协同"},
+                {"name": "GPT-5.4 Codex", "url": "https://openai.com/codex", "description": "OpenAI最新编程模型，原生计算机使用能力"}
             ]
         },
         {
@@ -256,7 +260,8 @@ var siteData = {
                 {"name": "Qwen-Omni", "url": "https://tongyi.aliyun.com/", "description": "（开源）阿里开源，语音对话模型"},
                 {"name": "GLM-4.1V-Thinking-Flash", "url": "https://www.bigmodel.cn/", "description": "（开源）智谱免费，语音+视觉多模态"},
                 {"name": "Sherpa-ONNX", "url": "https://github.com/k2-fsa/sherpa-onnx", "description": "（开源）离线语音识别/合成框架"},
-                {"name": "VoiceFox", "url": "https://voicefox.cn/", "description": "大模型增强ASR，支持19种方言，噪音环境识别率领先"}
+                {"name": "VoiceFox", "url": "https://voicefox.cn/", "description": "大模型增强ASR，支持19种方言，噪音环境识别率领先"},
+                {"name": "VibeVoice", "url": "https://github.com/microsoft/VibeVoice", "description": "（开源）微软开源语音AI家族，60分钟上下文，支持ASR和TTS"}
             ]
         },
         {
@@ -337,7 +342,10 @@ var siteData = {
                 {"name": "Vals AI", "url": "https://www.vals.ai/", "description": "专注于大型语言模型评估和基准测试的平台"},
                 {"name": "Gemma 4", "url": "https://ai.google.dev/gemma", "description": "（开源）Google开源大模型系列，Apache 2.0协议"},
                 {"name": "Kimi K2.6", "url": "https://platform.moonshot.cn/", "description": "月之暗面最新开源模型，支持300个子Agent并行协作"},
-                {"name": "Qwen3.6-Max", "url": "https://www.aliyun.com/product/tongyi", "description": "阿里最新旗舰模型，登顶最佳国产模型"}
+                {"name": "Qwen3.6-Max", "url": "https://www.aliyun.com/product/tongyi", "description": "阿里最新旗舰模型，登顶最佳国产模型"},
+                {"name": "GLM-5-Turbo", "url": "https://www.bigmodel.cn/", "description": "智谱面向OpenClaw场景深度优化的基座模型"},
+                {"name": "MiMo-V2-Pro", "url": "https://mimo.xiaomi.com/zh/", "description": "小米最新旗舰模型，OpenRouter调用量全球第一"},
+                {"name": "Step3.5Flash", "url": "https://platform.stepfun.com/", "description": "阶跃星辰开源模型，高性价比"}
             ]
         },
         {
@@ -357,7 +365,8 @@ var siteData = {
                 {"name": "CocoLoop", "url": "https://hub.cocoloop.cn/", "description": "更快更安全的 Al Agent Skills 商店"},
                 {"name": "MiniMax", "url": "https://agent.minimaxi.com/skills", "description": "AI Agent学习新技能的地方"},
                 {"name": "theSkills.ai", "url": "https://theskills.ai/", "description": "专家认证技能市场，连接技能专家与AI Agent"},
-                {"name": "SafeSkill", "url": "https://safeskill.cn/", "description": "微步旗下AI智能体Skills安全平台，守护每一个AI Agent Skill"}
+                {"name": "SafeSkill", "url": "https://safeskill.cn/", "description": "微步旗下AI智能体Skills安全平台，守护每一个AI Agent Skill"},
+                {"name": "陌讯 Skills", "url": "https://www.moxun.cn/skills", "description": "国内首个企业级技能分发平台，符合OWASP ASVS标准"}
             ]
         },
         {
