@@ -1,5 +1,5 @@
 // 网站图标映射表 - 本地化版本
-// 共 2253 个网站图标
+// 共 2257 个网站图标
 var iconMap = {
     "123Colorize": "icons/123Colorize.png",
     "135 AI排版": "icons/135_AI排版.png",
@@ -2258,7 +2258,24 @@ var iconMap = {
     "鲜艺AI抠图": "icons/鲜艺AI抠图.png",
     "鹿班": "icons/鹿班.png",
     "麻小玩虾指南": "icons/麻小玩虾指南.png",
+    "Antigravity 2.0": "icons/Antigravity_2_0.png",
+    "TRAE SOLO": "icons/TRAE_SOLO.png",
+    "Gemini 3.5 Flash": "icons/Gemini_3_5_Flash.png",
+    "Gemini Omni": "icons/Gemini_Omni.png",
+    "GPT-5.6": "icons/GPT_5_6.png",
+    "Gemini Spark": "icons/Gemini_Spark.png",
+    "Mavis": "icons/Mavis.png",
+    "诗云API": "icons/诗云API.png",
+    "基石智算": "icons/基石智算.png",
+    "VoiceLM-7B": "icons/VoiceLM_7B.png",
+    "StepAudio 2.5 ASR": "icons/StepAudio_2_5_ASR.png",
+    "StepAudio 2.5 Realtime": "icons/StepAudio_2_5_Realtime.png",
+    "Flow Music": "icons/Flow_Music.png",
     "스토어링크 공식 크롬 익스텐션 확장 프로그램": "icons/스토어링크_공식_크롬_익스텐션_확장_프로그램.png",
+    "锐智AI": "icons/锐智AI.png",
+    "云笔AI": "icons/云笔AI.png",
+    "笔捷AI": "icons/笔捷AI.png",
+    "掌桥科研": "icons/掌桥科研.png",
 };
 
 // 根据网站名称获取图标

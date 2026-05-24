@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "3.4.0",
+    "version": "3.8.0",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -120,7 +120,11 @@ var siteData = {
                 {"name": "蓝耘元生代", "url": "https://www.lanyun.net/", "description": "MaaS平台，DeepSeek-v3.2模型吞吐性能登顶AI Ping榜首"},
                 {"name": "魔搭社区", "url": "https://modelscope.cn/", "description": "阿里云旗下，国内最大AI模型开源社区，提供3000+预训练模型"},
                 {"name": "腾讯云TI平台", "url": "https://cloud.tencent.com/product/ti", "description": "腾讯云大模型精选商店，覆盖模型训练、推理及工具链支持"},
-                {"name": "元景大模型MaaS平台", "url": "https://www.chinaunicom.com/", "description": "中国联通出品，面向工业领域的模型即服务平台"}
+                {"name": "元景大模型MaaS平台", "url": "https://www.chinaunicom.com/", "description": "中国联通出品，面向工业领域的模型即服务平台"},
+                {"name": "华为云MaaS", "url": "https://www.huaweicloud.com/ai/token-service.html", "description": "华为云MaaS平台，支持GLM-5等主流模型，Day0级适配"},
+                {"name": "七牛云MaaS", "url": "https://www.qiniu.com/ai/agent", "description": "中国版OpenRouter，AI大模型广场，18万+用户"},
+                {"name": "诗云API", "url": "https://shiyunapi.com/", "description": "第一梯队全能性能标杆，首字响应20ms，99.92% SLA"},
+                {"name": "基石智算", "url": "https://www.modelscope.cn/", "description": "阿里云旗下，国内最大AI模型开源社区"}
             ]
         },
         {
@@ -160,7 +164,10 @@ var siteData = {
                 {"name": "瓴羊Agent One", "url": "https://www.lydaas.com/agentone", "description": "阿里云旗下决策执行Agent，打通数据与业务"},
                 {"name": "蚂蚁数科 Agentar", "url": "https://antdigital.com/products/Agentar", "description": "全栈式智能体开发平台，信通院可信AI评估5级评级"},
                 {"name": "OpenAgents", "url": "https://openagents.com/", "description": "全球首个开放式智能体互联网，解决多Agent协同孤岛问题"},
-                {"name": "NebulaAI", "url": "https://www.nebula-ai.com/", "description": "企业级私有部署平台，支持与OA、ERP等系统深度拉通"}
+                {"name": "NebulaAI", "url": "https://www.nebula-ai.com/", "description": "企业级私有部署平台，支持与OA、ERP等系统深度拉通"},
+                {"name": "Gemini Spark", "url": "https://gemini.google.com/spark", "description": "Google 24小时运行的个人AI Agent，深度集成Gmail、日历等"},
+                {"name": "Hermes Agent", "url": "https://hermes-agent.nousresearch.com/", "description": "开源自主AI代理，拥有内置的自我学习循环"},
+                {"name": "Mavis", "url": "https://www.minimaxi.com/mavis", "description": "MiniMax Agent升级版，支持多智能体协作"}
             ]
         },
         {
@@ -172,7 +179,9 @@ var siteData = {
                 {"name": "Steel", "url": "https://steel.dev/", "description": "抗指纹识别的浏览器环境，增强隐蔽性"},
                 {"name": "阿里云 AgentBay", "url": "https://help.aliyun.com/document_detail/2878644.html", "description": "无影AgentBay，提供浏览器、代码空间、云电脑、移动端四大核心环境"},
                 {"name": "Hyperbrowser", "url": "https://hyperbrowser.ai/", "description": "高性能浏览器环境，优化渲染与交互速度"},
-                {"name": "Daytona", "url": "https://www.daytona.io/", "description": "安全弹性基础设施，运行AI生成代码，支持Computer Use"}
+                {"name": "Daytona", "url": "https://www.daytona.io/", "description": "安全弹性基础设施，运行AI生成代码，支持Computer Use"},
+                {"name": "Cube沙箱", "url": "https://github.com/tencentcloud/cube-sandbox", "description": "（开源）腾讯云开源，硬件级强隔离，60ms冷启动，兼容E2B SDK"},
+                {"name": "PPIO Agent沙箱", "url": "https://ppio.com/", "description": "中国首款兼容E2B接口的Agent沙箱，毫秒级启动，强安全隔离"}
             ]
         },
         {
@@ -208,7 +217,9 @@ var siteData = {
                 {"name": "Kiro", "url": "https://kiro.dev/", "description": "规格驱动开发，企业级AI IDE，从原型到生产的全流程自动化"},
                 {"name": "Tabby", "url": "https://github.com/TabbyML/tabby", "description": "（开源）完全本地运行的AI代码助手，隐私保护极佳"},
                 {"name": "Qwen Code CLI", "url": "https://github.com/QwenLM/Qwen-Code", "description": "阿里推出的终端AI编程工具，支持智能体协同"},
-                {"name": "GPT-5.4 Codex", "url": "https://openai.com/codex", "description": "OpenAI最新编程模型，原生计算机使用能力"}
+                {"name": "GPT-5.4 Codex", "url": "https://openai.com/codex", "description": "OpenAI最新编程模型，原生计算机使用能力"},
+                {"name": "Antigravity 2.0", "url": "https://ai.google.dev/antigravity", "description": "Google发布的智能体优先工作平台，支持多Agent编排"},
+                {"name": "TRAE SOLO", "url": "https://www.trae.com.cn/solo", "description": "字节跳动的全流程Agent独立端，AI主导执行"}
             ]
         },
         {
@@ -261,7 +272,16 @@ var siteData = {
                 {"name": "GLM-4.1V-Thinking-Flash", "url": "https://www.bigmodel.cn/", "description": "（开源）智谱免费，语音+视觉多模态"},
                 {"name": "Sherpa-ONNX", "url": "https://github.com/k2-fsa/sherpa-onnx", "description": "（开源）离线语音识别/合成框架"},
                 {"name": "VoiceFox", "url": "https://voicefox.cn/", "description": "大模型增强ASR，支持19种方言，噪音环境识别率领先"},
-                {"name": "VibeVoice", "url": "https://github.com/microsoft/VibeVoice", "description": "（开源）微软开源语音AI家族，60分钟上下文，支持ASR和TTS"}
+                {"name": "VibeVoice", "url": "https://github.com/microsoft/VibeVoice", "description": "（开源）微软开源语音AI家族，60分钟上下文，支持ASR和TTS"},
+                {"name": "Seeduplex", "url": "https://www.doubao.com/", "description": "豆包全双工语音大模型，边听边说，交互自然顺畅"},
+                {"name": "MiMo-V2.5-TTS", "url": "https://mimo.mi.com/", "description": "小米自研语音合成大模型，支持方言、歌声合成，上亿小时预训练"},
+                {"name": "MiMo-V2.5-ASR", "url": "https://mimo.mi.com/", "description": "小米自研语音识别大模型，支持中英双语、方言、噪音环境"},
+                {"name": "山海·知音2.0", "url": "https://www.unisound.com/", "description": "云知声全双工语音大模型，支持30+方言，首包延迟90ms"},
+                {"name": "Voxtral-4B-TTS", "url": "https://mistral.ai/", "description": "（开源）Mistral开源，3秒克隆，多语言支持"},
+                {"name": "StepAudio 2.5 TTS", "url": "https://platform.stepfun.com/", "description": "阶跃星辰语音生成模型，Artificial Analysis榜单前三"},
+                {"name": "VoiceLM-7B", "url": "https://github.com/voice-lm", "description": "（开源）轻量化多模态语音大模型，支持零样本语境感知语音合成"},
+                {"name": "StepAudio 2.5 ASR", "url": "https://platform.stepfun.com/", "description": "阶跃星辰语音识别模型，高速高精度"},
+                {"name": "StepAudio 2.5 Realtime", "url": "https://platform.stepfun.com/", "description": "阶跃星辰实时语音交互模型，主打活人感AI聊天体验"}
             ]
         },
         {
@@ -291,7 +311,11 @@ var siteData = {
                 {"name": "Soundraw", "url": "https://soundraw.io/", "description": "可定制化 AI 音乐生成，支持商用"},
                 {"name": "音潮", "url": "https://web.yinchaoyongxian.com/studio/music-explore", "description": "自由量级出品，一站式AI音乐创作平台，零门槛出歌"},
                 {"name": "Vemus未音", "url": "https://y.qq.com/vemus/", "description": "腾讯音乐旗下AI音乐创作工具，多模态输入"},
-                {"name": "Lemonaid", "url": "https://www.lemonaid.ai/", "description": "面向专业音乐人的AI音乐生成工具，支持MIDI与WAV输出"}
+                {"name": "Lemonaid", "url": "https://www.lemonaid.ai/", "description": "面向专业音乐人的AI音乐生成工具，支持MIDI与WAV输出"},
+                {"name": "音潮 V3.0", "url": "https://web.yinchaoyongxian.com/studio/music-explore", "description": "自由量级出品，一站式AI音乐创作平台，零门槛出歌，15秒生成"},
+                {"name": "Suno V5.5", "url": "https://suno.com/", "description": "AI音乐生成工具，支持人声克隆、风格训练，个性化创作"},
+                {"name": "鲸鱼音乐", "url": "https://www.jingyuyinyue.com/", "description": "AI音乐生成器，支持多模态输入，3000+企业客户"},
+                {"name": "Flow Music", "url": "https://deepmind.google/", "description": "Google推出的AI音乐制作工具，接入Gemini Omni模型"}
             ]
         },
         {
@@ -310,7 +334,8 @@ var siteData = {
                 {"name": "万彩AI", "url": "https://ai.kezhan365.com/", "description": "AI短视频创作，数字人口播"},
                 {"name": "即梦AI", "url": "https://jimeng.jianying.com/", "description": "字节跳动出品，Seedance 2.0视频生成"},
                 {"name": "万兴喵影", "url": "https://filmora.wondershare.com/", "description": "AI视频编辑，内置短剧模板"},
-                {"name": "巨日禄", "url": "https://www.jurilu.com/", "description": "AI短剧创作平台，支持剧本生成与视频制作"}
+                {"name": "巨日禄", "url": "https://www.jurilu.com/", "description": "AI短剧创作平台，支持剧本生成与视频制作"},
+                {"name": "纳米大片流水线", "url": "https://www.nami.ai/", "description": "AI影视剧组智能体系统，解决人物穿帮、世界观穿帮、空间穿帮三大挑战"}
             ]
         },
         {
@@ -345,7 +370,16 @@ var siteData = {
                 {"name": "Qwen3.6-Max", "url": "https://www.aliyun.com/product/tongyi", "description": "阿里最新旗舰模型，登顶最佳国产模型"},
                 {"name": "GLM-5-Turbo", "url": "https://www.bigmodel.cn/", "description": "智谱面向OpenClaw场景深度优化的基座模型"},
                 {"name": "MiMo-V2-Pro", "url": "https://mimo.xiaomi.com/zh/", "description": "小米最新旗舰模型，OpenRouter调用量全球第一"},
-                {"name": "Step3.5Flash", "url": "https://platform.stepfun.com/", "description": "阶跃星辰开源模型，高性价比"}
+                {"name": "Step3.5Flash", "url": "https://platform.stepfun.com/", "description": "阶跃星辰开源模型，高性价比"},
+                {"name": "GPT-5.5", "url": "https://platform.openai.com/", "description": "OpenAI最新模型，支持100万Token上下文，原生电脑控制"},
+                {"name": "DeepSeek V4", "url": "https://www.deepseek.com/", "description": "百万Token上下文，国产算力全栈适配，开源模型标杆"},
+                {"name": "Kimi K2.6", "url": "https://platform.moonshot.cn/", "description": "月之暗面最新模型，支持300个Agent并行协作"},
+                {"name": "Claude Opus 4.7", "url": "https://platform.claude.com/", "description": "Anthropic最新模型，编程能力顶尖，SWE-bench 80.8%"},
+                {"name": "Gemini 3.1", "url": "https://aistudio.google.com/", "description": "Google最新模型，推理能力翻倍，支持200万Token上下文"},
+                {"name": "Gemini 3.2 Flash", "url": "https://aistudio.google.com/", "description": "Google最新发布的轻量级模型，单次生成2200行代码，性能超越Pro"},
+                {"name": "Gemini 3.5 Flash", "url": "https://aistudio.google.com/", "description": "Google最强编码和Agent模型，输出速度达竞品4倍"},
+                {"name": "Gemini Omni", "url": "https://aistudio.google.com/", "description": "Google多模态视频生成模型，支持对话式编辑"},
+                {"name": "GPT-5.6", "url": "https://platform.openai.com/", "description": "OpenAI最新模型，开始内测"}
             ]
         },
         {
@@ -1791,7 +1825,11 @@ var siteData = {
                 {"name": "火山写作", "url": "https://writingo.net/document?utm_source=aigongjuji", "description": "字节跳动旗下推出的免费AI写作助手"},
                 {"name": "火龙果写作", "url": "https://www.mypitaya.com/", "description": "AI驱动的文字生产力工具"},
                 {"name": "ProWritingAid", "url": "https://prowritingaid.com/", "description": "英语写作优化和修改工具"},
-                {"name": "Coda AI", "url": "https://coda.io/product/ai?utm_source=.cn", "description": "在线协作平台Coda推出的AI写作和文档助手，类似于Notion AI"}
+                {"name": "Coda AI", "url": "https://coda.io/product/ai?utm_source=.cn", "description": "在线协作平台Coda推出的AI写作和文档助手，类似于Notion AI"},
+                {"name": "锐智AI", "url": "https://www.ruifou.com/", "description": "高质量原创AI论文生成平台，免费智能选题、免费生成大纲，支持无限改稿"},
+                {"name": "云笔AI", "url": "https://www.iyunbi.com/", "description": "一键生成万字原创论文初稿，知网查重率稳定在15%以下，支持投喂AI功能"},
+                {"name": "笔捷AI", "url": "https://m.bijieai.com/", "description": "AI智能写作助手，支持多场景写作，免费选题、真实文献推荐"},
+                {"name": "掌桥科研", "url": "https://www.zhangqiaokeyan.com/", "description": "一站式科研服务平台，提供AI论文写作、科技查新、文献服务"}
             ]
         },
         {
