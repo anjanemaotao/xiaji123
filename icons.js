@@ -1,5 +1,5 @@
 // 网站图标映射表 - 本地化版本
-// 共 2257 个网站图标
+// 共 2266 个网站图标
 var iconMap = {
     "123Colorize": "icons/123Colorize.png",
     "135 AI排版": "icons/135_AI排版.png",
@@ -2276,6 +2276,15 @@ var iconMap = {
     "云笔AI": "icons/云笔AI.png",
     "笔捷AI": "icons/笔捷AI.png",
     "掌桥科研": "icons/掌桥科研.png",
+    "Molili": "icons/Molili.png",
+    "MiniMax M3": "icons/MiniMax_M3.png",
+    "Sakana Fugu Ultra": "icons/Sakana_Fugu_Ultra.png",
+    "MAI-Thinking-1": "icons/MAI-Thinking-1.png",
+    "Cosmos 3": "icons/Cosmos_3.png",
+    "DreamX-World 1.0": "icons/DreamX-World_1.0.png",
+    "ACE-Step 1.5 XL": "icons/ACE-Step_1.5_XL.png",
+    "云知声U2": "icons/云知声U2.png",
+    "Flow Music": "icons/Flow_Music.png",
 };
 
 // 根据网站名称获取图标
