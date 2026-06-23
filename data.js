@@ -42,7 +42,8 @@ var siteData = {
                 {"name": "Loomy", "url": "https://loomy.xunfei.cn/", "description": "科大讯飞推出的桌面级 AI 个人助理，基于 AstronClaw 打造"},
                 {"name": "Hermes Agent", "url": "https://hermes-agent.nousresearch.com/", "description": "开源自主Al代理，拥有内置的自我学习循环"},
                 {"name": "铠盒智能", "url": "https://www.nizwo.com/", "description": "AI智能体计算机，预装OpenClaw，7x24小时稳定运行"},
-                {"name": "Molili", "url": "https://molili.dangbei.com/", "description": "（本地）当贝推出的国内首个OpenClaw中文版，交互创新、Token消耗降低50%"}
+                {"name": "Molili", "url": "https://molili.dangbei.com/", "description": "（本地）当贝推出的国内首个OpenClaw中文版，交互创新、Token消耗降低50%"},
+                {"name": "悟帆AI", "url": "https://www.wufanai.com/", "description": "（云端）多Agent协作平台，支持并行调度、圆桌讨论、交叉验证"}
             ]
         },
         {
@@ -125,7 +126,8 @@ var siteData = {
                 {"name": "华为云MaaS", "url": "https://www.huaweicloud.com/ai/token-service.html", "description": "华为云MaaS平台，支持GLM-5等主流模型，Day0级适配"},
                 {"name": "七牛云MaaS", "url": "https://www.qiniu.com/ai/agent", "description": "中国版OpenRouter，AI大模型广场，18万+用户"},
                 {"name": "诗云API", "url": "https://shiyunapi.com/", "description": "第一梯队全能性能标杆，首字响应20ms，99.92% SLA"},
-                {"name": "基石智算", "url": "https://www.modelscope.cn/", "description": "阿里云旗下，国内最大AI模型开源社区"}
+                {"name": "基石智算", "url": "https://www.modelscope.cn/", "description": "阿里云旗下，国内最大AI模型开源社区"},
+                {"name": "ModelArts Next", "url": "https://www.huaweicloud.com/product/modelarts.html", "description": "华为云新一代模型训推平台，模型调度精准率超95%，调用成本降低20%"}
             ]
         },
         {
@@ -220,7 +222,10 @@ var siteData = {
                 {"name": "Qwen Code CLI", "url": "https://github.com/QwenLM/Qwen-Code", "description": "阿里推出的终端AI编程工具，支持智能体协同"},
                 {"name": "GPT-5.4 Codex", "url": "https://openai.com/codex", "description": "OpenAI最新编程模型，原生计算机使用能力"},
                 {"name": "Antigravity 2.0", "url": "https://ai.google.dev/antigravity", "description": "Google发布的智能体优先工作平台，支持多Agent编排"},
-                {"name": "TRAE SOLO", "url": "https://www.trae.com.cn/solo", "description": "字节跳动的全流程Agent独立端，AI主导执行"}
+                {"name": "TRAE SOLO", "url": "https://www.trae.com.cn/solo", "description": "字节跳动的全流程Agent独立端，AI主导执行"},
+                {"name": "DevEcoCode", "url": "https://developer.huawei.com/consumer/cn/deveco-code/", "description": "华为鸿蒙应用开发智能体，内置UI意图验证Agent和代码修复Agent"},
+                {"name": "DevEcoCLI", "url": "https://developer.huawei.com/consumer/cn/deveco-cli/", "description": "华为鸿蒙命令行编程工具，专为已有AI工具的大厂开发者设计"},
+                {"name": "Copilot桌面应用", "url": "https://github.com/features/copilot", "description": "GitHub独立AI协作平台，Canvas画布+Agent Merge多智能体协作"}
             ]
         },
         {
@@ -282,7 +287,8 @@ var siteData = {
                 {"name": "StepAudio 2.5 TTS", "url": "https://platform.stepfun.com/", "description": "阶跃星辰语音生成模型，Artificial Analysis榜单前三"},
                 {"name": "VoiceLM-7B", "url": "https://github.com/voice-lm", "description": "（开源）轻量化多模态语音大模型，支持零样本语境感知语音合成"},
                 {"name": "StepAudio 2.5 ASR", "url": "https://platform.stepfun.com/", "description": "阶跃星辰语音识别模型，高速高精度"},
-                {"name": "云知声U2", "url": "https://maas.unisound.com/models/u2", "description": "云知声原生智能体大模型，可自主拆解100步以上复杂工作流"}
+                {"name": "云知声U2", "url": "https://maas.unisound.com/models/u2", "description": "云知声原生智能体大模型，可自主拆解100步以上复杂工作流"},
+                {"name": "StepAudio 2.5 Realtime", "url": "https://platform.stepfun.com/", "description": "阶跃星辰实时语音交互模型，主打活人感AI聊天体验"}
             ]
         },
         {
@@ -317,7 +323,8 @@ var siteData = {
                 {"name": "Suno V5.5", "url": "https://suno.com/", "description": "AI音乐生成工具，支持人声克隆、风格训练，个性化创作"},
                 {"name": "鲸鱼音乐", "url": "https://www.jingyuyinyue.com/", "description": "AI音乐生成器，支持多模态输入，3000+企业客户"},
                 {"name": "Flow Music", "url": "https://deepmind.google/", "description": "Google推出的AI音乐制作工具，接入Gemini Omni模型"},
-                {"name": "ACE-Step 1.5 XL", "url": "https://github.com/ace-step/ace-step", "description": "（开源）AI音乐生成模型，支持本地运行4分钟带人声歌曲，版权归属用户"}
+                {"name": "ACE-Step 1.5 XL", "url": "https://github.com/ace-step/ace-step", "description": "（开源）AI音乐生成模型，支持本地运行4分钟带人声歌曲，版权归属用户"},
+                {"name": "MELO音乐", "url": "https://melomusic.com/", "description": "专为华语优化的AI音乐工具，中文咬字清晰，综合评分9.2登顶"}
             ]
         },
         {
@@ -383,7 +390,12 @@ var siteData = {
                 {"name": "Gemini Omni", "url": "https://aistudio.google.com/", "description": "Google多模态视频生成模型，支持对话式编辑"},
                 {"name": "MiniMax M3", "url": "https://www.minimaxi.com/", "description": "（开源）MiniMax旗舰多模态模型，SWE-Bench Pro超越GPT-5.5，百万上下文"},
                 {"name": "Sakana Fugu Ultra", "url": "https://sakana.ai/", "description": "多智能体编排模型，动态调度全球顶尖模型，性能比肩Claude Fable"},
-                {"name": "MAI-Thinking-1", "url": "https://azure.microsoft.com/", "description": "微软首款自研推理模型，350亿活跃参数，256K上下文，无第三方蒸馏"}
+                {"name": "MAI-Thinking-1", "url": "https://azure.microsoft.com/", "description": "微软首款自研推理模型，350亿活跃参数，256K上下文，无第三方蒸馏"},
+                {"name": "GPT-5.6", "url": "https://platform.openai.com/", "description": "OpenAI最新模型，开始内测"},
+                {"name": "Claude Fable 5", "url": "https://platform.claude.com/", "description": "Anthropic最新旗舰模型，SWE-Bench Pro 80.3%，24小时迁移5000万行代码"},
+                {"name": "Claude Mythos 5", "url": "https://platform.claude.com/", "description": "Anthropic前沿模型，仅面向经审核的研究机构和企业开放"},
+                {"name": "GLM-5.2", "url": "https://www.bigmodel.cn/", "description": "（开源）智谱最新开源模型，MIT协议，Code Arena全球可用模型第一"},
+                {"name": "GPT-5.5 Instant", "url": "https://chat.openai.com/", "description": "OpenAI ChatGPT默认模型，常识推理与事实准确性大幅提升"}
             ]
         },
         {
@@ -517,7 +529,9 @@ var siteData = {
                 {"name": "智元 Genie Envisioner", "url": "https://www.zhiyuan-robot.com/", "description": "智元机器人世界模型，动作驱动的物理进化引擎"},
                 {"name": "蔚来世界模型", "url": "https://www.nio.com/", "description": "智能驾驶世界模型，停车场自主寻路"},
                 {"name": "Cosmos 3", "url": "https://www.nvidia.com/en-us/ai/cosmos/", "description": "英伟达全模态物理AI基础模型，支持文本/图像/视频/声音/动作五模态"},
-                {"name": "DreamX-World 1.0", "url": "https://www.amap.com/", "description": "高德交互式通用世界模型，支持1分钟连续交互、精准镜头控制"}
+                {"name": "DreamX-World 1.0", "url": "https://www.amap.com/", "description": "高德交互式通用世界模型，支持1分钟连续交互、精准镜头控制"},
+                {"name": "特斯拉世界模型", "url": "https://www.tesla.com/", "description": "自动驾驶世界模型，神经网络驱动的环境模拟"},
+                {"name": "极佳视界 DriveDreamer", "url": "https://www.jiachaworld.com/", "description": "驾驶世界模型与具身世界模型，已签约20余家头部主机厂"}
             ]
         }
 ,

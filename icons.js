@@ -1,5 +1,5 @@
 // 网站图标映射表 - 本地化版本
-// 共 2266 个网站图标
+// 共 2280 个网站图标
 var iconMap = {
     "123Colorize": "icons/123Colorize.png",
     "135 AI排版": "icons/135_AI排版.png",
@@ -2285,6 +2285,20 @@ var iconMap = {
     "ACE-Step 1.5 XL": "icons/ACE-Step_1.5_XL.png",
     "云知声U2": "icons/云知声U2.png",
     "Flow Music": "icons/Flow_Music.png",
+    "悟帆AI": "icons/悟帆AI.png",
+    "ModelArts Next": "icons/ModelArts_Next.png",
+    "DevEcoCode": "icons/DevEcoCode.png",
+    "DevEcoCLI": "icons/DevEcoCLI.png",
+    "Copilot桌面应用": "icons/Copilot桌面应用.png",
+    "StepAudio 2.5 Realtime": "icons/StepAudio_2.5_Realtime.png",
+    "MELO音乐": "icons/MELO音乐.png",
+    "GPT-5.6": "icons/GPT-5.6.png",
+    "Claude Fable 5": "icons/Claude_Fable_5.png",
+    "Claude Mythos 5": "icons/Claude_Mythos_5.png",
+    "GLM-5.2": "icons/GLM-5.2.png",
+    "GPT-5.5 Instant": "icons/GPT-5.5_Instant.png",
+    "特斯拉世界模型": "icons/特斯拉世界模型.png",
+    "极佳视界 DriveDreamer": "icons/极佳视界_DriveDreamer.png",
 };
 
 // 根据网站名称获取图标
