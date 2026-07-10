@@ -2326,6 +2326,16 @@ var iconMap = {
     "Gemini 3.1": "icons/Gemini_3.1.png",
     "Gemini 3.2 Flash": "icons/Gemini_3.2_Flash.png",
     "陌讯 Skills": "icons/陌讯_Skills.png",
+    "龙虾管家·AI安全沙箱": "icons/龙虾管家_AI安全沙箱.png",
+    "云端龙虾": "icons/云端龙虾.png",
+    "移动云MoMA": "icons/移动云MoMA.png",
+    "得助MaaS": "icons/得助MaaS.png",
+    "Cartesia Sonic": "icons/Cartesia_Sonic.png",
+    "Cartesia Ink": "icons/Cartesia_Ink.png",
+    "ZONOS2": "icons/ZONOS2.png",
+    "Apple Intelligence": "icons/Apple_Intelligence.png",
+    "Vidu S1": "icons/Vidu_S1.png",
+    "腾讯混元3D世界模型": "icons/腾讯混元3D世界模型.png",
 };
 
 // 根据网站名称获取图标

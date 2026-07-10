@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "3.9.0",
+    "version": "3.9.1",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -43,7 +43,9 @@ var siteData = {
                 {"name": "Hermes Agent", "url": "https://hermes-agent.nousresearch.com/", "description": "开源自主Al代理，拥有内置的自我学习循环"},
                 {"name": "铠盒智能", "url": "https://www.nizwo.com/", "description": "AI智能体计算机，预装OpenClaw，7x24小时稳定运行"},
                 {"name": "Molili", "url": "https://molili.dangbei.com/", "description": "（本地）当贝推出的国内首个OpenClaw中文版，交互创新、Token消耗降低50%"},
-                {"name": "悟帆AI", "url": "https://www.wufanai.com/", "description": "（云端）多Agent协作平台，支持并行调度、圆桌讨论、交叉验证"}
+                {"name": "悟帆AI", "url": "https://www.wufanai.com/", "description": "（云端）多Agent协作平台，支持并行调度、圆桌讨论、交叉验证"},
+                {"name": "龙虾管家·AI安全沙箱", "url": "https://guanjia.qq.com/main.html", "description": "腾讯推出的AI安全沙箱，为智能体提供安全隔离运行环境"},
+                {"name": "云端龙虾", "url": "https://gpulink.cc/", "description": "零克云OpenClaw，提供云端GPU算力与Agent托管服务"}
             ]
         },
         {
@@ -127,7 +129,9 @@ var siteData = {
                 {"name": "七牛云MaaS", "url": "https://www.qiniu.com/ai/agent", "description": "中国版OpenRouter，AI大模型广场，18万+用户"},
                 {"name": "诗云API", "url": "https://shiyunapi.com/", "description": "第一梯队全能性能标杆，首字响应20ms，99.92% SLA"},
                 {"name": "基石智算", "url": "https://www.modelscope.cn/", "description": "阿里云旗下，国内最大AI模型开源社区"},
-                {"name": "ModelArts Next", "url": "https://www.huaweicloud.com/product/modelarts.html", "description": "华为云新一代模型训推平台，模型调度精准率超95%，调用成本降低20%"}
+                {"name": "ModelArts Next", "url": "https://www.huaweicloud.com/product/modelarts.html", "description": "华为云新一代模型训推平台，模型调度精准率超95%，调用成本降低20%"},
+                {"name": "移动云MoMA", "url": "https://ecloud.10086.cn/portal/product/MaaS", "description": "中国移动MaaS平台，提供大模型训练、推理、精调服务"},
+                {"name": "得助MaaS", "url": "https://www.51ima.com/", "description": "中关村科金出品的智能MaaS平台，面向金融等行业场景"}
             ]
         },
         {
@@ -288,7 +292,10 @@ var siteData = {
                 {"name": "VoiceLM-7B", "url": "https://github.com/voice-lm", "description": "（开源）轻量化多模态语音大模型，支持零样本语境感知语音合成"},
                 {"name": "StepAudio 2.5 ASR", "url": "https://platform.stepfun.com/", "description": "阶跃星辰语音识别模型，高速高精度"},
                 {"name": "云知声U2", "url": "https://maas.unisound.com/models/u2", "description": "云知声原生智能体大模型，可自主拆解100步以上复杂工作流"},
-                {"name": "StepAudio 2.5 Realtime", "url": "https://platform.stepfun.com/", "description": "阶跃星辰实时语音交互模型，主打活人感AI聊天体验"}
+                {"name": "StepAudio 2.5 Realtime", "url": "https://platform.stepfun.com/", "description": "阶跃星辰实时语音交互模型，主打活人感AI聊天体验"},
+                {"name": "Cartesia Sonic", "url": "https://cartesia.ai/", "description": "实时TTS模型，延迟极低，支持毫秒级语音合成与多语言"},
+                {"name": "Cartesia Ink", "url": "https://cartesia.ai/", "description": "实时ASR模型，高精度语音识别，与Sonic无缝配合"},
+                {"name": "ZONOS2", "url": "https://www.zyphra.com/", "description": "（开源）Zyphra开源TTS模型，支持多语言语音合成，GitHub开源"}
             ]
         },
         {
@@ -395,7 +402,8 @@ var siteData = {
                 {"name": "Claude Fable 5", "url": "https://platform.claude.com/", "description": "Anthropic最新旗舰模型，SWE-Bench Pro 80.3%，24小时迁移5000万行代码"},
                 {"name": "Claude Mythos 5", "url": "https://platform.claude.com/", "description": "Anthropic前沿模型，仅面向经审核的研究机构和企业开放"},
                 {"name": "GLM-5.2", "url": "https://www.bigmodel.cn/", "description": "（开源）智谱最新开源模型，MIT协议，Code Arena全球可用模型第一"},
-                {"name": "GPT-5.5 Instant", "url": "https://chat.openai.com/", "description": "OpenAI ChatGPT默认模型，常识推理与事实准确性大幅提升"}
+                {"name": "GPT-5.5 Instant", "url": "https://chat.openai.com/", "description": "OpenAI ChatGPT默认模型，常识推理与事实准确性大幅提升"},
+                {"name": "Apple Intelligence", "url": "https://www.apple.com/apple-intelligence/", "description": "苹果AI智能系统，深度集成iOS/macOS，支持写作、图像、Siri增强"}
             ]
         },
         {
@@ -531,7 +539,9 @@ var siteData = {
                 {"name": "Cosmos 3", "url": "https://www.nvidia.com/en-us/ai/cosmos/", "description": "英伟达全模态物理AI基础模型，支持文本/图像/视频/声音/动作五模态"},
                 {"name": "DreamX-World 1.0", "url": "https://www.amap.com/", "description": "高德交互式通用世界模型，支持1分钟连续交互、精准镜头控制"},
                 {"name": "特斯拉世界模型", "url": "https://www.tesla.com/", "description": "自动驾驶世界模型，神经网络驱动的环境模拟"},
-                {"name": "极佳视界 DriveDreamer", "url": "https://www.jiachaworld.com/", "description": "驾驶世界模型与具身世界模型，已签约20余家头部主机厂"}
+                {"name": "极佳视界 DriveDreamer", "url": "https://www.jiachaworld.com/", "description": "驾驶世界模型与具身世界模型，已签约20余家头部主机厂"},
+                {"name": "Vidu S1", "url": "https://www.vidu.cn/vidu-stream", "description": "生数科技世界模型，支持视频生成与物理世界模拟"},
+                {"name": "腾讯混元3D世界模型", "url": "https://3d-models.hunyuan.tencent.com/world/", "description": "腾讯混元3D世界模型，生成可交互的三维场景与物理仿真"}
             ]
         }
 ,
