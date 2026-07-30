@@ -1,5 +1,5 @@
 // 网站图标映射表 - 本地化版本
-// 共 2280 个网站图标
+// 共 2346 个网站图标
 var iconMap = {
     "123Colorize": "icons/123Colorize.png",
     "135 AI排版": "icons/135_AI排版.png",
@@ -2335,8 +2335,23 @@ var iconMap = {
     "ZONOS2": "icons/ZONOS2.png",
     "Apple Intelligence": "icons/Apple_Intelligence.png",
     "Vidu S1": "icons/Vidu_S1.png",
-    "腾讯混元3D世界模型": "icons/腾讯混元3D世界模型.png",
-};
+     "腾讯混元3D世界模型": "icons/腾讯混元3D世界模型.png",
+     "Cindy": "icons/Cindy.png",
+     "GPT-Live": "icons/GPT-Live.png",
+     "GPT-Transcribe": "icons/GPT-Transcribe.png",
+     "GPT-Live-Transcribe": "icons/GPT-Live-Transcribe.png",
+     "趣丸千音 All Voice Lab": "icons/All_Voice_Lab.png",
+     "天谱乐": "icons/天谱乐.png",
+     "GPT-5.6 Sol": "icons/GPT-5.6_Sol.png",
+     "GPT-5.6 Terra": "icons/GPT-5.6_Terra.png",
+     "GPT-5.6 Luna": "icons/GPT-5.6_Luna.png",
+     "Claude Opus 5": "icons/Claude_Opus_5.ico",
+     "Claude Sonnet 5": "icons/Claude_Sonnet_5.ico",
+     "Kimi K3": "icons/Kimi_K3.ico",
+     "Qwen3.8-Max": "icons/Qwen3.8-Max.svg",
+     "CodeBuddy IDE": "icons/CodeBuddy_IDE.svg",
+     "腾讯云ADP 4.0": "icons/腾讯云ADP_4.0.ico",
+ };
 
 // 根据网站名称获取图标
 function getIconByName(name) {
