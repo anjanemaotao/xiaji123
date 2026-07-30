@@ -1,5 +1,5 @@
 var siteData = {
-    "version": "3.9.1",
+    "version": "3.9.2",
     "categories": [
         {
             "title": "百虾争鸣",
@@ -45,7 +45,8 @@ var siteData = {
                 {"name": "Molili", "url": "https://molili.dangbei.com/", "description": "（本地）当贝推出的国内首个OpenClaw中文版，交互创新、Token消耗降低50%"},
                 {"name": "悟帆AI", "url": "https://www.wufanai.com/", "description": "（云端）多Agent协作平台，支持并行调度、圆桌讨论、交叉验证"},
                 {"name": "龙虾管家·AI安全沙箱", "url": "https://guanjia.qq.com/main.html", "description": "腾讯推出的AI安全沙箱，为智能体提供安全隔离运行环境"},
-                {"name": "云端龙虾", "url": "https://gpulink.cc/", "description": "零克云OpenClaw，提供云端GPU算力与Agent托管服务"}
+                {"name": "云端龙虾", "url": "https://gpulink.cc/", "description": "零克云OpenClaw，提供云端GPU算力与Agent托管服务"},
+                {"name": "Cindy", "url": "https://cindy.cn/", "description": "（开源）心动/TapTap推出的开源AI Agent客户端，统一接入多种模型，内置TapTapMaker，面向全网免费开源"}
             ]
         },
         {
@@ -174,7 +175,8 @@ var siteData = {
                 {"name": "NebulaAI", "url": "https://www.nebula-ai.com/", "description": "企业级私有部署平台，支持与OA、ERP等系统深度拉通"},
                 {"name": "Gemini Spark", "url": "https://gemini.google.com/spark", "description": "Google 24小时运行的个人AI Agent，深度集成Gmail、日历等"},
                 {"name": "Hermes Agent", "url": "https://hermes-agent.nousresearch.com/", "description": "开源自主AI代理，拥有内置的自我学习循环"},
-                {"name": "Mavis", "url": "https://www.minimaxi.com/mavis", "description": "MiniMax Agent升级版，支持多智能体协作"}
+                {"name": "Mavis", "url": "https://www.minimaxi.com/mavis", "description": "MiniMax Agent升级版，支持多智能体协作"},
+                {"name": "腾讯云ADP 4.0", "url": "https://cloud.tencent.com/product/adp", "description": "企业级AgentOps平台，覆盖智能体构建、分发、治理全生命周期，支持海外渠道与多模型"}
             ]
         },
         {
@@ -271,19 +273,8 @@ var siteData = {
                 {"name": "avavox", "url": "https://avavox.com/", "description": "神州泰岳旗下大模型外呼机器人，按Token计费，30秒搭建"},
                 {"name": "云蝠智能", "url": "https://www.telrobot.top/", "description": "VoiceAgent大模型语音智能体，支持多模态交互，500ms响应"},
                 {"name": "沃丰科技智呼机器人", "url": "https://www.udesk.cn/", "description": "大模型语音机器人，0.3秒响应，支持全渠道接入"},
-                {"name": "CosyVoice3", "url": "https://github.com/FunAudioLLM/CosyVoice", "description": "（开源）阿里FunAudioLLM开源，中文优化语音合成"},
-                {"name": "GPT-SoVITS", "url": "https://github.com/RVC-Boss/GPT-SoVITS", "description": "（开源）社区开源，高保真音色克隆"},
-                {"name": "IndexTTS-2", "url": "https://github.com/index-tts/indextts", "description": "（开源）零样本克隆，情绪控制"},
-                {"name": "Spark-TTS", "url": "https://github.com/SparkAudio/Spark-TTS", "description": "（开源）腾讯开源，基于Qwen的语音合成"},
-                {"name": "Whisper", "url": "https://github.com/openai/whisper", "description": "（开源）OpenAI开源，99种语言语音识别"},
-                {"name": "Qwen3-ASR", "url": "https://tongyi.aliyun.com/", "description": "（开源）阿里开源，多语言语音识别"},
-                {"name": "FunASR", "url": "https://github.com/modelscope/FunASR", "description": "（开源）阿里达摩院开源，工业级ASR"},
-                {"name": "Qwen-Omni", "url": "https://tongyi.aliyun.com/", "description": "（开源）阿里开源，语音对话模型"},
-                {"name": "GLM-4.1V-Thinking-Flash", "url": "https://www.bigmodel.cn/", "description": "（开源）智谱免费，语音+视觉多模态"},
-                {"name": "Sherpa-ONNX", "url": "https://github.com/k2-fsa/sherpa-onnx", "description": "（开源）离线语音识别/合成框架"},
                 {"name": "VoiceFox", "url": "https://voicefox.cn/", "description": "大模型增强ASR，支持19种方言，噪音环境识别率领先"},
                 {"name": "VibeVoice", "url": "https://github.com/microsoft/VibeVoice", "description": "（开源）微软开源语音AI家族，60分钟上下文，支持ASR和TTS"},
-                {"name": "Seeduplex", "url": "https://www.doubao.com/", "description": "豆包全双工语音大模型，边听边说，交互自然顺畅"},
                 {"name": "MiMo-V2.5-TTS", "url": "https://mimo.mi.com/", "description": "小米自研语音合成大模型，支持方言、歌声合成，上亿小时预训练"},
                 {"name": "MiMo-V2.5-ASR", "url": "https://mimo.mi.com/", "description": "小米自研语音识别大模型，支持中英双语、方言、噪音环境"},
                 {"name": "山海·知音2.0", "url": "https://www.unisound.com/", "description": "云知声全双工语音大模型，支持30+方言，首包延迟90ms"},
@@ -295,7 +286,11 @@ var siteData = {
                 {"name": "StepAudio 2.5 Realtime", "url": "https://platform.stepfun.com/", "description": "阶跃星辰实时语音交互模型，主打活人感AI聊天体验"},
                 {"name": "Cartesia Sonic", "url": "https://cartesia.ai/", "description": "实时TTS模型，延迟极低，支持毫秒级语音合成与多语言"},
                 {"name": "Cartesia Ink", "url": "https://cartesia.ai/", "description": "实时ASR模型，高精度语音识别，与Sonic无缝配合"},
-                {"name": "ZONOS2", "url": "https://www.zyphra.com/", "description": "（开源）Zyphra开源TTS模型，支持多语言语音合成，GitHub开源"}
+                {"name": "ZONOS2", "url": "https://www.zyphra.com/", "description": "（开源）Zyphra开源TTS模型，支持多语言语音合成，GitHub开源"},
+                {"name": "GPT-Live", "url": "https://platform.openai.com/", "description": "OpenAI全双工实时语音模型，支持同时听说、打断处理、语气理解，已集成ChatGPT桌面端"},
+                {"name": "GPT-Transcribe", "url": "https://platform.openai.com/", "description": "OpenAI语音转录模型，上下文感知ASR，错误率较Whisper降低55%，支持22种语言"},
+                {"name": "GPT-Live-Transcribe", "url": "https://platform.openai.com/", "description": "OpenAI实时转录模型，延迟低至230ms，适合直播同传、会议实时记录"},
+                {"name": "趣丸千音 All Voice Lab", "url": "https://allvoicelab.cn/", "description": "趣丸科技一站式视频翻译与AI配音平台，AI译制成本降低90%，月译制量50万分钟，支持40+语言"}
             ]
         },
         {
@@ -331,7 +326,8 @@ var siteData = {
                 {"name": "鲸鱼音乐", "url": "https://www.jingyuyinyue.com/", "description": "AI音乐生成器，支持多模态输入，3000+企业客户"},
                 {"name": "Flow Music", "url": "https://deepmind.google/", "description": "Google推出的AI音乐制作工具，接入Gemini Omni模型"},
                 {"name": "ACE-Step 1.5 XL", "url": "https://github.com/ace-step/ace-step", "description": "（开源）AI音乐生成模型，支持本地运行4分钟带人声歌曲，版权归属用户"},
-                {"name": "MELO音乐", "url": "https://melomusic.com/", "description": "专为华语优化的AI音乐工具，中文咬字清晰，综合评分9.2登顶"}
+                {"name": "MELO音乐", "url": "https://melomusic.com/", "description": "专为华语优化的AI音乐工具，中文咬字清晰，综合评分9.2登顶"},
+                {"name": "天谱乐", "url": "https://i52hz.com/", "description": "趣丸科技出品，全球首个多模态音乐生成大模型，支持文/图/音/视频生曲，API平台已上线"}
             ]
         },
         {
@@ -398,12 +394,18 @@ var siteData = {
                 {"name": "MiniMax M3", "url": "https://www.minimaxi.com/", "description": "（开源）MiniMax旗舰多模态模型，SWE-Bench Pro超越GPT-5.5，百万上下文"},
                 {"name": "Sakana Fugu Ultra", "url": "https://sakana.ai/", "description": "多智能体编排模型，动态调度全球顶尖模型，性能比肩Claude Fable"},
                 {"name": "MAI-Thinking-1", "url": "https://azure.microsoft.com/", "description": "微软首款自研推理模型，350亿活跃参数，256K上下文，无第三方蒸馏"},
-                {"name": "GPT-5.6", "url": "https://platform.openai.com/", "description": "OpenAI最新模型，开始内测"},
-                {"name": "Claude Fable 5", "url": "https://platform.claude.com/", "description": "Anthropic最新旗舰模型，SWE-Bench Pro 80.3%，24小时迁移5000万行代码"},
+                {"name": "GPT-5.6 Sol", "url": "https://platform.openai.com/", "description": "OpenAI旗舰模型，Terminal-Bench 2.1达88.8%，支持Ultra多代理模式"},
+                {"name": "GPT-5.6 Terra", "url": "https://platform.openai.com/", "description": "OpenAI均衡模型，性能接近GPT-5.5但成本减半，适合日常开发"},
+                {"name": "GPT-5.6 Luna", "url": "https://platform.openai.com/", "description": "OpenAI轻量模型，速度最快成本最低，适合高并发场景"},
+                {"name": "Claude Opus 5", "url": "https://platform.claude.com/", "description": "Anthropic新一代Opus旗舰，性能接近Fable 5但价格仅一半，Frontier-Bench v0.1达43.3%"},
+                {"name": "Claude Sonnet 5", "url": "https://platform.claude.com/", "description": "Anthropic最具Agent能力的Sonnet，SWE-bench Verified 89.4%，超越Opus 4.8"},
+                {"name": "Claude Fable 5", "url": "https://platform.claude.com/", "description": "Anthropic旗舰模型，SWE-Bench Pro 80.3%，24小时迁移5000万行代码"},
                 {"name": "Claude Mythos 5", "url": "https://platform.claude.com/", "description": "Anthropic前沿模型，仅面向经审核的研究机构和企业开放"},
                 {"name": "GLM-5.2", "url": "https://www.bigmodel.cn/", "description": "（开源）智谱最新开源模型，MIT协议，Code Arena全球可用模型第一"},
                 {"name": "GPT-5.5 Instant", "url": "https://chat.openai.com/", "description": "OpenAI ChatGPT默认模型，常识推理与事实准确性大幅提升"},
-                {"name": "Apple Intelligence", "url": "https://www.apple.com/apple-intelligence/", "description": "苹果AI智能系统，深度集成iOS/macOS，支持写作、图像、Siri增强"}
+                {"name": "Apple Intelligence", "url": "https://www.apple.com/apple-intelligence/", "description": "苹果AI智能系统，深度集成iOS/macOS，支持写作、图像、Siri增强"},
+                {"name": "Kimi K3", "url": "https://platform.moonshot.cn/", "description": "（开源）月之暗面最新旗舰模型，2.8万亿参数，100万Token上下文，原生视觉理解，全球首个开源3T级模型"},
+                {"name": "Qwen3.8-Max", "url": "https://tongyi.aliyun.com/", "description": "阿里最新旗舰模型，2.4万亿参数，原生多模态，全栈开发与多Agent长程任务显著提升，即将开源"}
             ]
         },
         {
@@ -2287,7 +2289,8 @@ var siteData = {
                 {"name": "Hocoos", "url": "https://hocoos.com/", "description": "无代码AI智能在线快速创建网站"},
                 {"name": "aiXcoder", "url": "https://www.aixcoder.com/", "description": "自然语言到代码的方法级代码生成，以及多行智能代码补全"},
                 {"name": "CodeArts Snap", "url": "https://www.huaweicloud.com/product/codeartside/snap.html", "description": "华为云推出的智能编程助手"},
-                {"name": "JamGPT", "url": "https://jam.dev/jamgpt", "description": "AI Debug调试助手"}
+                {"name": "JamGPT", "url": "https://jam.dev/jamgpt", "description": "AI Debug调试助手"},
+                {"name": "CodeBuddy IDE", "url": "https://copilot.tencent.com/ide", "description": "腾讯云首个全流程AI一体化开发工作台，覆盖产品—设计—研发部署全链路"}
             ]
         },
         {

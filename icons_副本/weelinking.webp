@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weelinking - AI API 服务平台</title>
+  <meta name="description" content="Weelinking提供稳定可靠的AI API服务，支持GPT、Claude、DeepSeek等主流模型">
+  
+  <!-- DNS 预取 - 加速外部资源 -->
+  <link rel="dns-prefetch" href="//api.weelinking.com">
+  <link rel="dns-prefetch" href="//docs.weelinking.com">
+  <link rel="preconnect" href="https://api.weelinking.com" crossorigin>
+  
+  <!-- 图标和关键资源 -->
+  <link rel="icon" href="./img/favicon.ico">
+  <link rel="preload" href="./style.css" as="style">
+  <link rel="preload" href="./img/logo.png" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="./style.css">
+  
+  <!-- 关键CSS内联 - 首屏渲染 -->
+  <style>
+    /* 使用系统字体栈，避免外部字体加载 */
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #e8eaf6 0%, #e1f5fe 25%, #f3e5f5 50%, #e8eaf6 75%, #e1f5fe 100%);
+      background-attachment: fixed;
+      min-height: 100vh;
+    }
+    
+    /* 首屏关键样式内联 */
+    .nav-loading {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    
+    /* 锚点偏移 - 防止固定导航栏遮挡标题 */
+    [id] {
+      scroll-margin-top: 100px;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Animation classes */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+      will-change: opacity, transform;
+    }
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .delay-100 { transition-delay: 0.1s; }
+    .delay-200 { transition-delay: 0.2s; }
+    .delay-300 { transition-delay: 0.3s; }
+    .delay-400 { transition-delay: 0.4s; }
+    .delay-500 { transition-delay: 0.5s; }
+
+    /* Float animation */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .animate-float {
+      animation: float 5s ease-in-out infinite;
+    }
+    
+    /* Hover Glow effect for glassmorphism */
+    .hover-glow {
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .hover-glow:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+    }
+
+    /* 玻璃拟态浮动球装饰 - 移除backdrop-filter优化性能 */
+    .glass-orb {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(102, 126, 234, 0.15), rgba(168, 85, 247, 0.08) 50%, transparent 70%);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 32px rgba(102, 126, 234, 0.1);
+    }
+    .glass-orb-1 {
+      width: 180px;
+      height: 180px;
+      top: 10%;
+      left: 5%;
+      animation: float 10s ease-in-out infinite;
+    }
+    .glass-orb-2 {
+      width: 120px;
+      height: 120px;
+      top: 60%;
+      right: 10%;
+      animation: float 12s ease-in-out infinite reverse;
+    }
+    
+    /* 减少动画触发频率 - 性能优化 */
+    @media (prefers-reduced-motion: reduce) {
+      .glass-orb, .animate-float, .animate-float-slow {
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div style="display: none;">
+    <!-- <div class="bg-gradient-to-r from-blue-600 to-indigo-600 py-3 px-4"> -->
+      <div class="max-w-7xl mx-auto">
+        <div class="flex items-center justify-between">
+          <!-- 公告内容区域 -->
+          <div class="flex items-center gap-3 min-w-0 flex-1">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" aria-hidden="true" class="h-5 w-5 text-white flex-shrink-0">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z">
+              </path>
+            </svg>
+            <!-- 公告列表（轮播内容） -->
+            <!-- <div class="flex items-center gap-2 min-w-0 notice-container"> -->
+              <!-- 公告1 -->
+              <div class="notice-item" data-index="0" style="display: none;">
+                <span class="text-sm font-medium text-white flex-shrink-0">重磅上线</span>
+                <a href="#" data-link="docs-changelog" class="text-sm text-white/90 hover:text-white transition-colors truncate">✨ 08/08 GPT-5 全系列
+                  正式上线，官网同价，充值加赠+汇率优势约8折</a>
+              </div>
+              <!-- 公告2（初始显示） -->
+              <div class="notice-item" data-index="1" style="display: flex;">
+                <span class="text-sm font-medium text-white flex-shrink-0">性能升级</span>
+                <a href="#" data-link="docs-changelog" class="text-sm text-white/90 hover:text-white transition-colors truncate">🎨 08/07 Claude Opus 4.1
+                  性能升级版上线，加量不加价</a>
+              </div>
+              <!-- 公告3 -->
+              <div class="notice-item" data-index="2" style="display: none;">
+                <span class="text-sm font-medium text-white flex-shrink-0">开源模型</span>
+                <a href="#" data-link="docs-changelog" class="text-sm text-white/90 hover:text-white transition-colors truncate">🚀 08/06 OpenAI 开源模型
+                  gpt-oss-120b 和 gpt-oss-20b 上线，价格低于 DeepSeek R1/V3</a>
+              </div>
+            </div>
+          </div>
+          <!-- 轮播控制按钮（补充ID属性） -->
+          <div class="flex items-center gap-2 ml-4">
+            <!-- 上一条按钮 -->
+            <button id="prevBtn" class="p-1 text-white/70 hover:text-white transition-colors" aria-label="上一条公告">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" aria-hidden="true" class="h-4 w-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+              </svg>
+            </button>
+            <!-- 圆点指示器（补充ID和data-index） -->
+            <div id="dotContainer" class="flex gap-1">
+              <button class="w-2 h-2 rounded-full transition-colors bg-white/40" aria-label="跳转到第1条公告"
+                data-index="0"></button>
+              <button class="w-2 h-2 rounded-full transition-colors bg-white" aria-label="跳转到第2条公告"
+                data-index="1"></button>
+              <button class="w-2 h-2 rounded-full transition-colors bg-white/40" aria-label="跳转到第3条公告"
+                data-index="2"></button>
+            </div>
+            <!-- 下一条按钮 -->
+            <button id="nextBtn" class="p-1 text-white/70 hover:text-white transition-colors" aria-label="下一条公告">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" aria-hidden="true" class="h-4 w-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+              </svg>
+            </button>
+            <!-- 暂停/播放按钮（补充ID） -->
+            <button id="playPauseBtn" class="p-1 text-white/70 hover:text-white transition-colors ml-2"
+              aria-label="暂停轮播">
+              <svg id="playPauseIcon" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="sticky top-0 z-50 glass-nav" style="background: rgba(255,255,255,0.7); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.08);">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="flex items-center justify-between py-6"><a class="flex items-center gap-2" href="/"><img
+              alt="weelinking Logo" width="40" height="40" decoding="async" data-nimg="1" class="h-10 w-10 animate-float-slow"
+              style="color:transparent" src="./img/logo.png"><span
+              class="text-2xl font-bold" style="color: #1a1a2e;">weelinking</span></a>
+          <div class="hidden md:flex items-center space-x-8"><a
+              class="font-medium transition-colors" style="color: rgba(26, 26, 46, 0.7);" onmouseover="this.style.color='#1a1a2e'" onmouseout="this.style.color='rgba(26, 26, 46, 0.7)'" href="/">首页</a><a
+              class="font-medium transition-colors" style="color: rgba(26, 26, 46, 0.7);" onmouseover="this.style.color='#1a1a2e'" onmouseout="this.style.color='rgba(26, 26, 46, 0.7)'" href="#features">功能</a><a
+              class="font-medium transition-colors" style="color: rgba(26, 26, 46, 0.7);" onmouseover="this.style.color='#1a1a2e'" onmouseout="this.style.color='rgba(26, 26, 46, 0.7)'" href="#code-examples">代码示例</a><a
+              class="font-medium transition-colors" style="color: rgba(26, 26, 46, 0.7);" onmouseover="this.style.color='#1a1a2e'" onmouseout="this.style.color='rgba(26, 26, 46, 0.7)'" href="#faq">常见问题</a><a
+              href="#" data-link="docs-home" class="font-medium transition-colors" style="color: rgba(26, 26, 46, 0.7);" onmouseover="this.style.color='#1a1a2e'" onmouseout="this.style.color='rgba(26, 26, 46, 0.7)'">API文档</a><a
+              class="font-medium transition-colors" style="color: rgba(26, 26, 46, 0.7);" onmouseover="this.style.color='#1a1a2e'" onmouseout="this.style.color='rgba(26, 26, 46, 0.7)'" href="#contact">联系我们</a><a
+              href="#" data-link="api-user-center" class="inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300" style="background: linear-gradient(135deg, #667eea 0%, #a855f7 100%); color: white; box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 30px rgba(102, 126, 234, 0.6)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(102, 126, 234, 0.4)';">开始使用</a>
+          </div><button class="md:hidden rounded-lg p-2 hover:bg-black/5" style="color: #1a1a2e;" aria-label="打开菜单"
+            title="打开菜单"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg></button>
+        </div>
+      </div>
+    </nav>
+    <div class="relative overflow-hidden min-h-screen flex flex-col justify-center">
+      <!-- 玻璃拟态风格背景 - 已通过 body CSS 设置 -->
+      <!-- 装饰性浮动球 - 简化版本优化性能 -->
+      <div class="glass-orb glass-orb-1"></div>
+      <div class="glass-orb glass-orb-2"></div>
+      <div class="mx-auto max-w-7xl px-6 lg:px-8 relative">
+        <div class="py-8 sm:py-12 md:py-16">
+          <div class="text-center">
+            <h2
+              class="fade-in-up text-4xl font-bold tracking-tight sm:text-5xl font-display sm:text-6xl md:text-7xl" style="color: #1a1a2e;">
+              全球优秀 AI 大模型<span
+                class="block" style="background: linear-gradient(90deg, #667eea 0%, #a855f7 50%, #ec4899 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">统一体验入口</span>
+            </h2>
+            <h3
+              class="fade-in-up delay-100 font-medium mt-6 max-w-3xl mx-auto text-lg sm:text-xl" style="color: rgba(26, 26, 46, 0.7);">
+              企业级大模型 API 统一入口，一次认证即可全模型畅用，为AI 编程与业务创新提速！</h3>
+            <div class="fade-in-up delay-200 mt-8 flex flex-wrap justify-center gap-4">
+              <div
+                class="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300" style="color: #1a1a2e; background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <span>✨</span>200+ 大模型覆盖
+              </div>
+              <div
+                class="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300" style="color: #1a1a2e; background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <span>🚀</span>99.99% 稳定可靠
+              </div>
+              <div
+                class="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300" style="color: #1a1a2e; background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <span>💰</span>约9折优惠
+              </div>
+            </div>
+            <div class="mt-10 flex flex-col gap-x-6 gap-y-4 sm:flex-row sm:justify-center"><a
+                href="#" data-link="api-login" class="text-lg px-8 py-4 inline-flex items-center justify-center rounded-full font-semibold whitespace-nowrap transition-all duration-300" style="background: linear-gradient(135deg, #667eea 0%, #a855f7 50%, #ec4899 100%); color: white; box-shadow: 0 4px 25px rgba(102, 126, 234, 0.4);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 35px rgba(102, 126, 234, 0.6)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 25px rgba(102, 126, 234, 0.4)';">
+                <div class="flex items-center gap-3"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"></path>
+                  </svg>一键登录</div>
+              </a><a href="#" data-link="docs-home" class="text-lg px-8 py-4 inline-flex items-center justify-center rounded-full font-medium whitespace-nowrap transition-all duration-300" style="color: #1a1a2e; background: rgba(255,255,255,0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 4px 15px rgba(0,0,0,0.05);" onmouseover="this.style.background='rgba(255,255,255,0.85)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.08)';" onmouseout="this.style.background='rgba(255,255,255,0.6)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)';">开发文档</a>
+            </div>
+            <!-- <p class="mt-4 text-sm text-gray-600 max-w-2xl mx-auto">注册自动送测试额度0.1美金，约300万 4o-mini Tokens，首充加赠 1 美金</p> -->
+          </div>
+          <div class="mt-16">
+            <p class="text-center text-sm font-medium mb-6" style="color: rgba(26, 26, 46, 0.6);">支持主流 AI 模型提供商</p>
+            <div class="rounded-2xl p-6" style="background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.2) 100%); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.5); box-shadow: 0 8px 32px rgba(102, 126, 234, 0.1), inset 0 1px 0 rgba(255,255,255,0.6);">
+              <div class="grid grid-cols-3 gap-4 sm:gap-6 md:grid-cols-6">
+                <div class="flex flex-col items-center justify-center group">
+                  <div class="relative h-10 w-full mb-2 transition-all duration-300" style="opacity: 0.7;">
+                    <div class="flex items-center justify-center h-full"><img alt="OpenAI logo" loading="lazy"
+                        width="60" height="40" decoding="async" data-nimg="1"
+                        class="object-contain h-10 w-auto group-hover:opacity-100 transition-opacity duration-300"
+                        style="max-width:100%;height:40px" src="./img/openai-logo.svg"></div>
+                  </div><span class="text-sm transition-colors" style="color: rgba(26, 26, 46, 0.6);">OpenAI</span>
+                </div>
+                <div class="flex flex-col items-center justify-center group">
+                  <div class="relative h-10 w-full mb-2 transition-all duration-300" style="opacity: 0.7;">
+                    <div class="flex items-center justify-center h-full"><img alt="Claude logo" loading="lazy"
+                        width="60" height="40" decoding="async" data-nimg="1"
+                        class="object-contain h-10 w-auto group-hover:opacity-100 transition-opacity duration-300"
+                        style="max-width:100%;height:40px" src="./img/claude-logo.svg"></div>
+                  </div><span class="text-sm transition-colors" style="color: rgba(26, 26, 46, 0.6);">Claude</span>
+                </div>
+                <div class="flex flex-col items-center justify-center group">
+                  <div class="relative h-10 w-full mb-2 transition-all duration-300" style="opacity: 0.7;">
+                    <div class="flex items-center justify-center h-full"><img alt="Gemini logo" loading="lazy"
+                        width="60" height="40" decoding="async" data-nimg="1"
+                        class="object-contain h-10 w-auto group-hover:opacity-100 transition-opacity duration-300"
+                        style="max-width:100%;height:40px" src="./img/gemini-logo.svg"></div>
+                  </div><span class="text-sm transition-colors" style="color: rgba(26, 26, 46, 0.6);">Gemini</span>
+                </div>
+                <div class="flex flex-col items-center justify-center group">
+                  <div class="relative h-10 w-full mb-2 transition-all duration-300" style="opacity: 0.7;">
+                    <div class="flex items-center justify-center h-full"><img alt="Grok logo" loading="lazy" width="60"
+                        height="40" decoding="async" data-nimg="1"
+                        class="object-contain h-10 w-auto group-hover:opacity-100 transition-opacity duration-300"
+                        style="max-width:100%;height:40px" src="./img/grok-logo.svg"></div>
+                  </div><span class="text-sm transition-colors" style="color: rgba(26, 26, 46, 0.6);">Grok</span>
+                </div>
+                <div class="flex flex-col items-center justify-center group">
+                  <div class="relative h-10 w-full mb-2 transition-all duration-300" style="opacity: 0.7;">
+                    <div class="flex items-center justify-center h-full"><img alt="DeepSeek logo" loading="lazy"
+                        width="60" height="40" decoding="async" data-nimg="1"
+                        class="object-contain h-10 w-auto group-hover:opacity-100 transition-opacity duration-300"
+                        style="max-width:100%;height:40px" src="./img/deepseek-logo.svg"></div>
+                  </div><span class="text-sm transition-colors" style="color: rgba(26, 26, 46, 0.6);">DeepSeek</span>
+                </div>
+                <div class="flex flex-col items-center justify-center group">
+                  <div class="relative h-10 w-full mb-2 transition-all duration-300" style="opacity: 0.7;">
+                    <div class="flex items-center justify-center h-full"><img alt="Qwen logo" loading="lazy" width="60"
+                        height="40" decoding="async" data-nimg="1"
+                        class="object-contain h-10 w-auto group-hover:opacity-100 transition-opacity duration-300"
+                        style="max-width:100%;height:40px" src="./img/qwen-logo.svg"></div>
+                  </div><span class="text-sm transition-colors" style="color: rgba(26, 26, 46, 0.6);">Qwen</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <div class="pt-40 pb-32">
+        <div id="features" class="mx-auto max-w-7xl px-6 lg:px-8">
+          <h3 class="text-sm font-medium uppercase tracking-wider" style="color: #a855f7;">核心优势</h3>
+          <h2 class="text-4xl font-bold tracking-tight sm:text-5xl mt-2 max-w-3xl" style="color: #1a1a2e;">为什么选择 weelinking？</h2>
+          <div class="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-3">
+            <div class="fade-in-up card-enhanced relative overflow-hidden rounded-2xl p-8 lg:col-span-2" style="background: rgba(255,255,255,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 8px 32px rgba(0,0,0,0.05);">
+              <div class="text-sm font-medium uppercase tracking-wider" style="color: #a855f7;">模型覆盖</div>
+              <h3 class="mt-2 text-2xl font-semibold tracking-tight " style="color: #1a1a2e;">200+ AI 大模型全覆盖</h3>
+              <p class="mt-4 text-base" style="color: rgba(26, 26, 46, 0.7);">统一认证秘钥，无缝集成GPT、Claude、Gemini等主流大模型，灵活高效。</p>
+              <div class="mt-8">
+                <div
+                  class="flex items-center justify-center h-32 rounded-xl" style="background: linear-gradient(135deg, rgba(102,126,234,0.3), rgba(118,75,162,0.3));">
+                  <div class="text-3xl font-bold text-white">200+</div>
+                </div>
+              </div>
+            </div>
+            <div class="fade-in-up card-enhanced relative overflow-hidden rounded-2xl p-8 lg:col-span-2" style="background: rgba(255,255,255,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 8px 32px rgba(0,0,0,0.05);">
+              <div class="text-sm font-medium uppercase tracking-wider" style="color: #a855f7;">性价比</div>
+              <h3 class="mt-2 text-2xl font-semibold tracking-tight " style="color: #1a1a2e;">综合成本降低 30%</h3>
+              <p class="mt-4 text-base" style="color: rgba(26, 26, 46, 0.7);">充值赠送高达 15%，综合成本比官方直接购买降低约 30%。支持微信和支付宝充值。</p>
+              <div class="mt-8">
+                <div
+                  class="flex items-center justify-center h-32 rounded-xl" style="background: linear-gradient(135deg, rgba(52,211,153,0.3), rgba(16,185,129,0.3));">
+                  <div class="text-3xl font-bold text-white">-30%</div>
+                </div>
+              </div>
+            </div>
+            <div class="fade-in-up card-enhanced relative overflow-hidden rounded-2xl p-8 lg:col-span-2" style="background: rgba(255,255,255,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 8px 32px rgba(0,0,0,0.05);">
+              <div class="text-sm font-medium uppercase tracking-wider" style="color: #a855f7;">易用性</div>
+              <h3 class="mt-2 text-2xl font-semibold tracking-tight " style="color: #1a1a2e;">无缝切换，即插即用</h3>
+              <p class="mt-4 text-base" style="color: rgba(26, 26, 46, 0.7);">基于OpenAI标准协议，三步完成切换：1. 替换API地址 2. 修改模型名称 3. 照常调用。</p>
+              <div class="mt-8">
+                <div
+                  class="flex items-center justify-center h-32 rounded-xl" style="background: linear-gradient(135deg, rgba(240,147,251,0.3), rgba(168,85,247,0.3));">
+                  <svg class="h-12 w-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="fade-in-up card-enhanced relative overflow-hidden rounded-2xl p-8 max-lg:rounded-t-[2rem] lg:col-span-3 lg:rounded-tl-[2rem]" style="background: rgba(255,255,255,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 8px 32px rgba(0,0,0,0.05);">
+              <div class="text-sm font-medium uppercase tracking-wider" style="color: #a855f7;">稳定性</div>
+              <h3 class="mt-2 text-2xl font-semibold tracking-tight " style="color: #1a1a2e;">99.99% 服务可用性</h3>
+              <p class="mt-4 text-base" style="color: rgba(26, 26, 46, 0.7);">基于多可用区架构与智能流量调度，实现秒级故障自愈，服务可用性达99.99%+。</p>
+              <div class="mt-8">
+                <div
+                  class="flex items-center justify-center h-40 rounded-xl" style="background: linear-gradient(135deg, rgba(102,126,234,0.3), rgba(168,85,247,0.3));">
+                  <div class="text-4xl font-bold text-white">99.99%</div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="fade-in-up card-enhanced relative overflow-hidden rounded-2xl p-8 lg:col-span-3 lg:rounded-tr-[2rem]" style="background: rgba(255,255,255,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 8px 32px rgba(0,0,0,0.05);">
+              <div class="text-sm font-medium uppercase tracking-wider" style="color: #a855f7;">性能</div>
+              <h3 class="mt-2 text-2xl font-semibold tracking-tight " style="color: #1a1a2e;">极速响应</h3>
+              <p class="mt-4 text-base" style="color: rgba(26, 26, 46, 0.7);">高性能服务器集群，平均响应时间低于 200ms。CDN 加速技术，让全球用户都能享受极速体验。</p>
+              <div class="mt-8">
+                <div
+                  class="flex items-center justify-center h-40 rounded-xl" style="background: linear-gradient(135deg, rgba(52,211,153,0.3), rgba(59,130,246,0.3));">
+                  <div class="text-4xl font-bold text-white">&lt;200ms</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="pricing" class="py-32 bg-white" style="display: none;">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <h3 class="text-sm font-medium uppercase tracking-wider text-gray-600">价格方案</h3>
+          <h2 class="text-4xl font-medium tracking-tight sm:text-5xl text-gray-950 mt-2 max-w-3xl">透明定价，超值优惠</h2>
+          <p class="mt-4 text-lg text-gray-600 max-w-2xl">weelinking采用按量计费模式，价格与官方保持一致。通过优惠汇率和充值加赠，综合优惠可达8折</p>
+          <div class="mt-16">
+            <div class="rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 p-8 mb-12">
+              <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">为什么选择 weelinking？</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                  <h4 class="text-lg font-semibold text-gray-700 mb-4">官方直接购买</h4>
+                  <ul class="space-y-3 text-sm">
+                    <li class="flex items-start"><span class="text-red-500 mr-2">✗</span><span>需要国外信用卡</span></li>
+                    <li class="flex items-start"><span class="text-red-500 mr-2">✗</span><span>汇率 1:7.3+</span></li>
+                    <li class="flex items-start"><span class="text-red-500 mr-2">✗</span><span>无充值优惠</span></li>
+                    <li class="flex items-start"><span class="text-red-500 mr-2">✗</span><span>访问不稳定</span></li>
+                  </ul>
+                  <div class="mt-6 p-4 bg-gray-100 rounded-lg">
+                    <div class="text-center">
+                      <div class="text-sm text-gray-600">100万 tokens 成本</div>
+                      <div class="text-2xl font-bold text-gray-900 mt-1">¥18.25</div>
+                      <div class="text-xs text-gray-500">($2.5 × 7.3)</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl p-6 shadow-xl text-white">
+                  <h4 class="text-lg font-semibold mb-4">通过 weelinking</h4>
+                  <ul class="space-y-3 text-sm">
+                    <li class="flex items-start"><span class="text-cyan-300 mr-2">✓</span><span>支持支付宝/微信</span></li>
+                    <li class="flex items-start"><span class="text-cyan-300 mr-2">✓</span><span>优惠汇率 1:7</span></li>
+                    <li class="flex items-start"><span class="text-cyan-300 mr-2">✓</span><span>充值送 15%</span></li>
+                    <li class="flex items-start"><span class="text-cyan-300 mr-2">✓</span><span>稳定快速访问</span></li>
+                  </ul>
+                  <div class="mt-6 p-4 bg-white/20 rounded-lg backdrop-blur">
+                    <div class="text-center">
+                      <div class="text-sm">100万 tokens 成本</div>
+                      <div class="text-2xl font-bold mt-1">¥14.00</div>
+                      <div class="text-xs">($2.5 × 7 × 0.8)</div>
+                      <div class="mt-2 text-sm font-medium text-cyan-300">节省 23%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-8 text-center">
+                <p class="text-sm text-gray-600">* 以 GPT-4o-mini 输入价格为例，实际节省比例因模型和充值金额而异</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-16">
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+              <div
+                class="fade-in-up card-enhanced relative rounded-2xl p-8 transition-all duration-300 bg-white shadow-lg ring-1 ring-gray-200 hover:shadow-xl">
+                <div class="mb-6">
+                  <h3 class="text-xl font-semibold text-gray-900">基础充值</h3>
+                  <div class="mt-4"><span class="text-3xl font-bold text-gray-900">$5 起</span><span
+                      class="ml-2 text-lg text-gray-600">1:7 汇率</span></div>
+                </div>
+                <ul class="mb-8 space-y-3">
+                  <li class="flex items-start text-sm text-gray-600"><svg
+                      class="mr-2 h-5 w-5 flex-shrink-0 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path>
+                    </svg>适合个人开发测试</li>
+                  <li class="flex items-start text-sm text-gray-600"><svg
+                      class="mr-2 h-5 w-5 flex-shrink-0 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path>
+                    </svg>无需月费，按需付费</li>
+                  <li class="flex items-start text-sm text-gray-600"><svg
+                      class="mr-2 h-5 w-5 flex-shrink-0 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path>
+                    </svg>支持所有主流 AI 模型</li>
+                  <li class="flex items-start text-sm text-gray-600"><svg
+                      class="mr-2 h-5 w-5 flex-shrink-0 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path>
+                    </svg>价格透明，消费明细清晰</li>
+                </ul><a href="#" data-link="api-register" class="w-full inline-flex items-center justify-center px-2 py-1.5 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 hover:bg-gray-50 disabled:bg-transparent disabled:opacity-40">免费试用</a>
+              </div>
+              <div
+                class="fade-in-up relative rounded-2xl p-8 transition-all duration-300 bg-gradient-to-br from-blue-600 to-indigo-600 text-white shadow-2xl ring-2 ring-blue-500/20 scale-105">
+                <div
+                  class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-orange-500 to-red-500 px-4 py-1 text-sm font-medium text-white shadow-lg">
+                  最佳性价比选择</div>
+                <div class="mb-6">
+                  <h3 class="text-xl font-semibold text-white">推荐充值</h3>
+                  <div class="mt-4"><span class="text-3xl font-bold text-white">$100+</span><span
+                      class="ml-2 text-lg text-blue-100">送 10% 额度</span></div>
+                </div>
+                <ul class="mb-8 space-y-3">
+                  <li class="flex items-start text-sm text-blue-50"><svg
+                      class="mr-2 h-5 w-5 flex-shrink-0 text-blue-200" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path>
+                    </svg>充值 $100 享受 10% 额外赠送</li>
+                  <li class="flex items-start text-sm text-blue-50"><svg
+                      class="mr-2 h-5 w-5 flex-shrink-0 text-blue-200" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path>
+                    </svg>结合汇率优惠，综合成本更低，多充多送</li>
+                  <li class="flex items-start text-sm text-blue-50"><svg
+                      class="mr-2 h-5 w-5 flex-shrink-0 text-blue-200" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path>
+                    </svg>支持微信/支付宝/USDT付款</li>
+                  <li class="flex items-start text-sm text-blue-50"><svg
+                      class="mr-2 h-5 w-5 flex-shrink-0 text-blue-200" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path>
+                    </svg>充值即时到账，立即使用</li>
+                </ul><a href="#" data-link="api-recharge"
+                  class="inline-flex w-full items-center justify-center px-4 py-2 rounded-full bg-white text-gray-900 font-medium shadow-md hover:bg-gray-100 transition-colors">立即充值</a>
+              </div>
+              <div
+                class="fade-in-up relative rounded-2xl p-8 transition-all duration-300 bg-white shadow-lg ring-1 ring-gray-200 hover:shadow-xl">
+                <div class="mb-6">
+                  <h3 class="text-xl font-semibold text-gray-900">企业定制</h3>
+                  <div class="mt-4"><span class="text-3xl font-bold text-gray-900">对公转账</span><span
+                      class="ml-2 text-lg text-gray-600">支持开票</span></div>
+                </div>
+                <ul class="mb-8 space-y-3">
+                  <li class="flex items-start text-sm text-gray-600"><svg
+                      class="mr-2 h-5 w-5 flex-shrink-0 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path>
+                    </svg>支持对公转账，开具发票</li>
+                  <li class="flex items-start text-sm text-gray-600"><svg
+                      class="mr-2 h-5 w-5 flex-shrink-0 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path>
+                    </svg>可定制专属服务器和 SLA 保障</li>
+                  <li class="flex items-start text-sm text-gray-600"><svg
+                      class="mr-2 h-5 w-5 flex-shrink-0 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path>
+                    </svg>满足企业级需求</li>
+                  <li class="flex items-start text-sm text-gray-600"><svg
+                      class="mr-2 h-5 w-5 flex-shrink-0 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path>
+                    </svg>专属技术支持</li>
+                </ul><a
+                  class="w-full inline-flex items-center justify-center px-2 py-1.5 rounded-lg border border-transparent shadow-sm ring-1 ring-black/10 text-sm font-medium whitespace-nowrap text-gray-950 hover:bg-gray-50 disabled:bg-transparent disabled:opacity-40"
+                  href="#contact">联系我们</a>
+              </div>
+            </div>
+          </div>
+          <div class="mt-12">
+            <h3 class="text-xl font-semibold text-gray-900 mb-6 text-center">热门模型价格</h3>
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+              <div
+                class="rounded-xl bg-white p-6 shadow-lg ring-1 ring-gray-200 hover:shadow-xl transition-all duration-300">
+                <h4 class="font-semibold text-gray-900">GPT-4o</h4>
+                <p class="text-sm text-gray-500 mb-4">经典多模态</p>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center"><span class="text-sm text-gray-600">输入价格:</span><span
+                      class="font-semibold text-gray-900">$2.50<span class="text-xs text-gray-500">/1M</span></span>
+                  </div>
+                  <div class="flex justify-between items-center"><span class="text-sm text-gray-600">输出价格:</span><span
+                      class="font-semibold text-gray-900">$10.00<span class="text-xs text-gray-500">/1M</span></span>
+                  </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-100">
+                  <div class="text-xs text-gray-500">实际成本约 <span class="font-medium text-blue-600">80%</span></div>
+                </div>
+              </div>
+              <div
+                class="rounded-xl bg-white p-6 shadow-lg ring-1 ring-gray-200 hover:shadow-xl transition-all duration-300">
+                <h4 class="font-semibold text-gray-900">GPT-4o-mini</h4>
+                <p class="text-sm text-gray-500 mb-4">高性价比</p>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center"><span class="text-sm text-gray-600">输入价格:</span><span
+                      class="font-semibold text-gray-900">$0.15<span class="text-xs text-gray-500">/1M</span></span>
+                  </div>
+                  <div class="flex justify-between items-center"><span class="text-sm text-gray-600">输出价格:</span><span
+                      class="font-semibold text-gray-900">$0.60<span class="text-xs text-gray-500">/1M</span></span>
+                  </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-100">
+                  <div class="text-xs text-gray-500">实际成本约 <span class="font-medium text-blue-600">80%</span></div>
+                </div>
+              </div>
+              <div
+                class="rounded-xl bg-white p-6 shadow-lg ring-1 ring-gray-200 hover:shadow-xl transition-all duration-300">
+                <h4 class="font-semibold text-gray-900">Claude 4 Sonnet</h4>
+                <p class="text-sm text-gray-500 mb-4">编程优势</p>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center"><span class="text-sm text-gray-600">输入价格:</span><span
+                      class="font-semibold text-gray-900">$3.00<span class="text-xs text-gray-500">/1M</span></span>
+                  </div>
+                  <div class="flex justify-between items-center"><span class="text-sm text-gray-600">输出价格:</span><span
+                      class="font-semibold text-gray-900">$15.00<span class="text-xs text-gray-500">/1M</span></span>
+                  </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-100">
+                  <div class="text-xs text-gray-500">实际成本约 <span class="font-medium text-blue-600">80%</span></div>
+                </div>
+              </div>
+              <div
+                class="rounded-xl bg-white p-6 shadow-lg ring-1 ring-gray-200 hover:shadow-xl transition-all duration-300">
+                <h4 class="font-semibold text-gray-900">Gemini 2.5 Pro</h4>
+                <p class="text-sm text-gray-500 mb-4">多模态擅长</p>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center"><span class="text-sm text-gray-600">输入价格:</span><span
+                      class="font-semibold text-gray-900">$2.50<span class="text-xs text-gray-500">/1M</span></span>
+                  </div>
+                  <div class="flex justify-between items-center"><span class="text-sm text-gray-600">输出价格:</span><span
+                      class="font-semibold text-gray-900">$10.00<span class="text-xs text-gray-500">/1M</span></span>
+                  </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-100">
+                  <div class="text-xs text-gray-500">实际成本约 <span class="font-medium text-blue-600">80%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-8 text-center">
+              <div
+                class="inline-flex items-center gap-4 rounded-full bg-gradient-to-r from-blue-50 to-indigo-50 px-6 py-3">
+                <span class="text-sm font-medium text-blue-900">汇率优惠 1:7</span><span class="text-blue-500">+</span><span
+                  class="text-sm font-medium text-blue-900">充值送 15%</span><span class="text-blue-500">=</span><span
+                  class="text-lg font-bold text-blue-900">综合优惠约 8 折</span>
+              </div>
+              <p class="mt-4 text-sm text-gray-600">* 以上为官方标准价格，实际成本通过汇率和充值优惠降低</p>
+            </div>
+          </div>
+          <div class="mt-12 text-center"><a href="#" data-link="api-pricing" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">查看完整价格表<svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+                class="ml-1 h-5 w-5">
+                <path fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"></path>
+              </svg></a></div>
+        </div>
+      </div>
+      <div id="code-examples">
+        <div class="py-16 px-4">
+          <div class="mx-auto max-w-5xl">
+            <div class="fade-in-up text-center mb-8">
+              <h2 class="text-3xl font-bold sm:text-4xl" style="color: #1a1a2e;">简单三步，立即使用</h2>
+              <p class="mt-4 text-lg" style="color: rgba(26, 26, 46, 0.7);">只需修改 API 地址和密钥，即可开始使用</p>
+            </div>
+            <div class="fade-in-up rounded-2xl shadow-2xl overflow-hidden max-w-3xl mx-auto" style="background: rgba(15,15,35,0.95); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1);">
+              <!-- Tab 头部 -->
+              <div class="flex" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <button
+                  class="tab-btn px-6 py-3 text-sm font-medium transition-colors text-white" style="background: rgba(255,255,255,0.1); border-bottom: 2px solid #a855f7;"
+                  data-tab="curl">cURL</button>
+                <button
+                  class="tab-btn px-6 py-3 text-sm font-medium transition-colors hover:bg-white/10" style="color: rgba(255,255,255,0.85);"
+                  data-tab="nodejs">Node.js</button>
+                <button
+                  class="tab-btn px-6 py-3 text-sm font-medium transition-colors hover:bg-white/10" style="color: rgba(255,255,255,0.85);"
+                  data-tab="python">Python</button>
+                <div class="flex-1"></div>
+                <button
+                  class="flex items-center gap-2 px-4 py-3 transition-all duration-200 text-white hover:text-cyan-300"
+                  title="复制代码" id="copyBtn">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3">
+                    </path>
+                  </svg>
+                  <span class="text-sm font-medium" id="copyText">复制</span>
+                </button>
+              </div>
+
+              <!-- Tab 内容区域 -->
+              <div class="p-6">
+                <!-- cURL 代码 -->
+                <div class="tab-content active" id="curl-content">
+                  <pre class="text-sm overflow-x-auto"><code class="whitespace-pre" style="color: #f1f5f9 !important;">
+curl https://api.weelinking.com/v1/chat/completions \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer sk-您的API密钥" \
+-d '{
+  "model": "gpt-4o",
+  "messages": [
+    {"role": "user", "content": "写一个马年的祝福语"}
+  ]
+}'</code></pre>
+                </div>
+
+                <!-- Node.js 代码 -->
+                <div class="tab-content hidden" id="nodejs-content">
+                  <pre class="text-sm overflow-x-auto"><code class="whitespace-pre" style="color: #f1f5f9 !important;">
+import OpenAI from "openai";
+
+const openai = new OpenAI({
+  apiKey: "sk-您的API密钥",
+  baseURL: "https://api.weelinking.com/v1"
+});
+
+const completion = await openai.chat.completions.create({
+  model: "gpt-4o",
+  messages: [
+    {"role": "user", "content": "写一个马年的祝福语"}
+  ]
+});
+
+console.log(completion.choices[0].message);</code></pre>
+                </div>
+
+                <!-- Python 代码 -->
+                <div class="tab-content hidden" id="python-content">
+                  <pre class="text-sm overflow-x-auto"><code class="whitespace-pre" style="color: #f1f5f9 !important;">
+from openai import OpenAI
+
+client = OpenAI(
+    api_key="sk-您的API密钥",
+    base_url="https://api.weelinking.com/v1"
+)
+
+completion = client.chat.completions.create(
+    model="gpt-4o",
+    messages=[
+        {"role": "user", "content": "写一个马年的祝福语"}
+    ]
+)
+
+print(completion.choices[0].message)</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+              <div class="text-center p-6 rounded-2xl" style="background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(0,0,0,0.06);">
+                <div
+                  class="mx-auto w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold text-xl" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                  1</div>
+                <h3 class="mt-4 font-semibold " style="color: #1a1a2e;">注册账号</h3>
+                <p class="mt-2 text-sm" style="color: rgba(26, 26, 46, 0.6);">免费注册获得测试额度</p>
+              </div>
+              <div class="text-center p-6 rounded-2xl" style="background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(0,0,0,0.06);">
+                <div
+                  class="mx-auto w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold text-xl" style="background: linear-gradient(135deg, #764ba2, #f093fb);">
+                  2</div>
+                <h3 class="mt-4 font-semibold " style="color: #1a1a2e;">获取 API Key</h3>
+                <p class="mt-2 text-sm" style="color: rgba(26, 26, 46, 0.6);">在后台生成您的密钥</p>
+              </div>
+              <div class="text-center p-6 rounded-2xl" style="background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(0,0,0,0.06);">
+                <div
+                  class="mx-auto w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold text-xl" style="background: linear-gradient(135deg, #f093fb, #667eea);">
+                  3</div>
+                <h3 class="mt-4 font-semibold " style="color: #1a1a2e;">开始调用</h3>
+                <p class="mt-2 text-sm" style="color: rgba(26, 26, 46, 0.6);">修改 API 地址即可使用</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="faq" class="py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="text-center">
+            <h3 class="text-sm font-medium uppercase tracking-wider" style="color: #a855f7;">常见问题</h3>
+            <h2 class="text-4xl font-bold tracking-tight sm:text-5xl mt-2 max-w-3xl mx-auto" style="color: #1a1a2e;">您可能想了解的一切
+            </h2>
+            <p class="mt-4 text-lg max-w-2xl mx-auto" style="color: rgba(26, 26, 46, 0.7);">我们整理了用户最关心的问题，帮助您快速了解 weelinking 的产品和服务</p>
+          </div>
+          <div class="mt-16 max-w-4xl mx-auto">
+            <div class="space-y-4">
+              <div class="rounded-2xl transition-all duration-300" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.15);">
+                <button class="flex w-full items-center justify-between p-6 text-left transition-colors"
+                  aria-expanded="false">
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg text-sm font-bold transition-all duration-300 text-white" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                      1</div>
+                    <h3 class="text-lg font-semibold" style="color: #1a1a2e;">weelinking 支持哪些OpenAI模型？Claude 也支持吗？</h3>
+                  </div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true" class="h-5 w-5 flex-shrink-0 transition-transform duration-300" style="color: rgba(26, 26, 46, 0.4);">
+                    <path fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </button>
+                <div class="overflow-hidden transition-all duration-300 max-h-0">
+                  <div class="px-6 pb-6">
+                    <div class="pl-12">
+                      <p class="text-gray-600 leading-relaxed whitespace-pre-line">weelinking支持基本所有
+                        OpenAI、Claude、Gemini、Grok、Qwen、DeepSeek 等主流模型。具体可用模型列表可在您的账户后台查看。</p>
+                      <div class="mt-4"><span
+                          class="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-800">模型支持</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rounded-2xl transition-all duration-300 bg-white ring-1 ring-gray-200 hover:ring-blue-500/10">
+                <button class="flex w-full items-center justify-between p-6 text-left transition-colors"
+                  aria-expanded="false">
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg text-sm font-bold transition-all duration-300 bg-gray-100 text-gray-600">
+                      2</div>
+                    <h3 class="text-lg font-semibold text-gray-900">如何充值 weelinking 账户？</h3>
+                  </div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true" class="h-5 w-5 flex-shrink-0 text-gray-500 transition-transform duration-300">
+                    <path fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </button>
+                <div class="overflow-hidden transition-all duration-300 max-h-0">
+                  <div class="px-6 pb-6">
+                    <div class="pl-12">
+                      <p class="text-gray-600 leading-relaxed whitespace-pre-line">登录您的weelinking账户后，在"充值"页选择充值金额，支持微信和支付宝付款。
+
+                        • 最低充值金额为1元，
+                        • 充值到额，即可用于调用
+                        • 支持对公转账，需联系客服，支持开票</p>
+                      <div class="mt-4"><span
+                          class="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-800">充值说明</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rounded-2xl transition-all duration-300 bg-white ring-1 ring-gray-200 hover:ring-blue-500/10">
+                <button class="flex w-full items-center justify-between p-6 text-left transition-colors"
+                  aria-expanded="false">
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg text-sm font-bold transition-all duration-300 bg-gray-100 text-gray-600">
+                      3</div>
+                    <h3 class="text-lg font-semibold text-gray-900">OpenAI API 是怎么计费的？</h3>
+                  </div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true" class="h-5 w-5 flex-shrink-0 text-gray-500 transition-transform duration-300">
+                    <path fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </button>
+                <div class="overflow-hidden transition-all duration-300 max-h-0">
+                  <div class="px-6 pb-6">
+                    <div class="pl-12">
+                      <p class="text-gray-600 leading-relaxed whitespace-pre-line">
+                        按量计费，计费单位是Token，使用的模型、输入和输出的长度有关。您自行测试一下，每次请求都有明细日志可以查询，每笔消耗清清楚楚。</p>
+                      <div class="mt-4"><span
+                          class="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-800">计费说明</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rounded-2xl transition-all duration-300 bg-white ring-1 ring-gray-200 hover:ring-blue-500/10">
+                <button class="flex w-full items-center justify-between p-6 text-left transition-colors"
+                  aria-expanded="false">
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg text-sm font-bold transition-all duration-300 bg-gray-100 text-gray-600">
+                      4</div>
+                    <h3 class="text-lg font-semibold text-gray-900">如何查看 API 使用记录和消费详情？</h3>
+                  </div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true" class="h-5 w-5 flex-shrink-0 text-gray-500 transition-transform duration-300">
+                    <path fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </button>
+                <div class="overflow-hidden transition-all duration-300 max-h-0">
+                  <div class="px-6 pb-6">
+                    <div class="pl-12">
+                      <p class="text-gray-600 leading-relaxed whitespace-pre-line">在weelinking平台的【用户中心】【使用日志】页面，可以查看每次 API
+                        调用的详细记录，包括所用模型、消耗的 token 数量及对应费用。</p>
+                      <div class="mt-4"><span
+                          class="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-800">使用记录</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rounded-2xl transition-all duration-300 bg-white ring-1 ring-gray-200 hover:ring-blue-500/10">
+                <button class="flex w-full items-center justify-between p-6 text-left transition-colors"
+                  aria-expanded="false">
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg text-sm font-bold transition-all duration-300 bg-gray-100 text-gray-600">
+                      5</div>
+                    <h3 class="text-lg font-semibold text-gray-900">weelinking 如何保障数据安全？</h3>
+                  </div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true" class="h-5 w-5 flex-shrink-0 text-gray-500 transition-transform duration-300">
+                    <path fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </button>
+                <div class="overflow-hidden transition-all duration-300 max-h-0">
+                  <div class="px-6 pb-6">
+                    <div class="pl-12">
+                      <p class="text-gray-600 leading-relaxed whitespace-pre-line">weelinking高度重视用户数据安全，采取了多重措施保护您的信息：
+
+                        • 端到端加密：所有数据传输均采用TLS 1.3协议加密
+                        • 最小化数据存储：weelinking 仅为中转平台，不会存储或查看您的API请求内容
+                        • 有限日志记录：只记录基础日志包括使用的模型和Tokens长度，用于故障排查和计费
+                        • 短期日志保留：日志仅保留7天
+                        • 合规性：严格遵守相关的数据保护法规和行业标准</p>
+                      <div class="mt-4"><span
+                          class="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-800">数据安全</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="contact" class="py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="text-center">
+            <h3 class="text-sm font-medium uppercase tracking-wider" style="color: #a855f7;">联系我们</h3>
+            <h2 class="text-4xl font-bold tracking-tight sm:text-5xl mt-2 max-w-3xl mx-auto" style="color: #1a1a2e;">随时为您服务</h2>
+            <!-- 公司介绍 -->
+            <div class="mt-10 max-w-3xl mx-auto py-6 px-8 rounded-2xl" style="background: transparent; border-left: 4px solid; border-image: linear-gradient(180deg, #667eea, #a855f7, #ec4899) 1;">
+              <h4 class="text-xl font-bold mb-4 text-left flex items-center gap-3">
+                <span class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #667eea, #a855f7); box-shadow: 0 4px 15px rgba(102,126,234,0.4);">
+                  <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"></path>
+                  </svg>
+                </span>
+                <span style="background: linear-gradient(90deg, #667eea 0%, #a855f7 50%, #ec4899 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">关于我们</span>
+              </h4>
+              <p class="text-base leading-relaxed text-left" style="color: rgba(26, 26, 46, 0.75);">广州甲枫网络科技有限公司是一家专注于人工智能大模型聚合与API服务的创新科技企业。我们致力于打破AI技术壁垒，为开发者和企业提供一站式大模型调用解决方案，让AI能力触手可及。</p>
+              <p class="mt-4 text-sm text-left flex items-center gap-2" style="color: rgba(26, 26, 46, 0.6);">
+                <svg class="w-4 h-4 flex-shrink-0" style="color: #a855f7;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                <span>公司地址：广东广州市黄埔区联和街道 南翔一路68号奥特朗科技园1栋304</span>
+              </p>
+            </div>
+            <div class="mt-12 flex flex-wrap justify-center gap-8 max-w-4xl mx-auto">
+              <div class="text-center p-6 rounded-2xl flex-shrink-0" style="width: 240px; background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(0,0,0,0.06);">
+                <div
+                  class="mx-auto h-12 w-12 rounded-xl flex items-center justify-center text-white text-2xl" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                  📧</div>
+                <h3 class="mt-4 text-lg font-semibold" style="color: #1a1a2e;">邮件支持</h3>
+                <p class="mt-2" style="color: rgba(26, 26, 46, 0.6); word-break: break-all;"><a href="mailto:kefu001@jiafengnet.cn"
+                    style="color: #667eea;">kefu001@jiafengnet.cn</a></p>
+              </div>
+              <div class="text-center p-6 rounded-2xl flex-shrink-0" style="display: none; width: 240px; background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(0,0,0,0.06);">
+                <div
+                  class="mx-auto h-12 w-12 rounded-xl flex items-center justify-center text-white text-2xl" style="background: linear-gradient(135deg, #764ba2, #f093fb);">
+                  📞</div>
+                <h3 class="mt-4 text-lg font-semibold" style="color: #1a1a2e;">联系电话</h3>
+                <p class="mt-2"><a href="tel:18578645845" style="color: #667eea; text-decoration: none;">18578645845</a></p>
+              </div>
+              <div class="text-center p-6 rounded-2xl flex-shrink-0" style="width: 240px; background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(0,0,0,0.06);">
+                <div
+                  class="mx-auto h-12 w-12 rounded-xl flex items-center justify-center text-white text-2xl" style="background: linear-gradient(135deg, #f093fb, #667eea);">
+                  💬</div>
+                <h3 class="mt-4 text-lg font-semibold" style="color: #1a1a2e;">微信客服</h3>
+                <p class="mt-2"><a href="#" data-link="support-wechat" target="_blank" style="color: #667eea; text-decoration: none;">点击在线咨询 →</a></p>
+              </div>
+              <div class="text-center p-6 rounded-2xl flex-shrink-0" style="width: 240px; background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(0,0,0,0.06);">
+                <div
+                  class="mx-auto h-12 w-12 rounded-xl flex items-center justify-center text-white text-2xl" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);">
+                  🌐</div>
+                <h3 class="mt-4 text-lg font-semibold" style="color: #1a1a2e;">在线客服</h3>
+                <p class="mt-2" style="color: rgba(26, 26, 46, 0.7);">7×24小时在线，即时响应</p>
+              </div>
+            </div>
+            <div class="mt-12"><a href="#" data-link="api-login" class="inline-flex items-center justify-center px-6 py-3 rounded-full text-base font-semibold whitespace-nowrap transition-all duration-300" style="background: rgba(255,255,255,0.9); color: #667eea; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.background='white'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)';" onmouseout="this.style.background='rgba(255,255,255,0.9)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)';">
+                <div class="flex items-center gap-3"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"></path>
+                  </svg>一键登录</div>
+              </a></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="relative text-white/80 overflow-hidden" style="background: rgba(15,15,35,0.95); backdrop-filter: blur(20px); border-top: 1px solid rgba(255,255,255,0.1);">
+      <div class="absolute inset-0 opacity-20">
+        <div
+          class="absolute -top-40 -right-40 w-80 h-80 rounded-full filter blur-3xl" style="background: radial-gradient(circle, rgba(102,126,234,0.5), transparent 70%);">
+        </div>
+        <div
+          class="absolute -bottom-40 -left-40 w-80 h-80 rounded-full filter blur-3xl" style="background: radial-gradient(circle, rgba(240,147,251,0.4), transparent 70%);">
+        </div>
+      </div>
+      <div class="mx-auto max-w-7xl px-6 lg:px-8 relative py-16">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-5">
+          <div class="lg:col-span-2"><a class="flex items-center gap-2" href="/"><img alt="weelinking Logo" loading="lazy"
+                width="40" height="40" decoding="async" data-nimg="1" class="h-10 w-10" style="color:transparent"
+                src="./img/logo.png"><span class="text-2xl font-bold text-white">weelinking</span></a>
+            <p class="mt-4 text-sm text-white/70">企业级专业稳定的 OpenAI &amp; Claude API 中转站</p>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold mb-4">快速链接</h3>
+            <ul class="space-y-3 text-sm text-white/70">
+              <li><a class="group flex items-center gap-2 hover:text-white transition-colors" href="#" data-link="api-quick-start"><span
+                    class="w-1 h-1 rounded-full bg-white/50 group-hover:w-2 transition-all"></span>快速开始</a></li>
+              <li><a class="group flex items-center gap-2 hover:text-white transition-colors" href="#" data-link="api-changelog"><span
+                    class="w-1 h-1 rounded-full bg-white/50 group-hover:w-2 transition-all"></span>公告中心</a></li>
+              <li><a class="group flex items-center gap-2 hover:text-white transition-colors"
+                  href="#" data-link="docs-home"><span
+                    class="w-1 h-1 rounded-full bg-white/50 group-hover:w-2 transition-all"></span>API 文档</a></li>
+              <li><a class="group flex items-center gap-2 hover:text-white transition-colors" href="/terms"><span
+                    class="w-1 h-1 rounded-full bg-white/50 group-hover:w-2 transition-all"></span>用户协议</a></li>
+              <li><a class="group flex items-center gap-2 hover:text-white transition-colors" href="/privacy"><span
+                    class="w-1 h-1 rounded-full bg-white/50 group-hover:w-2 transition-all"></span>隐私政策</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold mb-4">相关资源</h3>
+            <ul class="space-y-3 text-sm text-white/70">
+              <li><a href="#" data-link="external-openai" class="group flex items-center gap-2 hover:text-white transition-colors"><span
+                    class="w-1 h-1 rounded-full bg-white/50 group-hover:w-2 transition-all"></span>OpenAI 文档</a></li>
+              <li><a href="#" data-link="external-claude" class="group flex items-center gap-2 hover:text-white transition-colors"><span
+                    class="w-1 h-1 rounded-full bg-white/50 group-hover:w-2 transition-all"></span>Claude 文档</a></li>
+              <li><a href="#" data-link="api-status" class="group flex items-center gap-2 hover:text-white transition-colors"><span
+                    class="w-1 h-1 rounded-full bg-white/50 group-hover:w-2 transition-all"></span>服务状态</a></li>
+            </ul>
+          </div>
+          <!-- <div>
+            <h3 class="text-white font-semibold mb-4">友情链接</h3>
+            <ul class="space-y-3 text-sm">
+              <li><a href="https://help.weelinking.com"                  class="group flex items-center gap-2 hover:text-white transition-colors"><span
+                    class="w-1 h-1 bg-purple-500 rounded-full group-hover:w-2 transition-all"></span>weelinking 博客</a></li>
+              <li><a href="https://llmapi.fit/"                  class="group flex items-center gap-2 hover:text-white transition-colors"><span
+                    class="w-1 h-1 bg-purple-500 rounded-full group-hover:w-2 transition-all"></span>回声笔降AIGC</a></li>
+              <li><a href="https://cldcode.com/"                  class="group flex items-center gap-2 hover:text-white transition-colors"><span
+                    class="w-1 h-1 bg-purple-500 rounded-full group-hover:w-2 transition-all"></span>ClaudeCode代办</a>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+        <div class="mt-12 pt-8" style="border-top: 1px solid rgba(255,255,255,0.1);">
+          <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex flex-col md:flex-row items-center gap-4 text-sm" style="color: rgba(255,255,255,0.5);">
+              <span>©2025-2026 weelinking All rights reserved</span>
+              <span class="hidden md:inline" style="margin: 0 8px;">|</span>
+              <a href="#" data-link="external-beian" target="_blank" class="hover:text-white transition-colors">粤ICP备2025509392号-1</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    // ========== FAQ 折叠/展开功能 ==========
+    document.querySelectorAll('#faq button[aria-expanded]').forEach(button => {
+      button.addEventListener('click', () => {
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('svg');
+        const container = button.parentElement;
+        const numberBadge = button.querySelector('.flex.h-8.w-8');
+
+        // 切换展开状态
+        button.setAttribute('aria-expanded', !isExpanded);
+
+        if (!isExpanded) {
+          // 展开
+          content.classList.remove('max-h-0');
+          content.classList.add('max-h-96');
+          icon.classList.add('rotate-180', 'text-blue-600');
+          container.classList.remove('bg-white', 'ring-1', 'ring-gray-200', 'hover:ring-blue-500/10');
+          container.classList.add('bg-gradient-to-br', 'from-blue-50', 'to-indigo-50', 'ring-2', 'ring-blue-500/20');
+          numberBadge.classList.remove('bg-gray-100', 'text-gray-600');
+          numberBadge.classList.add('bg-gradient-to-br', 'from-blue-500', 'to-indigo-500', 'text-white');
+        } else {
+          // 折叠
+          content.classList.remove('max-h-96');
+          content.classList.add('max-h-0');
+          icon.classList.remove('rotate-180', 'text-blue-600');
+          container.classList.remove('bg-gradient-to-br', 'from-blue-50', 'to-indigo-50', 'ring-2', 'ring-blue-500/20');
+          container.classList.add('bg-white', 'ring-1', 'ring-gray-200', 'hover:ring-blue-500/10');
+          numberBadge.classList.remove('bg-gradient-to-br', 'from-blue-500', 'to-indigo-500', 'text-white');
+          numberBadge.classList.add('bg-gray-100', 'text-gray-600');
+        }
+      });
+    });
+
+    // 获取所有 Tab 按钮和内容
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        const copyBtn = document.getElementById('copyBtn');
+        const copyText = document.getElementById('copyText');
+
+        // Tab 切换逻辑
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 移除所有按钮的激活样式
+                tabBtns.forEach(b => {
+                    b.classList.remove('bg-gray-800', 'text-white', 'border-b-2', 'border-blue-500');
+                    b.classList.add('text-gray-400');
+                });
+
+                // 添加当前按钮的激活样式
+                btn.classList.remove('text-gray-400');
+                btn.classList.add('bg-gray-800', 'text-white', 'border-b-2', 'border-blue-500');
+
+                // 隐藏所有内容
+                tabContents.forEach(content => {
+                    content.classList.add('hidden');
+                    content.classList.remove('active');
+                });
+
+                // 显示当前内容
+                const tabId = btn.getAttribute('data-tab');
+                const activeContent = document.getElementById(`${tabId}-content`);
+                activeContent.classList.remove('hidden');
+                activeContent.classList.add('active');
+            });
+        });
+
+        // 复制代码功能
+        copyBtn.addEventListener('click', () => {
+            // 获取当前激活的代码内容
+            const activeCode = document.querySelector('.tab-content.active pre code').textContent;
+            
+            // 复制到剪贴板
+            navigator.clipboard.writeText(activeCode).then(() => {
+                copyText.textContent = '已复制';
+                setTimeout(() => {
+                    copyText.textContent = '复制';
+                }, 2000);
+            }).catch(err => {
+                console.error('复制失败:', err);
+                copyText.textContent = '复制失败';
+                setTimeout(() => {
+                    copyText.textContent = '复制';
+                }, 2000);
+            });
+        });
+    // 等待DOM加载完成后执行
+    document.addEventListener('DOMContentLoaded', function () {
+      // 1. 获取DOM元素
+      const prevBtn = document.getElementById('prevBtn'); // 上一页按钮
+      const nextBtn = document.getElementById('nextBtn'); // 下一页按钮
+      const dotContainer = document.getElementById('dotContainer'); // 圆点容器
+      const dots = dotContainer.querySelectorAll('button'); // 所有圆点按钮
+      const playPauseBtn = document.getElementById('playPauseBtn'); // 暂停/播放按钮
+      const playPauseIcon = document.getElementById('playPauseIcon'); // 暂停/播放图标
+      const noticeItems = document.querySelectorAll('.notice-item'); // 所有公告项
+
+      // 2. 轮播核心配置
+      const config = {
+        total: dots.length, // 轮播总数（圆点数量）
+        currentIndex: 1, // 当前激活索引（初始为第2条，对应data-index=1）
+        interval: 3000, // 自动轮播间隔（毫秒）
+        isPaused: false, // 是否暂停轮播
+        timer: null // 自动轮播定时器
+      };
+
+      // 3. 更新圆点激活状态和公告内容显示
+      function updateCarouselStatus() {
+        // 更新圆点状态
+        dots.forEach((dot, index) => {
+          if (index === config.currentIndex) {
+            dot.classList.remove('bg-white/40');
+            dot.classList.add('bg-white');
+          } else {
+            dot.classList.remove('bg-white');
+            dot.classList.add('bg-white/40');
+          }
+        });
+
+        // 更新公告内容显示
+        noticeItems.forEach((item, index) => {
+          item.style.display = index === config.currentIndex ? 'flex' : 'none';
+        });
+      }
+
+      // 4. 切换轮播页（核心函数）
+      function switchToIndex(targetIndex) {
+        // 边界处理：循环轮播（超出范围则回到另一端）
+        if (targetIndex < 0) {
+          config.currentIndex = config.total - 1;
+        } else if (targetIndex >= config.total) {
+          config.currentIndex = 0;
+        } else {
+          config.currentIndex = targetIndex;
+        }
+        // 更新轮播状态
+        updateCarouselStatus();
+      }
+
+      // 5. 启动自动轮播
+      function startAutoPlay() {
+        // 先清除已有定时器（避免重复）
+        if (config.timer) clearInterval(config.timer);
+        // 非暂停状态下启动定时器
+        if (!config.isPaused) {
+          config.timer = setInterval(() => {
+            switchToIndex(config.currentIndex + 1);
+          }, config.interval);
+        }
+      }
+
+      // 6. 暂停自动轮播
+      function pauseAutoPlay() {
+        clearInterval(config.timer);
+        config.timer = null;
+      }
+
+      // 7. 切换暂停/播放状态
+      function togglePlayPause() {
+        config.isPaused = !config.isPaused;
+        if (config.isPaused) {
+          // 暂停状态：清除定时器 + 切换为播放图标
+          pauseAutoPlay();
+          playPauseIcon.innerHTML = '<path d="M8 5v14l11-7z"></path>'; // 播放图标（三角形）
+          playPauseBtn.setAttribute('aria-label', '播放轮播');
+        } else {
+          // 播放状态：启动定时器 + 切换为暂停图标
+          startAutoPlay();
+          playPauseIcon.innerHTML = '<path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"></path>'; // 暂停图标（双竖线）
+          playPauseBtn.setAttribute('aria-label', '暂停轮播');
+        }
+      }
+
+      // 8. 绑定事件监听
+      // 上一页按钮
+      prevBtn.addEventListener('click', () => {
+        switchToIndex(config.currentIndex - 1);
+        // 点击后重置自动轮播定时器（避免快速点击导致轮播混乱）
+        startAutoPlay();
+      });
+
+      // 下一页按钮
+      nextBtn.addEventListener('click', () => {
+        switchToIndex(config.currentIndex + 1);
+        startAutoPlay();
+      });
+
+      // 圆点按钮（点击跳转对应页）
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const targetIndex = parseInt(dot.getAttribute('data-index'));
+          switchToIndex(targetIndex);
+          startAutoPlay();
+        });
+      });
+
+      // 暂停/播放按钮
+      playPauseBtn.addEventListener('click', togglePlayPause);
+
+      // 9. 初始化
+      updateCarouselStatus(); // 初始更新轮播状态
+      startAutoPlay(); // 启动自动轮播
+
+      // 【优化】页面隐藏时暂停轮播，显示时恢复
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          pauseAutoPlay();
+        } else if (!config.isPaused) {
+          startAutoPlay();
+        }
+      });
+    });
+  </script>
+  <script src="./config.js?v=3"></script>
+  <script>
+    // Intersection Observer for fade-in animations
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+      
+      // 性能优化：页面隐藏时暂停动画
+      document.addEventListener('visibilitychange', () => {
+        const animatedElements = document.querySelectorAll('.glass-orb, .animate-float, .animate-float-slow');
+        if (document.hidden) {
+          animatedElements.forEach(el => el.style.animationPlayState = 'paused');
+        } else {
+          animatedElements.forEach(el => el.style.animationPlayState = 'running');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
